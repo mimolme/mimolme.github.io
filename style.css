@@ -1,0 +1,139 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  max-width: 960px;
+  margin: auto;
+  }
+
+a {
+  color: #008697;
+  }
+a:hover {
+  color: #699196;
+}
+a:visited {
+  color: #ED7478;
+}
+
+  header {
+    position: relative;
+  }
+  
+  .top-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  nav.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  nav.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav.nav-menu a:hover {
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  
+  main {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+th {
+    background-color: #f2f2f2;
+}
+  
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+  }
+/* トップへ戻るボタン */
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* レスポンシブ */
+  @media screen and (max-width: 600px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav.nav-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #fff;
+      padding: 1rem 0;
+    }
+  
+    nav.nav-menu.open {
+      display: flex;
+    }
+  }
+  
