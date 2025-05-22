@@ -80,6 +80,69 @@ nav.nav-menu a+a {
   border-left: 1px solid #ccc8af;
   padding-left: 1rem;
   margin-left: 0.5rem;
+}.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #ccc8af;
+}
+
+nav.nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  font-family: monospace;
+}
+
+/* 各メニューアイテム全体をflexボックスで囲む */
+nav.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: inherit;
+  position: relative;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ホバー時の下線 */
+nav.nav-menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%; /* 少し内側から */
+  width: 0%;
+  height: 2px;
+  background-color: #ccc8af;
+  transition: width 0.3s ease;
+}
+
+nav.nav-menu a:hover::before {
+  width: 80%;
+}
+
+/* 縦棒のデザイン（a + a） */
+nav.nav-menu a + a {
+  position: relative;
+}
+
+/* 縦棒線：リンクの前に表示 */
+nav.nav-menu a + a::after {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background-color: #ccc8af;
 }
 
 main {
@@ -200,7 +263,7 @@ html {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* --- レスポンシブ --- */
+/* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   .menu-toggle {
     display: block;
@@ -219,10 +282,18 @@ html {
     display: flex;
   }
 
-  /* 縦棒をモバイルでは非表示に */
+  /* モバイル時は縦棒と整列を解除 */
   nav.nav-menu a {
-    border-left: none !important;
+    justify-content: flex-start;
     padding-left: 0;
-    margin-left: 0;
+  }
+
+  nav.nav-menu a::before {
+    left: 0;
+    width: 0;
+  }
+
+  nav.nav-menu a + a::after {
+    content: none;
   }
 }
