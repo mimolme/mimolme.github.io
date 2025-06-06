@@ -58,7 +58,7 @@ nav.nav-menu a {
   font-weight: bold;
   padding: 0.5rem 1rem;
   position: relative;
-  font-family: inherit;
+  font-family: monospace;
 }
 
 nav.nav-menu a::before {
@@ -80,7 +80,9 @@ nav.nav-menu a+a {
   border-left: 1px solid #ccc8af;
   padding-left: 1rem;
   margin-left: 0.5rem;
-}.menu-toggle {
+}
+
+.menu-toggle {
   display: none;
   background: none;
   border: none;
@@ -90,6 +92,7 @@ nav.nav-menu a+a {
   right: 1rem;
   cursor: pointer;
   color: #ccc8af;
+  /* ← 追加：ハンバーガーの色 */
 }
 
 nav.nav-menu {
@@ -118,7 +121,8 @@ nav.nav-menu a::before {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 10%; /* 少し内側から */
+  left: 10%;
+  /* 少し内側から */
   width: 0%;
   height: 2px;
   background-color: #ccc8af;
@@ -130,12 +134,12 @@ nav.nav-menu a:hover::before {
 }
 
 /* 縦棒のデザイン（a + a） */
-nav.nav-menu a + a {
+nav.nav-menu a+a {
   position: relative;
 }
 
 /* 縦棒線：リンクの前に表示 */
-nav.nav-menu a + a::after {
+nav.nav-menu a+a::after {
   content: '';
   position: absolute;
   left: -0.5rem;
@@ -229,6 +233,18 @@ th {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+.zoomable {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-height: 200px;
+  height: auto;
+  width: auto;
+}
+
+.zoomable:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
 
 footer {
   margin-top: 2rem;
@@ -293,7 +309,7 @@ html {
     width: 0;
   }
 
-  nav.nav-menu a + a::after {
+  nav.nav-menu a+a::after {
     content: none;
   }
 }
