@@ -34,6 +34,7 @@
     </nav>
   </header>
   <main>
+    <p style="color: #888888" id="last-modified"></p>
     <section>
       <h2>モルモットは何を食べるの？住処は？必要な道具は？？</h2>
       <ul class="no-bullet">
@@ -132,7 +133,6 @@
           注意：</strong>このサイトでは「玉ねぎ」や「ニンニク」といったモルモットに与えてはいけない青果については深く言及しません。また，一般的にモルモットに食べさせて良いとされる<a
           href="#fig5">青果</a>であっても，モルモットの体質によっては給餌を避けた方がよい場合もあります。日常生活の中で適宜「食べさせて良い青果か」かかりつけ医などに相談しましょう。また，調理後や食事後，ネギやチョコレートが服についていないか（モルモットの口・住処に入りうるため），床に落ちていないか（”もる散歩”の際に誤食しないよう），細心の注意を払いましょう。
       </div>
-      <div class="table-container">
       <table id="table1" class="food-table">
         <caption>表1. モルの好み</caption>
         <tr>
@@ -148,8 +148,7 @@
           <td>キュウリ, パセリ, セルリ, サツマイモ, ミニトマト, 長芋, 大根, いちご</td>
         </tr>
       </table>
-      </div>
-      <div class="table-container">
+
       <table id="table2" class="food-table">
         <caption>表2. メルの好み</caption>
         <tr>
@@ -165,8 +164,7 @@
           <td>キュウリ, セルリ, パセリ, ミニトマト, 大根</td>
         </tr>
       </table>
-      </div>
-      <div class="table-container">
+
       <table id="table3" class="food-table">
         <caption>表3. レムの好み</caption>
         <tr>
@@ -182,7 +180,6 @@
           <td>ミニトマト, ナス, 長芋, アスパラ, いちご</td>
         </tr>
       </table>
-      </div>
       <p>表の評価基準は次の通りです：</p>
       <p><strong>- 好き: </strong>大量に食べる，複数選択肢があったら一番先に食べる，それまで食べていたものを投げ出してでも食べる<br>
         <strong>- 普通: </strong>「好き」な青果ほどではないけれどあれば食べる<br>
@@ -821,6 +818,11 @@
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
+  </script>
+
+  <script>
+    const lastModified = document.lastModified;
+    document.getElementById("last-modified").textContent = "最終更新日: " + lastModified;
   </script>
 </body>
 
