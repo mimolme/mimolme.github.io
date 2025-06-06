@@ -233,18 +233,30 @@ th {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.zoomable {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  max-height: 200px;
-  height: auto;
-  width: auto;
+/* モーダル背景 */
+#image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.zoomable:hover {
-  transform: scale(1.2);
-  z-index: 1;
+/* 拡大画像 */
+#image-modal img {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 5% auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #fff;
+  transition: transform 0.3s;
 }
+
 
 footer {
   margin-top: 2rem;
