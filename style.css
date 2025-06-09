@@ -103,6 +103,53 @@ nav.nav-menu {
   font-family: monospace;
 }
 
+.dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    z-index: 1000;
+    flex-direction: column;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown-content a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f2f2f2;
+  }
+
+  /* モバイル対応 */
+  @media screen and (max-width: 600px) {
+    .dropdown-content {
+      position: static;
+      display: none;
+      box-shadow: none;
+    }
+
+    .nav-menu.open .dropdown-content {
+      display: flex;
+    }
+  }
+
 /* 各メニューアイテム全体をflexボックスで囲む */
 nav.nav-menu a {
   color: #333;
