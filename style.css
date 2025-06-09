@@ -358,18 +358,22 @@ html {
   background-color: #f4f4f4;
 }
 
-/* ▼ PC: hover時に表示 */
+/* ▼ PC: hover時にのみ表示 */
 @media screen and (min-width: 601px) {
   .dropdown-parent:hover .dropdown-menu {
     display: block;
   }
 }
 
-/* ▼ モバイル: メニュー開閉状態に応じてドロップダウン表示 */
+/* ▼ モバイル: 明示的にドロップダウンを非表示 */
 @media screen and (max-width: 600px) {
-  .nav-menu.open .dropdown-parent .dropdown-menu {
+  .dropdown-menu {
+    display: none !important;
+  }
+
+  .nav-menu.open .dropdown-parent:hover .dropdown-menu {
+    display: block !important;
     position: static;
-    display: block;
     border: none;
     box-shadow: none;
     padding-left: 1rem;
