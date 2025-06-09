@@ -41,7 +41,6 @@ header {
   top: 1rem;
   right: 1rem;
   cursor: pointer;
-  color: #ccc8af;
 }
 
 nav.nav-menu {
@@ -53,43 +52,94 @@ nav.nav-menu {
   font-family: monospace;
 }
 
-nav.nav-menu a,
-nav.nav-menu .dropdown > a {
+nav.nav-menu a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
   position: relative;
   font-family: monospace;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-nav.nav-menu a::before,
-nav.nav-menu .dropdown > a::before {
+nav.nav-menu a::before {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 10%;
+  left: 0;
   width: 0%;
   height: 2px;
   background-color: #ccc8af;
   transition: width 0.3s ease;
 }
 
-nav.nav-menu a:hover::before,
-nav.nav-menu .dropdown:hover > a::before {
+nav.nav-menu a:hover::before {
+  width: 100%;
+}
+
+nav.nav-menu a+a {
+  border-left: 1px solid #ccc8af;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #ccc8af;
+  /* ← 追加：ハンバーガーの色 */
+}
+
+nav.nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  font-family: monospace;
+}
+
+/* 各メニューアイテム全体をflexボックスで囲む */
+nav.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: inherit;
+  position: relative;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ホバー時の下線 */
+nav.nav-menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /* 少し内側から */
+  width: 0%;
+  height: 2px;
+  background-color: #ccc8af;
+  transition: width 0.3s ease;
+}
+
+nav.nav-menu a:hover::before {
   width: 80%;
 }
 
-nav.nav-menu a + a,
-nav.nav-menu .dropdown + a {
+/* 縦棒のデザイン（a + a） */
+nav.nav-menu a+a {
   position: relative;
 }
 
-nav.nav-menu a + a::after,
-nav.nav-menu .dropdown + a::after {
+/* 縦棒線：リンクの前に表示 */
+nav.nav-menu a+a::after {
   content: '';
   position: absolute;
   left: -0.5rem;
@@ -99,50 +149,125 @@ nav.nav-menu .dropdown + a::after {
   background-color: #ccc8af;
 }
 
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  min-width: 250px;
-  z-index: 1000;
-  padding: 0.5rem 0;
-  border-radius: 4px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-}
-
-.dropdown-content a {
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-  color: #333;
-  text-decoration: none;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #f2f2f2;
-}
-
 main {
   margin-top: 2rem;
   padding: 0 1rem;
 }
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.no-bullet {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 6px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* コラム：青系 */
+.column-box {
+  border-left-color: #3399cc;
+  background-color: #eef6fb;
+}
+
+/* ちょっとブレイク：茶系 */
+.break-box {
+  border-left-color: #c19a6b;
+  background-color: #fdf6ee;
+}
+
+/* 注意：赤系 */
+.warning-box {
+  border-left-color: #e74c3c;
+  background-color: #fcebea;
+}
+
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  table-layout: fixed;
+}
+
+.food-table th,
+.food-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.food-table th {
+  background-color: #e0f0ff;
+}
+
+.food-table caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+/* モーダル背景 */
+#image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 拡大画像 */
+#image-modal img {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 5% auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #fff;
+  transition: transform 0.3s;
+}
+
 
 footer {
   margin-top: 2rem;
   text-align: center;
   color: #888;
   font-size: 0.9rem;
+}
+
+/* トップへ戻るボタン */
+html {
+  scroll-behavior: smooth;
 }
 
 .back-to-top {
@@ -166,6 +291,7 @@ footer {
   background-color: rgba(255, 255, 255, 1);
 }
 
+/* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   .menu-toggle {
     display: block;
@@ -184,32 +310,18 @@ footer {
     display: flex;
   }
 
-  nav.nav-menu a,
-  nav.nav-menu .dropdown > a {
+  /* モバイル時は縦棒と整列を解除 */
+  nav.nav-menu a {
     justify-content: flex-start;
     padding-left: 0;
   }
 
-  nav.nav-menu a::before,
-  nav.nav-menu .dropdown > a::before {
+  nav.nav-menu a::before {
     left: 0;
     width: 0;
   }
 
-  nav.nav-menu a + a::after,
-  nav.nav-menu .dropdown + a::after {
+  nav.nav-menu a+a::after {
     content: none;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    padding-left: 1rem;
-    display: none;
-    background: none;
-  }
-
-  nav.nav-menu.open .dropdown-content {
-    display: flex;
   }
 }
