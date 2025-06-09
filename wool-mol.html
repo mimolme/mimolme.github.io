@@ -24,7 +24,7 @@
         <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
         <nav class="nav-menu">
             <a href="https://mimolme.github.io">もるらぼ</a>
-            <a href="food-environment.html">食べ物と環境</a>
+            <a href="feeding-environment_toc.html">食べ物と環境</a>
             <a href="health-illness.html">健康と病気</a>
             <a href="mol-log.html">もるログ</a>
             <a href="wool-mol.html">羊毛モル</a>
@@ -40,45 +40,42 @@
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol2.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol2.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol2.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol3.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol3.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol3.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol4.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol4.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol4.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol5.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol5.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol5.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol6.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol6.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol6.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-mol7.jpg" alt="woolMol"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-mol7.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-mol7.jpg" alt="woolMol" height="200px"
+                        style="width: auto;"></a>
                 </div>
                 <div>
-                    <img class="modal-image" src="https://mimolme.github.io/img/tips/wool-capy.jpg" alt="woolCapy"
-                        height="200px" style="width: auto;">
+                    <a href="https://mimolme.github.io/img/tips/wool-capy.jpg" target="_blank"><img src="https://mimolme.github.io/img/tips/wool-capy.jpg" alt="woolCapy" height="200px"
+                        style="width: auto;"></a>
                 </div>
         </section>
 
 
         <a href="#top" class="back-to-top">▲</a>
     </main>
-    <div id="image-modal">
-  <img src="" alt="拡大画像">
-</div>
 
     <footer>
         <p>&copy; 2023-2025 mimolme</p>
@@ -91,23 +88,6 @@
             nav.classList.toggle('open');
         });
     </script>
-    <script>
-  const modal = document.getElementById('image-modal');
-  const modalImg = modal.querySelector('img');
-
-  document.querySelectorAll('.modal-image').forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-    });
-  });
-
-  modal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-</script>
-
 </body>
 
 </html>
