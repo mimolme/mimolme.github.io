@@ -1,14 +1,19 @@
+/* 基本設定 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica Neue", sans-serif;
-  margin: 0;
+  margin: auto;
   padding: 1rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
   max-width: 960px;
-  margin: auto;
 }
 
+/* リンク設定 */
 a {
   color: #008697;
 }
@@ -21,6 +26,7 @@ a:visited {
   color: #ED7478;
 }
 
+/* ヘッダーとトップ画像 */
 header {
   position: relative;
 }
@@ -32,56 +38,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-}
-
-nav.nav-menu {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding-left: 1rem;
-  font-family: monospace;
-}
-
-nav.nav-menu a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  position: relative;
-  font-family: monospace;
-}
-
-nav.nav-menu a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #ccc8af;
-  transition: width 0.3s ease;
-}
-
-nav.nav-menu a:hover::before {
-  width: 100%;
-}
-
-nav.nav-menu a+a {
-  border-left: 1px solid #ccc8af;
-  padding-left: 1rem;
-  margin-left: 0.5rem;
-}
-
+/* ハンバーガーメニュー */
 .menu-toggle {
   display: none;
   background: none;
@@ -92,18 +49,18 @@ nav.nav-menu a+a {
   right: 1rem;
   cursor: pointer;
   color: #ccc8af;
-  /* ← 追加：ハンバーガーの色 */
 }
 
+/* ナビゲーションメニュー */
 nav.nav-menu {
   display: flex;
   justify-content: flex-start;
+  gap: 1rem;
   flex-wrap: wrap;
   padding-left: 1rem;
   font-family: monospace;
 }
 
-/* 各メニューアイテム全体をflexボックスで囲む */
 nav.nav-menu a {
   color: #333;
   text-decoration: none;
@@ -122,7 +79,6 @@ nav.nav-menu a::before {
   position: absolute;
   bottom: 0;
   left: 10%;
-  /* 少し内側から */
   width: 0%;
   height: 2px;
   background-color: #ccc8af;
@@ -133,13 +89,12 @@ nav.nav-menu a:hover::before {
   width: 80%;
 }
 
-/* 縦棒のデザイン（a + a） */
-nav.nav-menu a+a {
+/* 縦棒デザイン */
+nav.nav-menu a + a {
   position: relative;
 }
 
-/* 縦棒線：リンクの前に表示 */
-nav.nav-menu a+a::after {
+nav.nav-menu a + a::after {
   content: '';
   position: absolute;
   left: -0.5rem;
@@ -149,11 +104,13 @@ nav.nav-menu a+a::after {
   background-color: #ccc8af;
 }
 
+/* メイン */
 main {
   margin-top: 2rem;
   padding: 0 1rem;
 }
 
+/* テーブル系 */
 .table-container {
   width: 100%;
   overflow-x: auto;
@@ -177,11 +134,13 @@ th {
   background-color: #f2f2f2;
 }
 
+/* リストの装飾なし */
 .no-bullet {
   list-style: none;
   padding-left: 0;
 }
 
+/* メッセージボックス */
 .box {
   padding: 1rem;
   margin: 1.5rem 0;
@@ -190,24 +149,27 @@ th {
   background-color: #f9f9f9;
 }
 
-/* コラム：青系 */
 .column-box {
   border-left-color: #3399cc;
   background-color: #eef6fb;
 }
 
-/* ちょっとブレイク：茶系 */
 .break-box {
   border-left-color: #c19a6b;
   background-color: #fdf6ee;
 }
 
-/* 注意：赤系 */
+.other-box {
+  border-left-color: #00ced1;
+  background-color: #e6ffff;
+}
+
 .warning-box {
-  border-left-color: #e74c3c;
+  border-left-color: #ff6347;
   background-color: #fcebea;
 }
 
+/* フード表 */
 .food-table {
   width: 100%;
   border-collapse: collapse;
@@ -233,6 +195,7 @@ th {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+
 /* モーダル背景 */
 #image-modal {
   display: none;
@@ -257,7 +220,7 @@ th {
   transition: transform 0.3s;
 }
 
-
+/* フッター */
 footer {
   margin-top: 2rem;
   text-align: center;
@@ -266,10 +229,6 @@ footer {
 }
 
 /* トップへ戻るボタン */
-html {
-  scroll-behavior: smooth;
-}
-
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -291,7 +250,7 @@ html {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* レスポンシブ対応 */
+/* モバイル対応 */
 @media screen and (max-width: 600px) {
   .menu-toggle {
     display: block;
@@ -310,7 +269,6 @@ html {
     display: flex;
   }
 
-  /* モバイル時は縦棒と整列を解除 */
   nav.nav-menu a {
     justify-content: flex-start;
     padding-left: 0;
@@ -321,7 +279,7 @@ html {
     width: 0;
   }
 
-  nav.nav-menu a+a::after {
+  nav.nav-menu a + a::after {
     content: none;
   }
 }
