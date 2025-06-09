@@ -41,6 +41,56 @@ header {
   top: 1rem;
   right: 1rem;
   cursor: pointer;
+}
+
+nav.nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  font-family: monospace;
+}
+
+nav.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  position: relative;
+  font-family: monospace;
+}
+
+nav.nav-menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ccc8af;
+  transition: width 0.3s ease;
+}
+
+nav.nav-menu a:hover::before {
+  width: 100%;
+}
+
+nav.nav-menu a+a {
+  border-left: 1px solid #ccc8af;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
   color: #ccc8af;
   /* ← 追加：ハンバーガーの色 */
 }
@@ -142,7 +192,7 @@ th {
 
 /* コラム：青系 */
 .column-box {
-  border-left-color: #00ced1;
+  border-left-color: #3399cc;
   background-color: #eef6fb;
 }
 
@@ -154,7 +204,7 @@ th {
 
 /* 注意：赤系 */
 .warning-box {
-  border-left-color: #ff6347;
+  border-left-color: #e74c3c;
   background-color: #fcebea;
 }
 
