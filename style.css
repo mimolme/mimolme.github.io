@@ -325,3 +325,53 @@ html {
     content: none;
   }
 }
+/* ▼ ドロップダウン全体の親要素 */
+.dropdown-parent {
+  position: relative;
+  display: inline-block;
+}
+
+/* ▼ 子メニュー（初期非表示） */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc8af;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 220px;
+  white-space: nowrap;
+}
+
+/* ▼ 子リンクのデザイン */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-family: monospace;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f4f4f4;
+}
+
+/* ▼ PC: hover時に表示 */
+@media screen and (min-width: 601px) {
+  .dropdown-parent:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* ▼ モバイル: メニュー開閉状態に応じてドロップダウン表示 */
+@media screen and (max-width: 600px) {
+  .nav-menu.open .dropdown-parent .dropdown-menu {
+    position: static;
+    display: block;
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+}
