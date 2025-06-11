@@ -124,6 +124,11 @@ nav.nav-menu {
   white-space: nowrap;
   color: #737373;
   text-decoration: none;
+  position: relative; /* 念のため入れておく */
+}
+/* 下線アニメーションを除外 */
+.submenu li a::after {
+  content: none !important;
 }
 
 .submenu li a:hover {
