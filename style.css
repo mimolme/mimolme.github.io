@@ -56,7 +56,7 @@ nav.nav-menu {
   position: relative;
 }
 
-/* ✅ 縦棒2本（短・長）＋余白付き */
+/* 縦棒2本 */
 .nav-menu > *:not(:first-child)::before {
   content: '‖';
   color: #ccc8af;
@@ -68,7 +68,7 @@ nav.nav-menu {
   white-space: pre;
 }
 
-/* ✅ 下線アニメーション（aタグ） */
+/* 下線アニメーション（aタグ） */
 .nav-menu a {
   color: #333;
   text-decoration: none;
@@ -96,7 +96,7 @@ nav.nav-menu {
   width: 80%;
 }
 
-/* ✅ ドロップダウン構造 */
+/* ドロップダウン構造 */
 .dropdown {
   position: relative;
 }
@@ -110,10 +110,13 @@ nav.nav-menu {
   padding: 0;
   list-style: none;
   background-color: white;
-  border: 1px solid #ccc;
+  border: none;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   width: max-content;
+  border-radius: 4px;
 }
+
 
 .submenu li a {
   display: block;
@@ -268,7 +271,7 @@ html {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* ✅ モバイル対応 */
+/* モバイル対応 */
 @media screen and (max-width: 600px) {
   .menu-toggle {
     display: block;
