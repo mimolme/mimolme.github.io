@@ -13,12 +13,12 @@ a {
   color: #008697;
 }
 
-a:hover {
-  color: #699196;
-}
-
 a:visited {
   color: #ED7478;
+}
+
+a:hover {
+  color: #699196;
 }
 
 header {
@@ -41,58 +41,7 @@ header {
   top: 1rem;
   right: 1rem;
   cursor: pointer;
-}
-
-nav.nav-menu {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding-left: 1rem;
-  font-family: monospace;
-}
-
-nav.nav-menu a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  position: relative;
-  font-family: monospace;
-}
-
-nav.nav-menu a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #ccc8af;
-  transition: width 0.3s ease;
-}
-
-nav.nav-menu a:hover::before {
-  width: 100%;
-}
-
-nav.nav-menu a+a {
-  border-left: 1px solid #ccc8af;
-  padding-left: 1rem;
-  margin-left: 0.5rem;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
   color: #ccc8af;
-  /* ← 追加：ハンバーガーの色 */
 }
 
 nav.nav-menu {
@@ -103,50 +52,84 @@ nav.nav-menu {
   font-family: monospace;
 }
 
-/* 各メニューアイテム全体をflexボックスで囲む */
-nav.nav-menu a {
+.nav-menu > * {
+  position: relative;
+}
+
+/* ✅ 縦棒2本（短・長）＋余白付き */
+.nav-menu > *:not(:first-child)::before {
+  content: '‖';
+  color: #ccc8af;
+  font-size: 0.9rem;
+  position: absolute;
+  left: -0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: pre;
+}
+
+/* ✅ 下線アニメーション（aタグ） */
+.nav-menu a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
   font-family: inherit;
-  position: relative;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-/* ホバー時の下線 */
-nav.nav-menu a::before {
+.nav-menu a::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 10%;
-  /* 少し内側から */
   width: 0%;
   height: 2px;
   background-color: #ccc8af;
   transition: width 0.3s ease;
 }
 
-nav.nav-menu a:hover::before {
+.nav-menu a:hover::after {
   width: 80%;
 }
 
-/* 縦棒のデザイン（a + a） */
-nav.nav-menu a+a {
+/* ✅ ドロップダウン構造 */
+.dropdown {
   position: relative;
 }
 
-/* 縦棒線：リンクの前に表示 */
-nav.nav-menu a+a::after {
-  content: '';
+.submenu {
+  display: none;
   position: absolute;
-  left: -0.5rem;
-  top: 25%;
-  height: 50%;
-  width: 1px;
-  background-color: #ccc8af;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  width: max-content;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  color: #008697;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+  color: #699196;
+}
+
+.dropdown:hover .submenu {
+  display: block;
 }
 
 main {
@@ -190,19 +173,16 @@ th {
   background-color: #f9f9f9;
 }
 
-/* コラム：青系 */
 .column-box {
-  border-left-color: #3399cc;
+  border-left-color: #00ced1;
   background-color: #eef6fb;
 }
 
-/* ちょっとブレイク：茶系 */
 .break-box {
   border-left-color: #c19a6b;
   background-color: #fdf6ee;
 }
 
-/* 注意：赤系 */
 .warning-box {
   border-left-color: #ff6347;
   background-color: #fcebea;
@@ -233,7 +213,7 @@ th {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-/* モーダル背景 */
+
 #image-modal {
   display: none;
   position: fixed;
@@ -246,7 +226,6 @@ th {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* 拡大画像 */
 #image-modal img {
   display: block;
   max-width: 90%;
@@ -257,7 +236,6 @@ th {
   transition: transform 0.3s;
 }
 
-
 footer {
   margin-top: 2rem;
   text-align: center;
@@ -265,7 +243,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* トップへ戻るボタン */
 html {
   scroll-behavior: smooth;
 }
@@ -291,7 +268,7 @@ html {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* レスポンシブ対応 */
+/* ✅ モバイル対応 */
 @media screen and (max-width: 600px) {
   .menu-toggle {
     display: block;
@@ -310,18 +287,18 @@ html {
     display: flex;
   }
 
-  /* モバイル時は縦棒と整列を解除 */
+  /* モバイルでは縦棒を非表示 */
+  .nav-menu > *:not(:first-child)::before {
+    content: none;
+  }
+
   nav.nav-menu a {
     justify-content: flex-start;
     padding-left: 0;
   }
 
-  nav.nav-menu a::before {
+  nav.nav-menu a::after {
     left: 0;
     width: 0;
-  }
-
-  nav.nav-menu a+a::after {
-    content: none;
   }
 }
