@@ -33,7 +33,7 @@
       <img src="https://mimolme.github.io/img/food-environment.png" alt="FE_img" class="top-image">
     </a>
     <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-     <nav class="nav-menu">
+    <nav class="nav-menu">
       <a href="https://mimolme.github.io">もるらぼ</a>
 
       <div class="dropdown">
@@ -100,16 +100,18 @@
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
         <div>
-          <img id="fig11" src="https://mimolme.github.io/img/tips/rem_drink1.jpg" alt="barleytea" height="200px"
-            style="width: auto;">
+          <a href="https://mimolme.github.io/img/tips/rem_drink1.jpg"><img id="fig11"
+              src="https://mimolme.github.io/img/tips/rem_drink1.jpg" alt="barleytea" height="200px"
+              style="width: auto;"></a>
           <div>
             <small>図11. 水と麦茶がある環境</small>
           </div>
         </div>
 
         <div>
-          <img id="fig12" src="https://mimolme.github.io/img/tips/rem_drink2.jpg" alt="soymilk" height="200px"
-            style="width: auto;">
+          <a href="https://mimolme.github.io/img/tips/rem_drink2.jpg"><img id="fig12"
+              src="https://mimolme.github.io/img/tips/rem_drink2.jpg" alt="soymilk" height="200px"
+              style="width: auto;"></a>
           <div>
             <small>図12. レムは豆乳が好き</small>
           </div>
@@ -119,6 +121,11 @@
     </section>
 
     <a href="#top" class="back-to-top">▲</a>
+    <!-- モーダル -->
+    <div id="modal" class="modal">
+      <img class="modal-content" id="modal-img">
+    </div>
+
   </main>
   </section>
   <footer>
@@ -130,6 +137,21 @@
     const nav = document.querySelector('.nav-menu');
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
+    });
+    // モーダル表示
+    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "block";
+        modalImg.src = this.href;
+      });
+    });
+
+    // モーダル画像クリックで閉じる
+    document.getElementById("modal-img").addEventListener("click", function () {
+      document.getElementById("modal").style.display = "none";
     });
   </script>
 </body>
