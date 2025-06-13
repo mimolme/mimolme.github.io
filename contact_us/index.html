@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <meta name="description" content="もるらぼは，モルモットと一緒に暮らすために必要な情報を提供するサイトです。">
+    <meta name="keywords"
+        content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
+
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="top"></div>
+    <header>
+        <a href="https://mimolme.github.io">
+            <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
+        </a>
+        <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+        <nav class="nav-menu">
+      <a href="https://mimolme.github.io">もるらぼ</a>
+
+      <div class="dropdown">
+        <a href="/feeding-environment_toc">食べ物と環境</a>
+        <ul class="submenu">
+          <li><a href="/feeding-environment_feeding">1. モルモットの食べ物</a></li>
+          <li><a href="/feeding-environment_drink">2. モルモットの飲み物</a></li>
+          <li><a href="/feeding-environment_environment">3. モルモットの生育環境</a></li>
+          <li><a href="/feeding-environment_tools">4. モルモットのケアに必要なツール</a></li>
+        </ul>
+      </div>
+
+      <a href="/health-disease">健康と病気</a>
+      <a href="/mol-log">もるログ</a>
+      <a href="/wool-mol">羊毛モル</a>
+      <a href="/terms_of_use">利用規約</a>
+      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+    </nav>
+    </header>
+    <main>
+        <section>
+            <h2 style="color: #282828;">お問い合わせ</h2>
+            <P style="color: #888888;"><i class="fa-solid fa-envelope"></i>&nbsp;mimolme.v2[at]gmail.com</p>
+            <small>必ず件名と氏名を記載してください。内容によってはご返信できない場合があります。予めご了承ください。</small>
+        </section>
+
+        <a href="#top" class="back-to-top">▲</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023-2025 mimolme</p>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-menu');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
