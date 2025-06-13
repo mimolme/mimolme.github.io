@@ -32,24 +32,24 @@
         </a>
         <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
         <nav class="nav-menu">
-      <a href="https://mimolme.github.io">もるらぼ</a>
+            <a href="https://mimolme.github.io">もるらぼ</a>
 
-      <div class="dropdown">
-        <a href="/feeding-environment_toc">食べ物と環境</a>
-        <ul class="submenu">
-          <li><a href="/feeding-environment_feeding">1. モルモットの食べ物</a></li>
-          <li><a href="/feeding-environment_drink">2. モルモットの飲み物</a></li>
-          <li><a href="/feeding-environment_environment">3. モルモットの生育環境</a></li>
-          <li><a href="/feeding-environment_tools">4. モルモットのケアに必要なツール</a></li>
-        </ul>
-      </div>
+            <div class="dropdown">
+                <a href="/feeding-environment_toc">食べ物と環境</a>
+                <ul class="submenu">
+                    <li><a href="/feeding-environment_feeding">1. モルモットの食べ物</a></li>
+                    <li><a href="/feeding-environment_drink">2. モルモットの飲み物</a></li>
+                    <li><a href="/feeding-environment_environment">3. モルモットの生育環境</a></li>
+                    <li><a href="/feeding-environment_tools">4. モルモットのケアに必要なツール</a></li>
+                </ul>
+            </div>
 
-      <a href="/health-disease">健康と病気</a>
-      <a href="/mol-log">もるログ</a>
-      <a href="/wool-mol">羊毛モル</a>
-      <a href="/terms_of_use">利用規約</a>
-      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
-    </nav>
+            <a href="/health-disease">健康と病気</a>
+            <a href="/mol-log">もるログ</a>
+            <a href="/wool-mol">羊毛モル</a>
+            <a href="/terms_of_use">利用規約</a>
+            <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+        </nav>
     </header>
     <main>
         <section>
@@ -103,7 +103,6 @@
         <a href="#top" class="back-to-top">▲</a>
         <!-- モーダル -->
         <div id="modal" class="modal">
-            <span class="close">&times;</span>
             <img class="modal-content" id="modal-img">
         </div>
     </main>
@@ -118,7 +117,7 @@
         toggle.addEventListener('click', () => {
             nav.classList.toggle('open');
         });
-        // モーダル表示用
+        // モーダル表示
         document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -129,7 +128,8 @@
             });
         });
 
-        document.querySelector(".close").addEventListener("click", function () {
+        // モーダル画像クリックで閉じる
+        document.getElementById("modal-img").addEventListener("click", function () {
             document.getElementById("modal").style.display = "none";
         });
 
