@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健康と病気</title>
+  <meta name="description" content="もるらぼは，モルモットと一緒に暮らすために必要な情報を提供するサイトです。">
+  <meta name="keywords"
+    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの病気，モルモットのメンテナンス，モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
+
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-85BH18E352');
+  </script>
+</head>
+
+<body>
+  <div id="top"></div>
+  <header>
+    <a href="/health-disease">
+      <img src="https://mimolme.github.io/img/health-illness.png" alt="top_img" class="top-image">
+    </a>
+    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="https://mimolme.github.io">もるらぼ</a>
+
+      <div class="dropdown">
+        <a href="/feeding-environment">食べ物と環境</a>
+        <ul class="submenu">
+          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
+          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
+          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
+          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="/health-disease">健康と病気</a>
+        <ul class="submenu">
+          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
+          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
+          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
+          <li><a href="/health-disease/diseases">4. 病気</a></li>
+        </ul>
+      </div>
+      <a href="/mol-log">もるログ</a>
+      <a href="/wool-mol">羊毛モル</a>
+      <a href="/terms_of_use">利用規約</a>
+      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+    </nav>
+  </header>
+  <main>
+    <h2>2. 豆乳トレーニング</h2>
+    <section>
+      <p>
+        無調整豆乳はタンパク質を効率よく摂取できます。さらにシリンジから水分を補給する練習にもなります。ぜひ幼い頃から試みてください。
+      </p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+        <div>
+          <a href="https://mimolme.github.io/img/tips/soyMilkTraining.jpg"><img id="fig2"
+              src="https://mimolme.github.io/img/tips/soyMilkTraining.jpg" alt="豆乳トレーニング" height="200px"
+              style="width: auto;"></a>
+          <div>
+            <small>図2. 豆乳トレーニング</small>
+          </div>
+        </div>
+
+        <a href="#top" class="back-to-top">▲</a>
+        <!-- モーダル -->
+        <div id="modal" class="modal">
+          <img class="modal-content" id="modal-img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023-2025 mimolme</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    // モーダル表示
+    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "block";
+        modalImg.src = this.href;
+      });
+    });
+
+    // モーダル画像クリックで閉じる
+    document.getElementById("modal-img").addEventListener("click", function () {
+      document.getElementById("modal").style.display = "none";
+    });
+  </script>
+</body>
+
+</html>
