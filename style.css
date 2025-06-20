@@ -312,6 +312,8 @@ html {
   nav.nav-menu a {
     justify-content: flex-start;
     padding-left: 0;
+    width: 100%;              /* ← 追加！ */
+    box-sizing: border-box;   /* ← 追加！ */
   }
 
   nav.nav-menu a::after {
