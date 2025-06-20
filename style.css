@@ -56,7 +56,6 @@ nav.nav-menu {
   position: relative;
 }
 
-/* 縦棒2本 */
 .nav-menu > *:not(:first-child)::before {
   content: '‖';
   color: #ccc8af;
@@ -68,7 +67,6 @@ nav.nav-menu {
   white-space: pre;
 }
 
-/* 下線アニメーション（aタグ） */
 .nav-menu a {
   color: #333;
   text-decoration: none;
@@ -96,7 +94,6 @@ nav.nav-menu {
   width: 80%;
 }
 
-/* ドロップダウン構造 */
 .dropdown {
   position: relative;
 }
@@ -117,16 +114,15 @@ nav.nav-menu {
   border-radius: 4px;
 }
 
-
 .submenu li a {
   display: block;
   padding: 0.5rem 1rem;
   white-space: nowrap;
   color: #737373;
   text-decoration: none;
-  position: relative; /* 念のため入れておく */
+  position: relative;
 }
-/* 下線アニメーションを除外 */
+
 .submenu li a::after {
   content: none !important;
 }
@@ -280,6 +276,14 @@ html {
 @media screen and (max-width: 600px) {
   .menu-toggle {
     display: block;
+    background: rgba(255, 255, 255, 0.5); /* 半透明 */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    padding: 0.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
   }
 
   nav.nav-menu {
@@ -295,7 +299,6 @@ html {
     display: flex;
   }
 
-  /* モバイルでは縦棒を非表示 */
   .nav-menu > *:not(:first-child)::before {
     content: none;
   }
