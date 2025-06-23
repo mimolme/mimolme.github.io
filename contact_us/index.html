@@ -86,21 +86,6 @@
         nav.classList.remove('open');
       }
     });
-    // モーダル表示（画像クリック）
-    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        modal.style.display = "block";
-        modalImg.src = this.href;
-      });
-    });
-
-    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
-    document.getElementById("modal").addEventListener("click", function () {
-      this.style.display = "none";
-    });
   </script>
 </body>
 
