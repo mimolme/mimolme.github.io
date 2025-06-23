@@ -119,26 +119,39 @@
     </footer>
 
     <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.nav-menu');
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-        // モーダル表示
-        document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const modal = document.getElementById("modal");
-                const modalImg = document.getElementById("modal-img");
-                modal.style.display = "block";
-                modalImg.src = this.href;
-            });
-        });
+        // ハンバーガーメニューの開閉
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-menu');
 
-        // モーダル画像クリックで閉じる
-        document.getElementById("modal-img").addEventListener("click", function () {
-            document.getElementById("modal").style.display = "none";
-        });
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+// メニュー外クリックで閉じる
+document.addEventListener('click', (e) => {
+  const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+  if (!isClickInsideMenu && nav.classList.contains('open')) {
+    nav.classList.remove('open');
+  }
+});
+// モーダル表示（画像クリック）
+document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modal.style.display = "block";
+    modalImg.src = this.href;
+  });
+});
+
+// モーダルの背景クリックでも閉じる（画像以外をクリック）
+const modal = document.getElementById("modal");
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
     </script>
 
