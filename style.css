@@ -325,6 +325,9 @@ html {
     display: block;
     width: 100%;
     box-sizing: border-box;
+    padding-left: 0; /* 任意：見た目を他と揃える */
+    text-align: left;
+  }sizing: border-box;
   }
 }
 
