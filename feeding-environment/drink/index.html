@@ -140,12 +140,22 @@
   </footer>
 
   <script>
+    // ハンバーガーメニューの開閉
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-menu');
+
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
-    // モーダル表示
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+      if (!isClickInsideMenu && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+    // モーダル表示（画像クリック）
     document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -156,9 +166,9 @@
       });
     });
 
-    // モーダル画像クリックで閉じる
-    document.getElementById("modal-img").addEventListener("click", function () {
-      document.getElementById("modal").style.display = "none";
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+      this.style.display = "none";
     });
   </script>
 </body>
