@@ -2,16 +2,16 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ</title>
-    <meta name="description" content="もるらぼは，モルモットと一緒に暮らすために必要な情報を提供するサイトです。">
-    <meta name="keywords"
-        content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ</title>
+  <meta name="description" content="もるらぼは，モルモットと一緒に暮らすために必要な情報を提供するサイトです。">
+  <meta name="keywords"
+    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,13 +23,13 @@
 </head>
 
 <body>
-    <div id="top"></div>
-    <header>
-        <a href="https://mimolme.github.io">
-            <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
-        </a>
-        <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-        <nav class="nav-menu">
+  <div id="top"></div>
+  <header>
+    <a href="https://mimolme.github.io">
+      <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
+    </a>
+    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+    <nav class="nav-menu">
       <a href="https://mimolme.github.io">もるらぼ</a>
 
       <div class="dropdown">
@@ -55,28 +55,53 @@
       <a href="/terms_of_use">利用規約</a>
       <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
     </nav>
-    </header>
-    <main>
-        <section>
-            <h2 style="color: #282828;">お問い合わせ</h2>
-            <P style="color: #888888;"><i class="fa-solid fa-envelope"></i>&nbsp;mimolme.v2[at]gmail.com</p>
-            <small>必ず件名と氏名を記載してください。内容によってはご返信できない場合があります。予めご了承ください。</small>
-        </section>
+  </header>
+  <main>
+    <section>
+      <h2 style="color: #282828;">お問い合わせ</h2>
+      <P style="color: #888888;"><i class="fa-solid fa-envelope"></i>&nbsp;mimolme.v2[at]gmail.com</p>
+      <small>必ず件名と氏名を記載してください。内容によってはご返信できない場合があります。予めご了承ください。</small>
+    </section>
 
-        <a href="#top" class="back-to-top">▲</a>
-    </main>
+    <a href="#top" class="back-to-top">▲</a>
+  </main>
 
-    <footer>
-        <p>&copy; 2023-2025 mimolme</p>
-    </footer>
+  <footer>
+    <p>&copy; 2023-2025 mimolme</p>
+  </footer>
 
-    <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.nav-menu');
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-    </script>
+  <script>
+    // ハンバーガーメニューの開閉
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+      if (!isClickInsideMenu && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+    // モーダル表示（画像クリック）
+    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "block";
+        modalImg.src = this.href;
+      });
+    });
+
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+      this.style.display = "none";
+    });
+  </script>
 </body>
 
 </html>
