@@ -149,8 +149,8 @@
         「モルモットに近づくとくしゃみが止まらない」，「モルモットを素肌で抱っこすると湿疹が出る」といった経験はありませんか？それはモルモットに対するアレルギーである可能性があります。かくいう私自身も実は「モルモットアレルギー」のようです。皮膚の症状に関しては個体に関わらず，場合によっては服越しでも，必ず生じます。一方で「くしゃみ・鼻水」に関しては必ず生じるわけではありません。むしろチモシーの粉塵で生じている気がします。ところで私はモルモットと暮らすまで恥ずかしながらモルモットに興味がありませんでした。ですので動物園でモルモットと触れ合うといった経験もありませんでした。従ってモルモットと暮らすとくしゃみや鼻水，湿疹が出るとは思いもよりませんでした。
       </p>
       <p>ところで，どれくらいのヒトがモルモットアレルギーなのでしょう？一般のヒトの有病率に関する調査はすぐには見当たりませんでしたが，<a
-          href="https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html">実験動物関係の従事者のうち，モルモット担当者の有病率は約10%であることを示唆する研究</a>や<a
-          href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cea.13873">猫・犬アレルギー患者の73%がモルモットアレルゲンにIgE陽性との報告</a><sup>※1</sup>もあります。検査項目に「モルモット」がある皮膚科/耳鼻咽喉科は多くありませんが，もしアレルギー検査をしたいけれど「モルモット」がアレルギー検査項目に含まれている病院が遠方にしかない場合，view39など一般的なアレルギー検査を受けてみて「犬・猫」項目の結果を参考にしてみても良いかもしれません。<br><sup>※1:
+          href="https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html">実験動物関係の従事者のうちモルモット担当者の有病率は約10%であることを示唆する研究</a>や<a
+          href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cea.13873">猫・犬アレルギー患者の73%がモルモットアレルゲンにIgE陽性との報告</a><sup>※1</sup>もあります。検査項目に「モルモット」がある皮膚科/耳鼻咽喉科は多くありませんが，もしアレルギー検査をしたいけれど「モルモット」がアレルギー検査項目に含まれている病院が遠方にしかない場合，view39など一般的なアレルギー検査を受けてみて「犬・猫」項目の結果を参考にしてみても良いかもしれませんね。<br><sup>※1:
           猫・犬アレルゲンとの交差反応で陽性になっただけのケースが混在</sup></p>
       <p>
         とにかく，あなたやあなたの家族がモルモットアレルギーである可能性は十分にあります。また，一緒に暮らしているうちにアレルギー性鼻炎や気管支炎喘息などを発症するケースも少なくないようです。あなたは嫌になりませんか？通院しながらモルモットと暮らしたいですか？モルモットと暮らすならばこうしたリスクも念頭に置いておく必要があるのです。
@@ -184,10 +184,20 @@
   </footer>
 
   <script>
+    // ハンバーガーメニューの開閉
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-menu');
+
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
+    });
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+      if (!isClickInsideMenu && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
     });
   </script>
 </body>
