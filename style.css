@@ -49,7 +49,7 @@ nav.nav-menu {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 1rem;
-  font-family: monospace;
+  font-family: inherit,monospace,sans-serif;
 }
 
 .nav-menu > * {
@@ -59,7 +59,7 @@ nav.nav-menu {
 .nav-menu > *:not(:first-child)::before {
   content: '‖';
   color: #ccc8af;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   position: absolute;
   left: -0.7rem;
   top: 50%;
@@ -71,7 +71,8 @@ nav.nav-menu {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-family: inherit;
+  font-family: inherit,monospace,sans-serif;
+  font-size: 0.8rem;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
