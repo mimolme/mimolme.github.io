@@ -145,13 +145,12 @@ document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
   });
 });
 
-// モーダルの背景クリックでも閉じる（画像以外をクリック）
-const modal = document.getElementById("modal");
-modal.addEventListener("click", function (e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
+// モーダル全体をクリックしたら閉じる（画像も含めてOK）
+document.getElementById("modal").addEventListener("click", function () {
+  this.style.display = "none";
 });
+
+
 
     </script>
 
