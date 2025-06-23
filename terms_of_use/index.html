@@ -108,10 +108,20 @@
   </footer>
 
   <script>
+    // ハンバーガーメニューの開閉
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-menu');
+
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
+    });
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+      if (!isClickInsideMenu && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
     });
   </script>
 </body>
