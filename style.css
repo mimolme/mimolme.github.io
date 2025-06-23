@@ -284,7 +284,7 @@ html {
     z-index: 1001;
     padding: 0.5rem;
     border-radius: 8px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); 
   }
 
   nav.nav-menu {
@@ -320,14 +320,6 @@ html {
   nav.nav-menu a::after {
     left: 0;
     width: 0;
-  }
-  .dropdown > a {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 0; /* 任意：見た目を他と揃える */
-    text-align: left;
-  }sizing: border-box;
   }
 }
 
