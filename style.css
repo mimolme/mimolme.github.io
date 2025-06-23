@@ -321,6 +321,11 @@ html {
     left: 0;
     width: 0;
   }
+  .dropdown > a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 /* モーダル */
