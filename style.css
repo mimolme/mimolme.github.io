@@ -144,14 +144,14 @@ main {
 
 /* 見出し(h2用) */
 .section-wrapper {
-  border-top: 1px solid #bcbcbc;
-  border-bottom: 1px solid #bcbcbc;
+  border-top: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
 }
 
 .section-title {
-  background-color: #bcbcbc;
+  background-color: #a7a7a7;
   color: #fff;
   padding: 0.5rem;
   margin: 0;
@@ -221,8 +221,8 @@ th {
 }
 
 .warning-box {
-  border-left-color: #ff6347;
-  background-color: #fcebea;
+  border-left-color: #ff735a;
+  background-color: #faedec;
 }
 
 .food-table {
