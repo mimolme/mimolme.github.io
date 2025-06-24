@@ -413,3 +413,8 @@ html {
 .references li {
   margin-bottom: 0.5rem;
 }
+
+.references a {
+  word-break: break-all;       /* ← 単語の途中でも改行可能にする */
+  overflow-wrap: break-word;   /* ← 古いブラウザにも対応 */
+}
