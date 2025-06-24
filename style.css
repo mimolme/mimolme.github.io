@@ -161,9 +161,9 @@ main {
 }
 /* 見出し(h3用) */
 .box-heading {
-  background-color: #e6f4f9;
+  background-color: #ffffff;
   border-left: 8px solid #2eafef;
-  padding: 0.2rem 1rem;
+  padding: 0.1rem 0.5rem;
   font-weight: bold;
   margin: 1rem 0;
 }
