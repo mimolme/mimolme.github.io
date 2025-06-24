@@ -162,10 +162,10 @@ main {
 /* 見出し(h3用) */
 .box-heading {
   background-color: #e6f4f9;
-  border-left: 8px solid #1e90d6;
-  padding: 0.75rem 1rem;
+  border-left: 8px solid #2eafef;
+  padding: 0.5rem 1rem;
   font-weight: bold;
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
 }
 
 /* マーカー */
