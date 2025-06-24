@@ -156,16 +156,16 @@ main {
   padding: 0.5rem;
   margin: 0;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 /* 見出し(h3用) */
 .box-heading {
   background-color: #ffffff;
-  border-left: 8px solid #2eafef;
+  border-left: 5px solid #2eafef;
   padding: 0.2rem 1rem;
   font-weight: bold;
-  margin: 0.2rem 0;
+  margin: 1rem 0;
 }
 
 /* マーカー */
