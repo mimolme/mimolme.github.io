@@ -161,12 +161,12 @@ main {
 }
 /* 見出し(h3用) */
 .box-heading {
-  height: 0.5rem;
+  height: 1rem;
   background-color: #ffffff;
   border-left: 8px solid #2eafef;
   padding: 0.2rem 1rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 /* マーカー */
