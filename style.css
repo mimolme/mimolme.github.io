@@ -163,10 +163,15 @@ main {
 .box-heading {
   background-color: #ffffff;
   border-left: 8px solid #2eafef;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   font-weight: bold;
   margin: 0.5rem 0;
 }
+
+.box-heading h3 {
+  margin: 0;
+}
+
 
 /* マーカー */
 .marker {
