@@ -163,9 +163,9 @@ main {
 .box-heading {
   background-color: #e6f4f9;
   border-left: 8px solid #2eafef;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   font-weight: bold;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 /* マーカー */
