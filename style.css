@@ -142,6 +142,25 @@ main {
   padding: 0 1rem;
 }
 
+.section-wrapper {
+  border-top: 1px solid #4aa9a0;
+  border-bottom: 1px solid #4aa9a0;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.section-title {
+  background-color: #4aa9a0;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
 .table-container {
   width: 100%;
   overflow-x: auto;
@@ -313,8 +332,8 @@ html {
   nav.nav-menu a {
     justify-content: flex-start;
     padding-left: 0;
-    width: 100%;              /* ← 追加！ */
-    box-sizing: border-box;   /* ← 追加！ */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   nav.nav-menu a::after {
