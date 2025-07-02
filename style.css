@@ -49,14 +49,14 @@ nav.nav-menu {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 1rem;
-  font-family: inherit,monospace,sans-serif;
+  font-family: inherit, monospace, sans-serif;
 }
 
-.nav-menu > * {
+.nav-menu>* {
   position: relative;
 }
 
-.nav-menu > *:not(:first-child)::before {
+.nav-menu>*:not(:first-child)::before {
   content: '‖';
   color: #ccc8af;
   font-size: 0.8rem;
@@ -71,7 +71,7 @@ nav.nav-menu {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-family: inherit,monospace,sans-serif;
+  font-family: inherit, monospace, sans-serif;
   font-size: 0.8rem;
   padding: 0.5rem 1rem;
   display: flex;
@@ -144,10 +144,42 @@ main {
 
 /* 見出し(h2用) */
 .section-wrapper {
-  border-bottom: 2px solid #333;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  position: relative;
+  background-color: #fff;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-align: center;
 }
+
+.section-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 100%;  /* 要素のすぐ下 */
+  left: 1.5em;  /* 三角の位置は調整可能 */
+  width: 0;
+  height: 0;
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #eee;   /* 吹き出しの枠線部分 */
+}
+
+.section-wrapper::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 1px);  /* ボーダーにくっつける */
+  left: 1.5em;
+  width: 0;
+  height: 0;
+
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #fff;  /* 三角形の中を背景色で塗る */
+  z-index: 1;
+}
+
 
 .section-title {
   color: #333;
@@ -157,6 +189,7 @@ main {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 /* 見出し(h3用) */
 .box-heading {
   background-color: #ffffff;
@@ -319,7 +352,7 @@ html {
     z-index: 1001;
     padding: 0.5rem;
     border-radius: 8px;
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(4px);
   }
 
   nav.nav-menu {
@@ -341,7 +374,7 @@ html {
     display: flex;
   }
 
-  .nav-menu > *:not(:first-child)::before {
+  .nav-menu>*:not(:first-child)::before {
     content: none;
   }
 
@@ -356,17 +389,18 @@ html {
     left: 0;
     width: 0;
   }
-.dropdown {
-  width: 100%;
-}
 
-.dropdown > a {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-}
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown>a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
 }
 
 /* モーダル */
@@ -380,7 +414,7 @@ html {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -431,6 +465,8 @@ html {
 }
 
 .references a {
-  word-break: break-all;       /* ← 単語の途中でも改行可能にする */
-  overflow-wrap: break-word;   /* ← 古いブラウザにも対応 */
+  word-break: break-all;
+  /* ← 単語の途中でも改行可能にする */
+  overflow-wrap: break-word;
+  /* ← 古いブラウザにも対応 */
 }
