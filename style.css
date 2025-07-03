@@ -146,9 +146,9 @@ main {
 .section-wrapper {
   position: relative;
   background-color: #fff;
-  border-top: 2px solid #eee;
-  border-bottom: 2px solid #eee;
-  padding: 0.5rem 1rem;
+  border-top: 2px solid #cecece;
+  border-bottom: 2px solid #cecece;
+  padding: 0.1rem 1rem;
   font-weight: bold;
   text-align: center;
 }
@@ -163,7 +163,7 @@ main {
 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #eee;   /* 吹き出しの枠線部分 */
+  border-top: 10px solid #cecece;   /* 吹き出しの枠線部分 */
 }
 
 .section-wrapper::before {
