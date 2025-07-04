@@ -333,6 +333,12 @@ th {
   margin: 0 auto 4px;
 }
 
+.profiles thead tr:first-child th {
+  background-color: transparent;
+  border: none;
+}
+
+
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   .profiles table {
