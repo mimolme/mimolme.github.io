@@ -324,11 +324,11 @@ th {
 }
 
 .profiles .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ccc;
+  border: 1px solid #cecece;
   display: block;
   margin: 0 auto 4px;
 }
