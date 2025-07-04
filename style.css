@@ -307,6 +307,10 @@ th {
   padding: 10px;
   text-align: center;
   font-size: 14px;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .profiles th {
@@ -359,6 +363,9 @@ th {
   .profiles th,
   .profiles td {
     padding: 6px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
   }
 
   .profiles .label {
