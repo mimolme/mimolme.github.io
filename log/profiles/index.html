@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>もるログ</title>
+  <meta name="description" content="もるらぼは，モルモットと一緒に暮らすために必要な情報を提供するサイトです。">
+  <meta name="keywords"
+    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察，モルモットの体重，モルモットの音声，モルモットの訓練方法，モルモットのトイレトレーニング">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-85BH18E352');
+  </script>
+</head>
+
+<body>
+  <div id="top"></div>
+  <header>
+    <a href="/log">
+      <img src="https://mimolme.github.io/img/mol-log.png" alt="log" class="top-image">
+    </a>
+    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="https://mimolme.github.io">もるらぼ</a>
+
+      <div class="dropdown">
+        <a href="/feeding-environment">食べ物と環境</a>
+        <ul class="submenu">
+          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
+          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
+          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
+          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="/health-disease">健康と病気</a>
+        <ul class="submenu">
+          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
+          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
+          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
+          <li><a href="/health-disease/diseases">4. 病気</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="/log">もるログ</a>
+        <ul class="submenu">
+          <li><a href="/log/profiles">1. プロフィール</a></li>
+          <li><a href="/log/weightTracking">2. 体重の推移</a></li>
+          <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
+          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
+        </ul>
+      </div>
+      <a href="/wool-mol">羊毛モル</a>
+      <a href="/terms_of_use">利用規約</a>
+      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="section-wrapper">
+        <h2 id="feeding" class="section-title">
+          1. プロフィール
+        </h2>
+      </div>
+    </section>
+    <section>
+      <div class="box-heading">
+        <h3 id="mol">モル（mol）</h3>
+      </div>
+      <div class="table-container">
+        <table id="table1" class="profiles-table">
+        <tbody>
+          <tr>
+            <td>名前</td>
+            <td>mol</td>
+          </tr>
+          <tr>
+            <td>購入日</td>
+            <td>2018/6/28</td>
+          </tr>
+          <tr>
+            <td>価格</td>
+            <td>¥5,378</td>
+          </tr>
+          <tr>
+            <td>種類</td>
+            <td>イングリッシュ</td>
+          </tr>
+          <tr>
+            <td>性別</td>
+            <td>オス</td>
+          </tr>
+          <tr>
+            <td>誕生日</td>
+            <td>2018年5月下旬</td>
+          </tr>
+          <tr>
+            <td>出身地</td>
+            <td>台湾</td>
+          </tr>
+          <tr>
+            <td>経由</td>
+            <td>大阪府寝屋川市</td>
+          </tr>
+          <tr>
+            <td>命日</td>
+            <td>2023/9/19<br>（5歳3ヶ月25日）</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <a href="#top" class="back-to-top">▲</a>
+      <!-- モーダル -->
+      <div id="modal" class="modal">
+        <img class="modal-content" id="modal-img">
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023-2025 mimolme</p>
+  </footer>
+
+  <script>
+    // ハンバーガーメニューの開閉
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+      if (!isClickInsideMenu && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+    // モーダル表示（画像クリック）
+    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "block";
+        modalImg.src = this.href;
+      });
+    });
+
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+      this.style.display = "none";
+    });
+  </script>
+</body>
+
+</html>
