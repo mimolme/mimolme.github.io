@@ -156,32 +156,27 @@ main {
 .section-wrapper::after {
   content: "";
   position: absolute;
-  top: 100%;
-  /* 要素のすぐ下 */
-  left: 1.5em;
-  /* 三角の位置は調整可能 */
+  top: 100%;  /* 要素のすぐ下 */
+  left: 1.5em;  /* 三角の位置は調整可能 */
   width: 0;
   height: 0;
 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #cecece;
-  /* 吹き出しの枠線部分 */
+  border-top: 10px solid #cecece;   /* 吹き出しの枠線部分 */
 }
 
 .section-wrapper::before {
   content: "";
   position: absolute;
-  top: calc(100% - 1px);
-  /* ボーダーにくっつける */
+  top: calc(100% - 1px);  /* ボーダーにくっつける */
   left: 1.5em;
   width: 0;
   height: 0;
 
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
-  border-top: 9px solid #fff;
-  /* 三角形の中を背景色で塗る */
+  border-top: 9px solid #fff;  /* 三角形の中を背景色で塗る */
   z-index: 1;
 }
 
@@ -291,23 +286,6 @@ th {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-
-.profiles-table {
-  table-layout: fixed;
-  word-wrap: break-word;
-}
-
-.profiles-table th,
-.profiles-table td {
-  border: 1px solid #ccc;
-  padding: 6px;
-  font-size: 14px;
-}
-.profile-table td:first-child {
-    background-color: #f9f9f9;
-    font-weight: bold;
-    width: 40%; /* 項目名の幅を指定 */
-  }
 
 #image-modal {
   display: none;
