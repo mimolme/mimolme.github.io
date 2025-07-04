@@ -324,13 +324,9 @@ th {
   width: 25%;
 }
 
-.profiles .alt {
-  background-color: #e0f5fa;
-}
-
 .profiles .profile-img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #ccc;
