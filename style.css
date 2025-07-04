@@ -288,6 +288,8 @@ th {
 }
 
 .profiles {
+  max-width: 800px;
+  margin: 0 auto;
   overflow-x: auto;
   padding: 1em;
 }
@@ -295,10 +297,8 @@ th {
 .profiles table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  min-width: 400px;
   table-layout: fixed;
-  min-width: 400px; /* 横スクロール発生を防止しつつ縮小可能 */
 }
 
 .profiles th,
@@ -309,7 +309,6 @@ th {
   font-size: 14px;
   word-wrap: break-word;
   word-break: break-word;
-  overflow-wrap: break-word;
   white-space: normal;
 }
 
@@ -317,15 +316,6 @@ th {
   background-color: #b0dfe5;
   color: white;
   border-radius: 10px 10px 0 0;
-}
-
-.profiles .highlight-header {
-  background-color: #ffa500;
-  color: white;
-}
-
-.profiles .highlight-cell {
-  border: 3px solid #ffa500;
 }
 
 .profiles .label {
@@ -348,11 +338,11 @@ th {
   margin: 0 auto 4px;
 }
 
-/* ===== レスポンシブ対応 ===== */
+/* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   .profiles table {
     font-size: 12px;
-    min-width: 100%; /* テーブル幅を画面に合わせる */
+    table-layout: auto;
   }
 
   .profiles .profile-img {
@@ -363,14 +353,6 @@ th {
   .profiles th,
   .profiles td {
     padding: 6px;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
-  }
-
-  .profiles .label {
-    width: auto;
-    white-space: nowrap;
   }
 }
 
