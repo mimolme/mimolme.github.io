@@ -82,7 +82,7 @@
         モルは撫でられた際に，200 Hz程度の高さの音声を繰り返し発声していました。撫でられているときは抵抗することもなく手足などを伸ばし頭を傾け時には目を閉じ，気持ちよさそうに見えました。
       </p>
       <div class="audio-player">
-        <button class="play-btn" id="playBtn">
+        <button class="play-btn">
           <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
         </button>
 
@@ -98,8 +98,9 @@
 
         <audio id="audioPlayer" src="https://mimolme.github.io/audio/mol_purring1.mp3"></audio>
       </div>
+      <br>
       <div class="audio-player">
-        <button class="play-btn" id="playBtn">
+        <button class="play-btn">
           <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
         </button>
 
@@ -109,7 +110,7 @@
 
         <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="1">
 
-        <button class="volume-btn" id="volumeBtn">
+        <button class="volume-btn">
           <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>
         </button>
 
@@ -125,7 +126,7 @@
         モルモットの鼻に異物が入った時の音声です　※チモシーを咀嚼している音声がベースに入っています。時折「ぐっぐっ」という音が確認できます。
       </p>
       <div class="audio-player">
-        <button class="play-btn" id="playBtn">
+        <button class="play-btn">
           <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
         </button>
 
@@ -189,12 +190,12 @@
     });
 
     // 音声プレイヤーの機能
-    const audio = document.getElementById('audioPlayer');
-    const playBtn = document.getElementById('playBtn');
-    const volumeSlider = document.getElementById('volumeSlider');
-    const volumeBtn = document.getElementById('volumeBtn');
-    const currentTimeEl = document.querySelector('.current');
-    const durationEl = document.querySelector('.duration');
+    const audio = player.querySelector('audio');
+    const playBtn = player.querySelector('.play-btn');
+    const volumeSlider = player.querySelector('.volume-slider');
+    const volumeBtn = player.querySelector('.volume-btn');
+    const currentTimeEl = player.querySelector('.current');
+    const durationEl = player.querySelector('.duration');
 
     function formatTime(time) {
       const min = Math.floor(time / 60);
@@ -211,6 +212,18 @@
     });
 
     playBtn.addEventListener('click', () => {
+      // 他のプレーヤーをすべて停止
+      document.querySelectorAll('.audio-player audio').forEach(otherAudio => {
+        if (otherAudio !== audio) {
+          otherAudio.pause();
+          otherAudio.currentTime = 0;
+          const otherPlayBtn = otherAudio.closest('.audio-player').querySelector('.play-btn');
+          if (otherPlayBtn) {
+            otherPlayBtn.innerHTML = '<i class="fa-solid fa-play" style="color: #a9aaab;"></i>';
+          }
+        }
+      });
+
       if (audio.paused) {
         audio.play();
         playBtn.innerHTML = '<i class="fa-solid fa-stop" style="color: #a9aaab;"></i>';
@@ -234,8 +247,6 @@
         : '<i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>';
       volumeSlider.value = audio.muted ? 0 : audio.volume;
     });
-
-
 
   </script>
 </body>
