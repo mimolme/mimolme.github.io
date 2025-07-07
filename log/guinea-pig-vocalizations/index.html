@@ -82,12 +82,23 @@
         モルモットの鼻に異物が入った時の音声です。
       </p>
       <div class="audio-player">
-        <button class="play-btn"><i class="fa-solid fa-play" style="color: #a9aaab;"></i></button>
-        <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
-        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
-        <button class="volume-btn"><i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i></button>
-        <audio id="audio" src="https://mimolme.github.io/audio/mol_nasal.mp3"></audio>
+        <button class="play-btn" id="playBtn">
+          <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
+        </button>
+
+        <div class="time">
+          <span class="current">0:00</span> / <span class="duration">0:00</span>
+        </div>
+
+        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+
+        <button class="volume-btn" id="volumeBtn">
+          <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>
+        </button>
+
+        <audio id="audioPlayer" src="https://mimolme.github.io/audio/mol_nasal.mp3"></audio>
       </div>
+
     </section>
 
     <a href="#top" class="back-to-top">▲</a>
@@ -136,10 +147,10 @@
     });
 
     // 音声プレイヤーの機能
-    const audio = document.getElementById('audio');
-    const playBtn = document.querySelector('.play-btn');
-    const volumeSlider = document.querySelector('.volume-slider');
-    const volumeBtn = document.querySelector('.volume-btn');
+    const audio = document.getElementById('audioPlayer');
+    const playBtn = document.getElementById('playBtn');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const volumeBtn = document.getElementById('volumeBtn');
     const currentTimeEl = document.querySelector('.current');
     const durationEl = document.querySelector('.duration');
 
@@ -160,23 +171,28 @@
     playBtn.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
-        playBtn.textContent = <i class="fa-solid fa-stop" style="color: #a9aaab;"></i>;
+        playBtn.innerHTML = '<i class="fa-solid fa-stop" style="color: #a9aaab;"></i>';
       } else {
         audio.pause();
-        playBtn.textContent = <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>;
+        playBtn.innerHTML = '<i class="fa-solid fa-play" style="color: #a9aaab;"></i>';
       }
     });
 
     volumeSlider.addEventListener('input', () => {
       audio.volume = volumeSlider.value;
-      volumeBtn.textContent = audio.volume == 0 ? <i class="fa-solid fa-volume-xmark" style="color: #a9aaab;"></i> : <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>;
+      volumeBtn.innerHTML = audio.volume == 0
+        ? '<i class="fa-solid fa-volume-xmark" style="color: #a9aaab;"></i>'
+        : '<i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>';
     });
 
     volumeBtn.addEventListener('click', () => {
       audio.muted = !audio.muted;
-      volumeBtn.textContent = audio.muted ? <i class="fa-solid fa-volume-xmark" style="color: #a9aaab;"></i> : <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>;
+      volumeBtn.innerHTML = audio.muted
+        ? '<i class="fa-solid fa-volume-xmark" style="color: #a9aaab;"></i>'
+        : '<i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>';
       volumeSlider.value = audio.muted ? 0 : audio.volume;
     });
+
   </script>
 </body>
 
