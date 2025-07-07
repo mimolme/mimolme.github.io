@@ -344,22 +344,63 @@ th {
 }
 
 .audio-player {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   background: #f2f4f5;
   border-radius: 999px;
-  padding: 10px 16px;
-  gap: 10px;
+  padding: 12px 16px;
   max-width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
 }
 
-/* ボタン共通 */
-.play-btn,
-.volume-btn,
-.menu-btn {
+/* 上段：再生ボタンとプログレスバー */
+.audio-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #888;
+  border-radius: 50%;
+}
+
+/* 時間表示 */
+.time {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 下段：音量調整バーとアイコン */
+.audio-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.volume-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -367,29 +408,12 @@ th {
   flex-shrink: 0;
 }
 
-/* 再生ボタン */
-.play-btn {
-  flex: 0 0 auto;
-}
-
-/* 時間表示 */
-.time {
-  font-size: 14px;
-  white-space: nowrap;
-  text-align: center;
-  flex: 0 0 auto;
-}
-
-/* 音量スライダー */
 .volume-slider {
-  flex: 1 1 100px;
-  min-width: 60px;
-  max-width: 120px;
+  flex: 1;
   height: 4px;
   background: #ccc;
   border-radius: 2px;
   appearance: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -401,64 +425,11 @@ th {
   border-radius: 50%;
 }
 
-/* 3点アイコン */
-.menu-btn::before {
-  content: '⋮';
-  font-size: 18px;
-  line-height: 1;
-  display: block;
-}
-
-/* オーディオは非表示 */
-audio {
-  display: none;
-}
-
-/* 再生進捗バー */
-.progress-bar {
-  flex: 1 1 150px;
-  min-width: 80px;
-  max-width: 200px;
-  height: 4px;
-  appearance: none;
-  background: #ccc;
-  border-radius: 2px;
-  cursor: pointer;
-  margin: 0 6px;
-}
-
-.progress-bar::-webkit-slider-thumb {
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  background: #888;
-  border-radius: 50%;
-}
-
-/* モバイル向けレスポンシブ調整 */
+/* スマホ調整 */
 @media (max-width: 480px) {
   .audio-player {
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 8px;
-    padding: 8px 12px;
-  }
-
-  .progress-bar {
-    flex: 1 1 100%;
-    min-width: 0;
-    max-width: 100%;
-    margin: 4px 0;
-  }
-
-  .volume-slider {
-    display: none; /* モバイルでは非表示（タップ切り替え可能にもできる） */
-  }
-
-  .time {
-    flex: 1 1 100%;
-    text-align: center;
-    margin-top: 4px;
+    padding: 10px 12px;
+    gap: 6px;
   }
 }
 
