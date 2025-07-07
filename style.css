@@ -416,6 +416,71 @@ audio {
   border-radius: 50%;
 }
 
+.audio-player {
+  display: flex;
+  flex-wrap: wrap; /* 横が狭いときは折り返し */
+  align-items: center;
+  background: #f2f4f5;
+  border-radius: 999px;
+  padding: 10px 16px;
+  gap: 10px;
+  max-width: 100%; /* はみ出さないようにする */
+  box-sizing: border-box;
+}
+
+/* 再生ボタン */
+.play-btn {
+  flex-shrink: 0;
+}
+
+/* シークバー（再生進捗） */
+.progress-bar {
+  flex: 1 1 120px;
+  min-width: 80px;
+  height: 4px;
+  appearance: none;
+  background: #ccc;
+  border-radius: 2px;
+}
+
+/* 音量スライダー */
+.volume-slider {
+  flex: 1 1 80px;
+  min-width: 60px;
+  height: 4px;
+  appearance: none;
+  background: #ccc;
+  border-radius: 2px;
+}
+
+/* アイコンや時間表示も折り返し対応 */
+.time,
+.volume-btn {
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+/* モバイル向け微調整 */
+@media (max-width: 480px) {
+  .audio-player {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 16px;
+  }
+
+  .progress-bar,
+  .volume-slider {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  .time {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   .profiles table {
