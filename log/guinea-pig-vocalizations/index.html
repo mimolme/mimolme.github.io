@@ -81,16 +81,10 @@
       <p>
         モルモットの鼻に異物が入った時の音声です。
       </p>
-      <div class="audio-player">
-        <button class="play-btn">▶︎</button>
-        <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
-        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
-        <button class="volume-btn">🔊</button>
-        <button class="menu-btn" title="More options"></button>
+      <button class="play-button" id="playBtn">▶ 再生</button>
 
-        <audio id="audio" src="https://mimolme.github.io/audio/nasal.mp3"></audio>
-      </div>
-      </div>
+      <audio id="audio" src="https://mimolme.github.io/audio/nasal.mp3"></audio>
+
 
     </section>
 
@@ -141,46 +135,11 @@
 
     // 音声プレイヤーの機能
     const audio = document.getElementById('audio');
-  const playBtn = document.querySelector('.play-btn');
-  const volumeSlider = document.querySelector('.volume-slider');
-  const volumeBtn = document.querySelector('.volume-btn');
-  const currentTimeEl = document.querySelector('.current');
-  const durationEl = document.querySelector('.duration');
+    const playBtn = document.getElementById('playBtn');
 
-  function formatTime(time) {
-    const min = Math.floor(time / 60);
-    const sec = Math.floor(time % 60).toString().padStart(2, '0');
-    return `${min}:${sec}`;
-  }
-
-  audio.addEventListener('loadedmetadata', () => {
-    durationEl.textContent = formatTime(audio.duration);
-  });
-
-  audio.addEventListener('timeupdate', () => {
-    currentTimeEl.textContent = formatTime(audio.currentTime);
-  });
-
-  playBtn.addEventListener('click', () => {
-    if (audio.paused) {
+    playBtn.addEventListener('click', () => {
       audio.play();
-      playBtn.textContent = '⏸️';
-    } else {
-      audio.pause();
-      playBtn.textContent = '▶️';
-    }
-  });
-
-  volumeSlider.addEventListener('input', () => {
-    audio.volume = volumeSlider.value;
-    volumeBtn.textContent = audio.volume == 0 ? '🔇' : '🔊';
-  });
-
-  volumeBtn.addEventListener('click', () => {
-    audio.muted = !audio.muted;
-    volumeBtn.textContent = audio.muted ? '🔇' : '🔊';
-    volumeSlider.value = audio.muted ? 0 : audio.volume;
-  });
+    });
   </script>
 </body>
 
