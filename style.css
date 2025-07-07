@@ -345,14 +345,18 @@ th {
 
 .audio-player {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   background: #f2f4f5;
   border-radius: 999px;
-  padding: 10px 20px;
-  gap: 12px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 10px 16px;
+  gap: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+/* ボタン共通 */
 .play-btn,
 .volume-btn,
 .menu-btn {
@@ -360,17 +364,27 @@ th {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  flex-shrink: 0;
 }
 
+/* 再生ボタン */
+.play-btn {
+  flex: 0 0 auto;
+}
+
+/* 時間表示 */
 .time {
   font-size: 14px;
   white-space: nowrap;
-  width: 70px;
   text-align: center;
+  flex: 0 0 auto;
 }
 
+/* 音量スライダー */
 .volume-slider {
-  width: 100px;
+  flex: 1 1 100px;
+  min-width: 60px;
+  max-width: 120px;
   height: 4px;
   background: #ccc;
   border-radius: 2px;
@@ -387,6 +401,7 @@ th {
   border-radius: 50%;
 }
 
+/* 3点アイコン */
 .menu-btn::before {
   content: '⋮';
   font-size: 18px;
@@ -394,18 +409,22 @@ th {
   display: block;
 }
 
+/* オーディオは非表示 */
 audio {
   display: none;
 }
 
+/* 再生進捗バー */
 .progress-bar {
-  width: 150px;
+  flex: 1 1 150px;
+  min-width: 80px;
+  max-width: 200px;
   height: 4px;
   appearance: none;
   background: #ccc;
   border-radius: 2px;
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 6px;
 }
 
 .progress-bar::-webkit-slider-thumb {
@@ -416,67 +435,30 @@ audio {
   border-radius: 50%;
 }
 
-.audio-player {
-  display: flex;
-  flex-wrap: wrap; /* 横が狭いときは折り返し */
-  align-items: center;
-  background: #f2f4f5;
-  border-radius: 999px;
-  padding: 10px 16px;
-  gap: 10px;
-  max-width: 100%; /* はみ出さないようにする */
-  box-sizing: border-box;
-}
-
-/* 再生ボタン */
-.play-btn {
-  flex-shrink: 0;
-}
-
-/* シークバー（再生進捗） */
-.progress-bar {
-  flex: 1 1 120px;
-  min-width: 80px;
-  height: 4px;
-  appearance: none;
-  background: #ccc;
-  border-radius: 2px;
-}
-
-/* 音量スライダー */
-.volume-slider {
-  flex: 1 1 80px;
-  min-width: 60px;
-  height: 4px;
-  appearance: none;
-  background: #ccc;
-  border-radius: 2px;
-}
-
-/* アイコンや時間表示も折り返し対応 */
-.time,
-.volume-btn {
-  flex-shrink: 0;
-  font-size: 14px;
-}
-
-/* モバイル向け微調整 */
+/* モバイル向けレスポンシブ調整 */
 @media (max-width: 480px) {
   .audio-player {
-    flex-direction: column;
-    align-items: stretch;
-    border-radius: 16px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px 12px;
   }
 
-  .progress-bar,
-  .volume-slider {
-    width: 100%;
+  .progress-bar {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: 100%;
     margin: 4px 0;
   }
 
+  .volume-slider {
+    display: none; /* モバイルでは非表示（タップ切り替え可能にもできる） */
+  }
+
   .time {
+    flex: 1 1 100%;
     text-align: center;
-    width: 100%;
+    margin-top: 4px;
   }
 }
 
