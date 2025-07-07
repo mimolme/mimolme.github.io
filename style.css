@@ -344,6 +344,9 @@ th {
 }
 
 .audio-player {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   background: #f2f4f5;
