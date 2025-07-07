@@ -82,26 +82,23 @@
         モルモットの鼻に異物が入った時の音声です。
       </p>
       <div class="audio-player">
-  <div class="audio-top">
-    <button class="play-btn" id="playBtn">
-      <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
-    </button>
-    <input type="range" class="progress-bar" id="progressBar" value="0" min="0" step="0.1">
-  </div>
+        <button class="play-btn" id="playBtn">
+          <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
+        </button>
 
-  <div class="time">
-    <span class="current">0:00</span> / <span class="duration">0:00</span>
-  </div>
+        <div class="time">
+          <span class="current">0:00</span> / <span class="duration">0:00</span>
+        </div>
 
-  <div class="audio-bottom">
-    <button class="volume-btn" id="volumeBtn">
-      <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>
-    </button>
-    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="1">
-  </div>
+        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="1">
 
-  <audio id="audioPlayer" src="https://mimolme.github.io/audio/mol_nasal.mp3"></audio>
-</div>
+        <button class="volume-btn" id="volumeBtn">
+          <i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>
+        </button>
+
+        <audio id="audioPlayer" src="https://mimolme.github.io/audio/mol_nasal.mp3"></audio>
+      </div>
+
 
 
     </section>
@@ -198,24 +195,6 @@
       volumeSlider.value = audio.muted ? 0 : audio.volume;
     });
 
-    const progressBar = document.getElementById('progressBar');
-
-    // 音声の読み込みが完了したら、再生バーの最大値を音声の長さに設定
-    audio.addEventListener('loadedmetadata', () => {
-      durationEl.textContent = formatTime(audio.duration);
-      progressBar.max = audio.duration;
-    });
-
-    // 再生中にバーを進める
-    audio.addEventListener('timeupdate', () => {
-      currentTimeEl.textContent = formatTime(audio.currentTime);
-      progressBar.value = audio.currentTime;
-    });
-
-    // ユーザーがバーを動かして再生位置を変更
-    progressBar.addEventListener('input', () => {
-      audio.currentTime = progressBar.value;
-    });
 
 
   </script>
