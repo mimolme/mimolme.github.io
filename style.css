@@ -343,6 +343,19 @@ th {
   border: none;
 }
 
+.audio-player {
+  background-color: #f2f4f5;
+  border-radius: 40px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.audio-player audio {
+  width: 300px;
+  outline: none;
+}
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
