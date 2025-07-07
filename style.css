@@ -345,7 +345,7 @@ th {
 
 .audio-player {
   width: 100%;
-  max-width: 200px;  
+  max-width: 250px;  
   display: flex;
   align-items: center;
   background: #f2f4f5;
