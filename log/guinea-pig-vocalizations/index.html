@@ -86,6 +86,8 @@
           <i class="fa-solid fa-play" style="color: #a9aaab;"></i>
         </button>
 
+        <input type="range" class="progress-bar" id="progressBar" value="0" min="0" step="0.1">
+
         <div class="time">
           <span class="current">0:00</span> / <span class="duration">0:00</span>
         </div>
@@ -98,6 +100,7 @@
 
         <audio id="audioPlayer" src="https://mimolme.github.io/audio/mol_nasal.mp3"></audio>
       </div>
+
 
     </section>
 
@@ -192,6 +195,26 @@
         : '<i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>';
       volumeSlider.value = audio.muted ? 0 : audio.volume;
     });
+
+    const progressBar = document.getElementById('progressBar');
+
+    // 音声の読み込みが完了したら、再生バーの最大値を音声の長さに設定
+    audio.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(audio.duration);
+      progressBar.max = audio.duration;
+    });
+
+    // 再生中にバーを進める
+    audio.addEventListener('timeupdate', () => {
+      currentTimeEl.textContent = formatTime(audio.currentTime);
+      progressBar.value = audio.currentTime;
+    });
+
+    // ユーザーがバーを動かして再生位置を変更
+    progressBar.addEventListener('input', () => {
+      audio.currentTime = progressBar.value;
+    });
+
 
   </script>
 </body>
