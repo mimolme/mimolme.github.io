@@ -344,76 +344,38 @@ th {
 }
 
 .audio-player {
+  display: flex;
+  align-items: center;
   background: #f2f4f5;
   border-radius: 999px;
-  padding: 12px 16px;
-  max-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: stretch;
+  padding: 10px 20px;
+  gap: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* 上段：再生ボタンとプログレスバー */
-.audio-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.play-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-
-.progress-bar {
-  flex: 1;
-  height: 4px;
-  background: #ccc;
-  border-radius: 2px;
-  appearance: none;
-  cursor: pointer;
-}
-
-.progress-bar::-webkit-slider-thumb {
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  background: #888;
-  border-radius: 50%;
-}
-
-/* 時間表示 */
-.time {
-  font-size: 14px;
-  text-align: center;
-}
-
-/* 下段：音量調整バーとアイコン */
-.audio-bottom {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.volume-btn {
+.play-btn,
+.volume-btn,
+.menu-btn {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  flex-shrink: 0;
+}
+
+.time {
+  font-size: 14px;
+  white-space: nowrap;
+  width: 70px;
+  text-align: center;
 }
 
 .volume-slider {
-  flex: 1;
+  width: 100px;
   height: 4px;
   background: #ccc;
   border-radius: 2px;
   appearance: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -425,12 +387,15 @@ th {
   border-radius: 50%;
 }
 
-/* スマホ調整 */
-@media (max-width: 480px) {
-  .audio-player {
-    padding: 10px 12px;
-    gap: 6px;
-  }
+.menu-btn::before {
+  content: '⋮';
+  font-size: 18px;
+  line-height: 1;
+  display: block;
+}
+
+audio {
+  display: none;
 }
 
 
