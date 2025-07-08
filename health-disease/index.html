@@ -7,7 +7,7 @@
   <title>健康と病気</title>
   <meta name="description" content="もるらぼは，モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
   <meta name="keywords"
-    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの病気，モルモット　病気，モルモット　不正咬合，モルモット　下痢，モルモット　角膜炎，モルモット　脂肪腫，モルモットのメンテナンス，モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
+    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの健康，モルモット　病気，モルモットの病気，モルモット　健康管理，モルモットのメンテナンス，モルモットのくしゃみ，モルモット　不正咬合，モルモット　下痢，モルモット　鼓張症，モルモット　結石，モルモット　尿路結石，モルモット　角膜炎，モルモット　脂肪腫，モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
 
 
   <link rel="stylesheet" href="/style.css">
@@ -68,38 +68,19 @@
     </nav>
   </header>
   <main>
+    <p style="color: #888888">最終更新日: 07/09/2025</p>
     <section>
-      <h2>モルモットの健康を維持するには？病気に罹ったら？</h2>
-      <h3 style="color: #2f4f4f">- 目次 -</h3>
-      <ul class="no-bullet">
-        <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
-        <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
-        <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a>
-          <ul>
-            <li class="no-bullet"><a href="/health-disease/interestingBehaviors#hiccuping">3-1. しゃっくり</a></li>
-            <li class="no-bullet"><a href="/health-disease/interestingBehaviors#sneezing">3-2. くしゃみ</a></li>
-            <li class="no-bullet"><a href="/health-disease/interestingBehaviors#yawn">3-3. あくび</a></li>
-            <li class="no-bullet"><a href="/health-disease/interestingBehaviors#nasalNoise">3-4. 鼻が鳴る</a></li>
-            <li class="no-bullet"><a href="/health-disease/interestingBehaviors#grooming">3-5. 毛繕い</a></li>
-            <li class="no-bullet"><a href="/health-disease/interestingBehaviors#popcorning">3-6. ポップコーンジャンプ</a></li>
-          </ul>
-        </li>
-        <li><a href="/health-disease/diseases">4. 病気</a>
-          <ul>
-            <li class="no-bullet"><a href="/health-disease/disease/diarrheaAndConstipation">4-1. 下痢・便秘</a></li>
-            <li class="no-bullet"><a href="/health-disease/disease/malocclusion">4-2. 不正咬合</a></li>
-            <li class="no-bullet"><a href="/health-disease/disease/urolithiasis">4-3. 尿路結石</a></li>
-            <li class="no-bullet"><a href="/health-disease/disease/keratitis">4-4. 角膜炎</a></li>
-            <li class="no-bullet"><a href="/health-disease/disease/lipoma">4-5. 脂肪腫</a></li>
-          </ul>
-        </li>
-        
-        <a href="#top" class="back-to-top">▲</a>
-        <!-- モーダル -->
-        <div id="modal" class="modal">
-          <img class="modal-content" id="modal-img">
-        </div>
-        </div>
+      <h2>早期発見と適切なアセスメントを</h2>
+    </section>
+    <p>「モルモットは急死しやすい」，「いつの間にか死んでいた」などたまに見かけます。そんなことはありません。必ず前兆があります。急に排泄量や活動量が減ったら要注意です。</p>
+    <section>
+
+    <a href="#top" class="back-to-top">▲</a>
+    <!-- モーダル -->
+    <div id="modal" class="modal">
+      <img class="modal-content" id="modal-img">
+    </div>
+    </div>
     </section>
   </main>
 
@@ -108,12 +89,22 @@
   </footer>
 
   <script>
+    // ハンバーガーメニューの開閉
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-menu');
+
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
-    // モーダル表示
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
+      if (!isClickInsideMenu && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+    // モーダル表示（画像クリック）
     document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -124,9 +115,9 @@
       });
     });
 
-    // モーダル画像クリックで閉じる
-    document.getElementById("modal-img").addEventListener("click", function () {
-      document.getElementById("modal").style.display = "none";
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+      this.style.display = "none";
     });
   </script>
 </body>
