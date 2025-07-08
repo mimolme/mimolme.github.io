@@ -45,6 +45,7 @@ header {
 }
 
 nav.nav-menu {
+  background-color: #eee;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
