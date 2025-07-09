@@ -36,7 +36,7 @@ header {
   display: none;
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 0.7rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -60,7 +60,7 @@ nav.nav-menu {
 .nav-menu>*:not(:first-child)::before {
   content: '‖';
   color: #ccc8af;
-  font-size: 1rem;
+  font-size: 0.7rem;
   position: absolute;
   left: -0.7rem;
   top: 50%;
@@ -72,7 +72,7 @@ nav.nav-menu {
   color: #333;
   text-decoration: none;
   font-family: inherit, monospace, sans-serif;
-  font-size: 1rem;
+  font-size: 0.7rem;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
@@ -157,16 +157,13 @@ main {
   content: "";
   position: absolute;
   top: 100%;
-  /* 要素のすぐ下 */
   left: 1.5em;
-  /* 三角の位置は調整可能 */
   width: 0;
   height: 0;
-
+  /* 吹き出しの枠線部分 */
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #cecece;
-  /* 吹き出しの枠線部分 */
 }
 
 .section-wrapper::before {
@@ -184,7 +181,6 @@ main {
   /* 三角形の中を背景色で塗る */
   z-index: 1;
 }
-
 
 .section-title {
   color: #333;
@@ -214,7 +210,7 @@ main {
   background: linear-gradient(transparent 70%, #ffeccb 70%);
 }
 
-
+/* 表 */
 .table-container {
   width: 100%;
   overflow-x: auto;
@@ -243,6 +239,8 @@ th {
   padding-left: 0;
 }
 
+
+/* コラム */
 .box {
   padding: 1rem;
   margin: 1.5rem 0;
@@ -266,6 +264,7 @@ th {
   background-color: #faedec;
 }
 
+/* 表（食べ物） */
 .food-table {
   width: 100%;
   border-collapse: collapse;
@@ -292,6 +291,7 @@ th {
   margin-bottom: 0.5rem;
 }
 
+/* プロフィール */
 .profiles {
   max-width: 800px;
   margin: 0 auto;
@@ -343,6 +343,7 @@ th {
   border: none;
 }
 
+/* 音声 */
 .audio-player {
   width: 100%;
   max-width: 270px;  
@@ -400,42 +401,7 @@ audio {
   display: none;
 }
 
-
-/* レスポンシブ対応 */
-@media screen and (max-width: 600px) {
-  .profiles table {
-    font-size: 12px;
-    table-layout: auto;
-  }
-
-  .profiles .profile-img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .profiles th,
-  .profiles td {
-    padding: 6px;
-  }
-}
-
-/* スマホ画面幅のときだけ適用（最大768px） */
-@media (max-width: 768px) {
-  .responsive-png {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  .responsive-jpg {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-}
-
-
+/* モーダル */
 #image-modal {
   display: none;
   position: fixed;
@@ -458,6 +424,7 @@ audio {
   transition: transform 0.3s;
 }
 
+/* フッター */
 footer {
   margin-top: 2rem;
   text-align: center;
@@ -469,6 +436,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* トップに戻る */
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -490,8 +458,75 @@ html {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* モバイル対応 */
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  box-shadow: 0 0 20px #fff;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 参考文献 */
+.references {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  font-size: 14px;
+  text-align: left;
+  border-top: 2px solid #ccc;
+  margin-top: 2rem;
+}
+
+.references h2 {
+  font-size: 16px;
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.references ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.references li {
+  margin-bottom: 0.5rem;
+}
+
+.references a {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+
+/* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
+
   .menu-toggle {
     display: block;
     background: rgba(255, 255, 255, 0.5);
@@ -549,72 +584,32 @@ html {
     box-sizing: border-box;
     padding: 0.5rem 1rem;
   }
+
+  .profiles table {
+    font-size: 12px;
+    table-layout: auto;
+  }
+
+  .profiles .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profiles th,
+  .profiles td {
+    padding: 6px;
+  }
+
+  .responsive-png {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .responsive-jpg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
-
-/* モーダル */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-  box-shadow: 0 0 20px #fff;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* 参考文献 */
-
-.references {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  font-size: 14px;
-  text-align: left;
-  border-top: 2px solid #ccc;
-  margin-top: 2rem;
-}
-
-.references h2 {
-  font-size: 16px;
-  margin-top: 0;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.references ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.references li {
-  margin-bottom: 0.5rem;
-}
-
-.references a {
-  word-break: break-all;
-  /* ← 単語の途中でも改行可能にする */
-  overflow-wrap: break-word;
-  /* ← 古いブラウザにも対応 */
 }
