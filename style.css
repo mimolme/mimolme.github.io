@@ -36,7 +36,7 @@ header {
   display: none;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -60,7 +60,7 @@ nav.nav-menu {
 .nav-menu>*:not(:first-child)::before {
   content: '‖';
   color: #ccc8af;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   left: -0.7rem;
   top: 50%;
