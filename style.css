@@ -71,9 +71,8 @@ nav.nav-menu {
 .nav-menu a {
   color: #333;
   text-decoration: none;
-  font-weight: bold;
   font-family: inherit, monospace, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
