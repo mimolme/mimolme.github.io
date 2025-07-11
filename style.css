@@ -530,6 +530,11 @@ html {
 }
 
 
+/* モーダル上のハンバーガメニュー非表示 */
+body.modal-open .menu-toggle {
+  display: none !important;
+}
+
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
 
