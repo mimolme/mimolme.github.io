@@ -61,10 +61,10 @@
           <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
           <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
         </ul>
-        </div>
-        <a href="/wool-mol">羊毛モル</a>
-        <a href="/terms_of_use">利用規約</a>
-        <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="/wool-mol">羊毛モル</a>
+      <a href="/terms_of_use">利用規約</a>
+      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
     </nav>
   </header>
   <main>
@@ -199,7 +199,9 @@
       <div class="references">
         <h2>参考文献</h2>
         <ul>
-          <li id="ref1">[1] Harrup, A. J., & Rooney, N. (2020). Current welfare state of pet guinea pigs in the UK.<i>Veterinary Record, 186</i>(9), 282.<a href="https://doi.org/10.1136/vr.105632">doi.org/10.1136/vr.105632</a>
+          <li id="ref1">[1] Harrup, A. J., & Rooney, N. (2020). Current welfare state of pet guinea pigs in the
+            UK.<i>Veterinary Record, 186</i>(9), 282.<a
+              href="https://doi.org/10.1136/vr.105632">doi.org/10.1136/vr.105632</a>
           <li id="ref2">[2] Fawcett, A. (2011). Management of husbandry‐related problems in guinea pigs.<i>In Practice,
               33</i>(4), 163–171. <a href="https://doi.org/10.1136/inp.d1812"> doi.org/10.1136/inp.d1812</a>
 
@@ -245,12 +247,30 @@
         const modalImg = document.getElementById("modal-img");
         modal.style.display = "block";
         modalImg.src = this.href;
+        document.body.classList.add("modal-open");
       });
     });
 
     // モーダル全体をクリックしたら閉じる（画像も含めてOK）
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
+      document.body.classList.remove("modal-open");
+    });// モーダル表示（画像クリック）
+    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "block";
+        modalImg.src = this.href;
+        document.body.classList.add("modal-open");
+      });
+    });
+
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+      this.style.display = "none";
+      document.body.classList.remove("modal-open");
     });
   </script>
 </body>
