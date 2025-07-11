@@ -242,6 +242,7 @@ th {
 .no-bullet {
   list-style: none;
   padding-left: 0;
+  font-size: small;
 }
 
 
