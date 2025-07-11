@@ -68,12 +68,12 @@
     </nav>
   </header>
   <main>
-    <p style="color: #888888">最終更新日: 07/09/2025</p>
+    <p class="update">最終更新日: 07/09/2025</p>
     <section>
       <h2>早期発見と適切なアセスメントを</h2>
     </section>
     <section>
-      <p>モルモットについて調べていると「急死した」，「急変しやすい」，「いつの間にか死んでいた」などという人が少なくありませんが，そんなことはありません。必ず前兆があるはずです。</p>
+      <p>モルモットについて調べていると「急死した」，「急変しやすい」，「いつの間にか死んでいた」などという人が少なくありませんが，そんなことはありません。必ず前兆があるはずです。見逃さないようにしましょう（自戒の念もこめて）。</p>
       <ul class="no-bullet2">
         <li><i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i>摂食量や排泄量に変化ありませんか？</li>
         <li><i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i>活動量に変わりありませんか？</li>
@@ -89,9 +89,8 @@
         <li><i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i>真っ直ぐ歩いていますか？</li>
       </ul>
       <p>
-        毎日注意深く観察し，できれば記録しましょう。記録することは正確な情報を担保するだけでなく，その子の「いつも」がわかるようになります。かくいう私はなかなか実現できないでいますが・・ただし，不調時は必ず状態や体重を細かに記録しています（非形式的）。
+        毎日注意深く観察し，できれば記録しましょう。記録することは正確な情報を担保するだけでなく，その子の「いつも」がわかるようになります。かくいう私はなかなか実現できないでいますが・・ただし，不調を検知した際にはすぐに状態や体重を細かに記録しかかりつけ医に正確な情報を伝えられるようにしています。
       </p>
-      <p>また，繰り返しになりますが，かかりつけ医を慎重に探しましょう。</p>
     </section>
     <section>
       <ul>
@@ -142,12 +141,14 @@
         const modalImg = document.getElementById("modal-img");
         modal.style.display = "block";
         modalImg.src = this.href;
+        document.body.classList.add("modal-open");
       });
     });
 
     // モーダル全体をクリックしたら閉じる（画像も含めてOK）
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
+      document.body.classList.remove("modal-open");
     });
   </script>
 </body>
