@@ -230,12 +230,14 @@
         const modalImg = document.getElementById("modal-img");
         modal.style.display = "block";
         modalImg.src = this.href;
+        document.body.classList.add("modal-open");
       });
     });
 
     // モーダル全体をクリックしたら閉じる（画像も含めてOK）
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
+      document.body.classList.remove("modal-open");
     });
   </script>
 </body>
