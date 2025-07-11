@@ -7,7 +7,7 @@
     <title>羊毛モルモット</title>
     <meta name="description" content="もるらぼは，モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
     <meta name="keywords"
-        content="もるらぼ, 羊毛，モルモット, 羊毛モルモット，羊毛モル, 羊毛フェルト　モルモット，モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
+        content="もるらぼ, 羊毛　モルモット, 羊毛モルモット，羊毛モル, 羊毛フェルト　モルモット，モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
 
 
     <link rel="stylesheet" href="/style.css">
@@ -151,12 +151,14 @@
                 const modalImg = document.getElementById("modal-img");
                 modal.style.display = "block";
                 modalImg.src = this.href;
+                document.body.classList.add("modal-open");
             });
         });
 
         // モーダル全体をクリックしたら閉じる（画像も含めてOK）
         document.getElementById("modal").addEventListener("click", function () {
             this.style.display = "none";
+            document.body.classList.remove("modal-open");
         });
 
     </script>
