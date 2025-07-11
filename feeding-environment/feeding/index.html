@@ -62,10 +62,10 @@
           <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
           <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
         </ul>
-        </div>
-        <a href="/wool-mol">羊毛モル</a>
-        <a href="/terms_of_use">利用規約</a>
-        <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="/wool-mol">羊毛モル</a>
+      <a href="/terms_of_use">利用規約</a>
+      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
     </nav>
   </header>
   <main>
@@ -94,7 +94,7 @@
     </section>
     <section>
       <div class="box-heading">
-      <h3 id="timothy">1-1. チモシー</h3>
+        <h3 id="timothy">1-1. チモシー</h3>
       </div>
       <p>
         モルモットの主食は<a
@@ -141,7 +141,7 @@
     </section>
     <section>
       <div class="box-heading">
-      <h3 id="vegetables">1-2. 青果</h3>
+        <h3 id="vegetables">1-2. 青果</h3>
       </div>
       <p>
         モルモットの主食はチモシーですが，他にも色々なものを毎日食べる必要があります。というのも，モルモットはヒトと同様，体内でビタミンCを生成できません。ビタミンCが欠乏することによって，結膜症や不正咬合などの疾患を引き起こす原因となり得ます。また，モルモットによっては水をあまり飲まないことがあります。水分不足は便秘などを引き起こします。体に必要な成分や水分をサプリメントや<a
@@ -239,7 +239,7 @@
     </section>
     <section>
       <div class="box-heading">
-      <h3 id="supplement">1-3. サプリメント</h3>
+        <h3 id="supplement">1-3. サプリメント</h3>
       </div>
       <p>
         先述の通り，モルモットは体内でビタミンCを生成できません。ビタミンCを摂取しないと，とりわけ眼病や皮膚病などに罹患しやすくなります。ですので<a
@@ -283,7 +283,7 @@
     </section>
     <section>
       <div class="box-heading">
-      <h3 id="chewBranch">1-4. 齧り木</h3>
+        <h3 id="chewBranch">1-4. 齧り木</h3>
       </div>
       <p>繰り返しになりますが，モルモットは全ての歯が一生伸び続け（常生歯），日常生活内で歯の磨耗が不十分だと不正咬合になります。主に前歯を削るために<a
           href="#fig9">図9</a>のような細枝を毎日住処に投入しています。私のモルモットたちは3頭ともリンゴ以外の枝だと食いつきが悪いため，リンゴの枝（細枝）を定期購入しています。どれくらい歯を研ぐのに使ってくれるかは個体差がありますが，モルやメルは大抵少し齧る（表面の皮の2/3が禿げる）程度，レムに至っては丸々一本食べてしまうこともあります。奥歯も摩耗できて良いですが，口の中を怪我しないか少し心配ではあります。しかし唾液をたくさん分泌しながらかじっているので問題ないでしょう。3頭のいずれも枝が原因で怪我をしたことはありません。心配であればあなたがいるときに与える，あるいは細すぎる枝を除く，といった対応すれば安心だと思います。前歯の伸び過ぎを防ぐために積極的にかじらせましょう。ちなみにリンゴの他にも桃や葡萄などがあります。
@@ -302,7 +302,7 @@
     </section>
     <section>
       <div class="box-heading">
-      <h3 id="TimothyPellets">1-5. 牧草代用ペレット</h3>
+        <h3 id="TimothyPellets">1-5. 牧草代用ペレット</h3>
       </div>
       <p>結論から先に，私はモルモットにモルモット専用ペレット（例えば<a
           href="https://www.yeaster.co.jp/d/mspro/">こちら</a>）を与えていません。理由としては主に，<br>・嗜好性が高すぎる<br>・別途ビタミンCや乳酸菌を与えている<br>・歯を十分に摩耗しない<br>の3点が挙げられます。モルモットが臼歯を摩耗させるためには，「ある程度硬いand/or繊維質の食べ物」を咀嚼することで「上下の顎を横に動かす」必要があるのです。ペレットは硬さや繊維質が十分ではなく，こうした動きを必要としません。また嗜好性が高いため放っておくとチモシーを食べなくなることもあり，ひいては摩耗が足りず不正咬合に陥ったり，（高カロリーなので）肥満になったりします。モル（1頭目）を買い始めた頃は，不慣れなこともあり，ペットショップ店員さんお勧めの「ビタミンCを含むペレット」を適量与えていましたが，結局ビタミンC不足で角膜炎になりかけました。以来，私は前述のビタミンCやマルチビタミンを買うようになり，（モルやメルが亡くなる数日前などは除き）原則ペレットを与えることをやめました。一方で<a
@@ -357,13 +357,16 @@
         const modalImg = document.getElementById("modal-img");
         modal.style.display = "block";
         modalImg.src = this.href;
+        document.body.classList.add("modal-open");
       });
     });
 
     // モーダル全体をクリックしたら閉じる（画像も含めてOK）
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
+      document.body.classList.remove("modal-open");
     });
+
   </script>
 </body>
 
