@@ -62,10 +62,10 @@
           <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
           <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
         </ul>
-        </div>
-        <a href="/wool-mol">羊毛モル</a>
-        <a href="/terms_of_use">利用規約</a>
-        <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="/wool-mol">羊毛モル</a>
+      <a href="/terms_of_use">利用規約</a>
+      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
     </nav>
   </header>
   <main>
@@ -482,13 +482,16 @@
         const modalImg = document.getElementById("modal-img");
         modal.style.display = "block";
         modalImg.src = this.href;
+        document.body.classList.add("modal-open");
       });
     });
 
     // モーダル全体をクリックしたら閉じる（画像も含めてOK）
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
+      document.body.classList.remove("modal-open");
     });
+
   </script>
 </body>
 
