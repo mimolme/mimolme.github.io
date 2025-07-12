@@ -294,7 +294,7 @@ th {
 }
 
 .food-table th {
-  background-color: #caffec;
+  background-color: #dbffed;
 }
 
 .food-table caption {
@@ -329,12 +329,12 @@ th {
 }
 
 .profiles th {
-  background-color: #caffec;
+  background-color: #dbffed;
   color: white;
 }
 
 .profiles .label {
-  background-color: #cafffd;
+  background-color: #dbffed;
   font-weight: bold;
   width: 25%;
 }
