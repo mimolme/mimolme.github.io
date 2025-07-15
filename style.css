@@ -38,16 +38,19 @@ header {
 }
 
 .top-image2 {
-  width: 960px;
-  height: 300px;
+  width: 100%;          /* レスポンシブ対応 */
+  max-width: 960px;      /* 最大幅を指定 */
+  height: 35vw;          /* ビューポートに応じて高さ可変（目安） */
+  max-height: 350px;     /* 高さの上限を設定 */
   overflow: hidden;
+  margin: 0 auto;        /* 中央寄せ */
 }
 
-.top-image2 img{
-  width: 960px;
-  display: block;
+.top-image2 img {
+  width: 100%;           /* 親要素にフィット */
   height: auto;
-  transform: translateY(-50px);
+  display: block;
+  transform: translateY(-5%); /* 上方向へずらす。調整可 */
   opacity: 0.8;
 }
 
@@ -590,7 +593,9 @@ body.modal-open .menu-toggle {
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
-
+  .top-image2 img {
+    transform: translateY(-2%);
+  }
   .menu-toggle {
     display: block;
     background: rgba(255, 255, 255, 0.5);
