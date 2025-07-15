@@ -77,8 +77,9 @@
       </div>
       <section>
       <ul>
-        <li class="no-bullet2" data-status="new"><a href="/health-disease/diseases/diarrheaAndConstipation/2020-11-26">2020-11-26</a></li>
-        <li class="no-bullet2" data-status="editing"><a href="/health-disease/diseases/diarrheaAndConstipation/2025-03-06">2025-03-06</a></li>
+        <li class="no-bullet2" data-status="new"><a href="/health-disease/diseases/diarrheaAndConstipation/2020-11-26">2020-11-26：鼓張症？
+        </a></li>
+        <li class="no-bullet2" data-status="editing"><a href="/health-disease/diseases/diarrheaAndConstipation/2025-03-06">2025-03-06：便秘？</a></li>
       </ul>
       </section>
       <br>
@@ -169,7 +170,7 @@
         const status = li.dataset.status;
         const label = document.createElement("span");
         label.classList.add("label", status);
-        label.textContent = status === "new" ? "New !" : "編集中";
+        label.textContent = status === "new" ? "New ! " : "編集中";
 
         const link = li.querySelector("a");
         if (link) {
