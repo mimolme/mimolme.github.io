@@ -76,13 +76,24 @@
     </section>
     <section>
       <ul>
-        <li class="no-bullet2"><a href="/health-disease/diseases/diarrheaAndConstipation">4-1. 下痢・便秘</a></li>
-        <li class="no-bullet2"><a href="/health-disease/diseases/malocclusion">4-2. 不正咬合</a></li>
-        <li class="no-bullet2"><a href="/health-disease/diseases/urolithiasis">4-3. 尿路結石</a></li>
-        <li class="no-bullet2"><a href="/health-disease/diseases/keratitis">4-4. 角膜炎</a></li>
-        <li class="no-bullet2"><a href="/health-disease/diseases/lipoma">4-5. 脂肪腫</a></li>
+        <li class="no-bullet2" data-status="new">
+          <a href="/health-disease/diseases/diarrheaAndConstipation">4-1. 下痢・便秘</a>
+        </li>
+        <li class="no-bullet2" data-status="editing">
+          <a href="/health-disease/diseases/malocclusion">4-2. 不正咬合</a>
+        </li>
+        <li class="no-bullet2" data-status="editing">
+          <a href="/health-disease/diseases/urolithiasis">4-3. 尿路結石</a>
+        </li>
+        <li class="no-bullet2" data-status="editing">
+          <a href="/health-disease/diseases/keratitis">4-4. 角膜炎</a>
+        </li>
+        <li class="no-bullet2" data-status="editing">
+          <a href="/health-disease/diseases/lipoma">4-5. 脂肪腫</a>
+        </li>
       </ul>
     </section>
+
     <section>
       <p>
         モルモットについて調べていると「急死した」，「急変しやすい」，「いつの間にか死んでいた」などという人が少なくありませんが，そんなことはありません。必ず前兆があるはずです。毎日気を抜かずヘルスチェックをしましょう（自戒の念もこめて）。
@@ -153,6 +164,21 @@
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
       document.body.classList.remove("modal-open");
+    });
+
+    // 記事ラベル
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("li[data-status]").forEach(li => {
+        const status = li.dataset.status;
+        const label = document.createElement("span");
+        label.classList.add("label", status);
+        label.textContent = status === "new" ? "new!" : "編集中";
+
+        const link = li.querySelector("a");
+        if (link) {
+          link.appendChild(label);
+        }
+      });
     });
   </script>
 </body>
