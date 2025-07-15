@@ -39,8 +39,15 @@ header {
 
 .top-image2 {
   width: 883px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.top-image2 img{
+  width: 883px;
+  display: block;
   height: auto;
-  clip-path: inset(0 0 50% 0);
+  transform: translateY(-50px);
 }
 
 
