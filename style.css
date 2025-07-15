@@ -234,6 +234,26 @@ main {
   background: linear-gradient(transparent 70%, #ffeccb 70%);
 }
 
+/* 記事ラベル */
+.label {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: 0.7em;
+  border-radius: 4px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.label.new {
+  background-color: #00ced1;
+}
+
+.label.editing {
+  background-color: #ff735a;
+}
+
+
 /* 表 */
 .table-container {
   width: 100%;
