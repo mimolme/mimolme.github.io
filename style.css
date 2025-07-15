@@ -38,11 +38,11 @@ header {
 }
 
 .top-image2 {
-  height: 400px;
-  display: block;
-  margin-bottom: 1rem;
-  justify-content: center;
+  width: 883px;
+  height: auto;
+  clip-path: inset(0 0 50% 0);
 }
+
 
 .menu-toggle {
   display: none;
