@@ -176,7 +176,7 @@
 
         const link = li.querySelector("a");
         if (link) {
-          link.appendChild(label);
+          li.insertBefore(label, link);
         }
       });
     });
