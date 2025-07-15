@@ -224,6 +224,10 @@ main {
   margin: 0;
 }
 
+.box-heading2 h3 {
+  margin: 0;
+}
+
 
 /* マーカー */
 .marker {
