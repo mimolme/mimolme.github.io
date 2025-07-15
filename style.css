@@ -48,6 +48,7 @@ header {
   display: block;
   height: auto;
   transform: translateY(-50px);
+  opacity: 0.8;
 }
 
 
