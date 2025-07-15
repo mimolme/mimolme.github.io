@@ -37,6 +37,12 @@ header {
   margin-bottom: 1rem;
 }
 
+.top-image2 {
+  height: 250px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .menu-toggle {
   display: none;
   background: none;
