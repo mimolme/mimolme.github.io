@@ -212,6 +212,14 @@ main {
   margin: 0.5rem 0;
 }
 
+.box-heading2 {
+  background-color: #ffffff;
+  border-left: 8px solid #a0a0a0;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
 .box-heading h3 {
   margin: 0;
 }
