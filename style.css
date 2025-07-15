@@ -237,7 +237,7 @@ main {
 /* 記事ラベル */
 .label {
   display: inline-block;
-  margin-left: 6px;
+  margin-right: 6px; /* ← 左側に来たので右マージンに変更 */
   padding: 2px 6px;
   font-size: 0.7em;
   border-radius: 4px;
@@ -246,12 +246,13 @@ main {
 }
 
 .label.new {
-  background-color: #00ced1;
+  background-color: #00bcd4; 
 }
 
 .label.editing {
-  background-color: #ff735a;
+  background-color: #ff7043; 
 }
+
 
 
 /* 表 */
