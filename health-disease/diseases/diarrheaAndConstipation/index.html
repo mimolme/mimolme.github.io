@@ -72,13 +72,13 @@
         モルモットは個体によっては年に1，2回，便がゆるくなったり形が先細りになったりします。特に季節の変わり目は室温・湿度を統制していても要注意です。
       </p>
       <br>
-      <section>
       <div class="box-heading2">
         <h3>記事</h3>
       </div>
+      <section>
       <ul>
-        <li class="no-bullet2"><a href="/health-disease/diseases/diarrheaAndConstipation/2020-11-26">2020-11-26</a></li>
-        <li class="no-bullet2"><a href="/health-disease/diseases/diarrheaAndConstipation/2025-03-06">2025-03-06</a></li>
+        <li data-status="new"><a href="/health-disease/diseases/diarrheaAndConstipation/2020-11-26">2020-11-26</a></li>
+        <li data-status="editing"><a href="/health-disease/diseases/diarrheaAndConstipation/2025-03-06">2025-03-06</a></li>
       </ul>
       </section>
       <br>
@@ -161,6 +161,21 @@
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
       document.body.classList.remove("modal-open");
+    });
+
+    // 記事ラベル
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("li[data-status]").forEach(li => {
+        const status = li.dataset.status;
+        const label = document.createElement("span");
+        label.classList.add("label", status);
+        label.textContent = status === "new" ? "New!" : "編集中";
+
+        const link = li.querySelector("a");
+        if (link) {
+          li.insertBefore(label, link);
+        }
+      });
     });
   </script>
 </body>
