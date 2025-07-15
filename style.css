@@ -594,7 +594,7 @@ body.modal-open .menu-toggle {
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   .top-image2 img {
-    transform: translateY(-2%);
+    transform: translateY(-45%);
   }
   .menu-toggle {
     display: block;
