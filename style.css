@@ -38,13 +38,13 @@ header {
 }
 
 .top-image2 {
-  width: 883px;
+  width: 960px;
   height: 300px;
   overflow: hidden;
 }
 
 .top-image2 img{
-  width: 883px;
+  width: 960px;
   display: block;
   height: auto;
   transform: translateY(-50px);
