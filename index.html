@@ -59,7 +59,7 @@
           <li><a href="/log/profiles">1. プロフィール</a></li>
           <li><a href="/log/weightTracking">2. 体重の推移</a></li>
           <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
-          <li><a href="/log/behavioralTraining" data-status="editing">4. トレーニング</a></li>
+          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
         </ul>
       </div>
       <a href="/wool-mol">羊毛モル</a>
@@ -229,20 +229,6 @@
       }
     });
 
-    // 記事ラベル
-    document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("li[data-status]").forEach(li => {
-      const status = li.dataset.status;
-      const label = document.createElement("span");
-      label.classList.add("label", status);
-      label.textContent = status === "new" ? "new!" : "編集中";
-
-      const link = li.querySelector("a");
-      if (link) {
-        link.appendChild(label);
-      }
-    });
-  });
   </script>
 </body>
 
