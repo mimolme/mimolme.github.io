@@ -41,7 +41,7 @@ header {
   width: 100%;          /* レスポンシブ対応 */
   max-width: 960px;      /* 最大幅を指定 */
   height: 35vw;          /* ビューポートに応じて高さ可変（目安） */
-  max-height: 350px;     /* 高さの上限を設定 */
+  max-height: 400px;     /* 高さの上限を設定 */
   overflow: hidden;
   margin: 0 auto;        /* 中央寄せ */
 }
@@ -50,7 +50,7 @@ header {
   width: 100%;           /* 親要素にフィット */
   height: auto;
   display: block;
-  transform: translateY(-5%); /* 上方向へずらす。調整可 */
+  transform: translateY(-45%); /* 上方向へずらす。調整可 */
   opacity: 0.8;
 }
 
