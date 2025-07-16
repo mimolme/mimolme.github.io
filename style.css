@@ -248,13 +248,16 @@ main {
 /* 記事ラベル */
 .label {
   display: inline-block;
-  margin-right: 6px; /* ← 左側に来たので右マージンに変更 */
+  width: 47px; /* ← 固定幅 */
+  text-align: center;
+  margin-right: 6px;
   padding: 2px 6px;
   font-size: 0.7em;
   border-radius: 4px;
   color: #fff;
   vertical-align: middle;
 }
+
 
 .label.new {
   background-color: #00bcd4; 
