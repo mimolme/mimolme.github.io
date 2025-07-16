@@ -38,19 +38,26 @@ header {
 }
 
 .top-image2 {
-  width: 100%;          /* レスポンシブ対応 */
-  max-width: 960px;      /* 最大幅を指定 */
-  height: 35vw;          /* ビューポートに応じて高さ可変（目安） */
-  max-height: 400px;     /* 高さの上限を設定 */
+  width: 100%;
+  /* レスポンシブ対応 */
+  max-width: 960px;
+  /* 最大幅を指定 */
+  height: 35vw;
+  /* ビューポートに応じて高さ可変（目安） */
+  max-height: 400px;
+  /* 高さの上限を設定 */
   overflow: hidden;
-  margin: 0 auto;        /* 中央寄せ */
+  margin: 0 auto;
+  /* 中央寄せ */
 }
 
 .top-image2 img {
-  width: 100%;           /* 親要素にフィット */
+  width: 100%;
+  /* 親要素にフィット */
   height: auto;
   display: block;
-  transform: translateY(-45%); /* 上方向へずらす。調整可 */
+  transform: translateY(-45%);
+  /* 上方向へずらす。調整可 */
   opacity: 0.8;
 }
 
@@ -248,7 +255,8 @@ main {
 /* 記事ラベル */
 .label {
   display: inline-block;
-  width: 35px; /* 固定幅 */
+  width: 35px;
+  /* 固定幅 */
   text-align: center;
   margin-right: 7px;
   padding: 2px 6px;
@@ -260,11 +268,11 @@ main {
 
 
 .label.new {
-  background-color: #00bcd4; 
+  background-color: #00bcd4;
 }
 
 .label.editing {
-  background-color: #ff7043; 
+  background-color: #ff7043;
 }
 
 
@@ -311,7 +319,6 @@ th {
   margin: 1.5rem 0;
   border-left: 6px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
 }
 
 .column-box {
@@ -319,7 +326,7 @@ th {
   background-color: #eef6fb;
 }
 
-.article-box {
+.other-box {
   border-left-color: #a0a0a0;
   background-color: #fff;
 }
@@ -328,6 +335,30 @@ th {
   border-left-color: #ff735a;
   background-color: #faedec;
 }
+
+/* 事例ボックス */
+.custom-box .box-title {
+  display: table;
+  margin: 2em 0 0 0;
+  padding: 0 0.75em;
+  border: 2px solid #a0a0a0;
+  border-radius: 5px 5px 0 0;
+  background-color: #a0a0a0;
+  color: #ffffff;
+}
+
+.custom-box .box-content {
+  margin: 0 0 2em 0;
+  padding: 0.5em 1em;
+  border: 2px solid #a0a0a0;
+  border-radius: 0 5px 5px 5px;
+}
+
+.custom-box .box-content p {
+  margin: 0;
+  padding: 0;
+}
+
 
 /* 表（食べ物） */
 .food-table {
@@ -411,7 +442,7 @@ th {
 /* 音声 */
 .audio-player {
   width: 100%;
-  max-width: 270px;  
+  max-width: 270px;
   display: flex;
   align-items: center;
   background: #f2f4f5;
@@ -599,6 +630,7 @@ body.modal-open .menu-toggle {
   .top-image2 img {
     transform: translateY(-45%);
   }
+
   .menu-toggle {
     display: block;
     background: rgba(255, 255, 255, 0.5);
@@ -680,10 +712,11 @@ body.modal-open .menu-toggle {
     display: block;
     margin: 0 auto;
   }
+
   .responsive-jpg {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-}
+  }
 }
