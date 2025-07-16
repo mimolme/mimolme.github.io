@@ -248,7 +248,7 @@ main {
 /* 記事ラベル */
 .label {
   display: inline-block;
-  width: 47px; /* ← 固定幅 */
+  width: 45px; /* 固定幅 */
   text-align: center;
   margin-right: 6px;
   padding: 2px 6px;
