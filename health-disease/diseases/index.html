@@ -172,7 +172,7 @@
         const status = li.dataset.status;
         const label = document.createElement("span");
         label.classList.add("label", status);
-        label.textContent = status === "new" ? "New!" : "編集中";
+        label.textContent = status === "new" ? "New !" : "編集中";
 
         const link = li.querySelector("a");
         if (link) {
