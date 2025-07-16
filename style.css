@@ -319,9 +319,9 @@ th {
   background-color: #eef6fb;
 }
 
-.break-box {
-  border-left-color: #c19a6b;
-  background-color: #fdf6ee;
+.article-box {
+  border-left-color: #a0a0a0;
+  background-color: #fff;
 }
 
 .warning-box {
