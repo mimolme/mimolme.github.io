@@ -145,7 +145,7 @@ nav.nav-menu {
   display: block;
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  color: #fafafa;
+  color: #737373;
   text-decoration: none;
   position: relative;
 }
@@ -155,7 +155,7 @@ nav.nav-menu {
 }
 
 .submenu li a:hover {
-  background-color: #f0f0f0;
+  background-color: #fafafa;
   color: #699196;
 }
 
