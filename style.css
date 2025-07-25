@@ -169,6 +169,22 @@ main {
 }
 
 /* ボタン */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  /* 横中央揃え */
+  margin: 40px auto;
+  /* 上下の余白 */
+}
+
+.btn-container {
+  display: flex;
+  gap: 16px;
+  /* ボタン間のスペース */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .btn1 {
   display: inline-flex;
   align-items: center;
@@ -182,8 +198,9 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.btn1:hover:hover {
-  background-color: #008697;
+.btn1:hover {
+  color: #fefefe;
+  background-color: #4b8991;
 }
 
 /* 見出し(h2用) */
