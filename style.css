@@ -1,278 +1,758 @@
-<!DOCTYPE html>
-<html lang="ja">
+body {
+  font-family: 'monospace', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  max-width: 960px;
+  margin: auto;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>もるらぼ -GuineaPigLab- </title>
-  <meta name="description" content="もるらぼは，モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
-  <meta name="keywords"
-    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/fav.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+a {
+  color: #008697;
+}
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+a:hover {
+  color: #699196;
+}
 
-    gtag('config', 'G-85BH18E352');
-  </script>
+.update {
+  font-size: small;
+  color: #888888;
+}
 
-</head>
+header {
+  position: relative;
+}
 
-<body>
-  <div id="top"></div>
-  <header>
-    <a href="https://mimolme.github.io">
-      <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
-    </a>
-    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <nav class="nav-menu">
-      <a href="https://mimolme.github.io">もるらぼ</a>
+.top-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
 
-      <div class="dropdown">
-        <a href="/feeding-environment">食べ物と環境</a>
-        <ul class="submenu">
-          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
-          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
-          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
-          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/health-disease">健康と病気</a>
-        <ul class="submenu">
-          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
-          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
-          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
-          <li><a href="/health-disease/diseases">4. 病気</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/log">もるログ</a>
-        <ul class="submenu">
-          <li><a href="/log/profiles">1. プロフィール</a></li>
-          <li><a href="/log/weightTracking">2. 体重の推移</a></li>
-          <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
-          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
-        </ul>
-      </div>
-      <a href="/wool-mol">羊毛モル</a>
-      <a href="/terms_of_use">利用規約</a>
-      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <p style="color: red;">※サイト作成中です。いくつかのページは現在機能しません。</p>
-      <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 07/25/2025</p>
-    </section>
-    <section>
-      <div class="section-wrapper">
-        <h2 class="section-title">もるらぼとは？</h2>
-      </div>
-      <p>
-        モルモットと一緒に暮らしたい。モルモットと暮らしているけどわからないことだらけ。モルモットの本をいくつか読んだけど実際に役立つ情報が少ない。一緒に暮らすからにはモルモットにとって最善を尽くしたい。</p>
-      <p>
-        そんな思いを抱いている方にとって少しでも有益な情報を配信できたら，そして，私自身も探求し続けたいと思い，このサイトを立ち上げました。モルモットが安心して健やかに暮らせること，これを可能な限り追求し続けるために管理人（私）は日々試行錯誤の繰り返しです。
-      <p>
-        ところで，モルモットと暮らしているとわからないことだらけですよね。と言いますのも，とにかく確たる情報が少ない！ペットショップの店員さん，獣医さん，飼育本（※専門書は除く。ここでは一般的に1~3千円程度で入手可能なものを指す）の著者，Webライター，みなさん違ったことを主張してきます。飼育本を例に取ってみても，著者によって情報が違う！この著者モルモットを飼育したことがあるのかしら？なんてことはよくありますよね。情報情報が錯綜する中，私が参考になった知識や奮闘した経験が少しでも誰かのお役に立てればなと思います。
-      </p>
-      <p>
-        ちなみに，なぜか「モルモットは比較的飼いやすい」と書かれた本が多いですが，私は全く同意できません。ものすごく大変です。私はこれまで3頭と暮らした経験がありますが「慣れる」作業はあっても楽だと感じたことは一度もありません。モルモットと暮らすと決めてからモルモットの「飼育本」を複数読みましたがこんなにも大変だとは思いもよりませんでした。モルモットとの同居を検討している方は本サイトをご参照の上，「本当に飼えるのか」冷静に考えてみてください。
-      </p>
-    </section>
-    <section>
-      <div class="box warning-box">
-        <strong>⚠ 注意：</strong>
-        「もるらぼ」は，個人のサイトです。管理人は，獣医でもなければ公的なモルモット専門家でもありません。真剣にモルモットと一緒に暮らしているしがない一般人です。従いまして，このサイトに書かれていることが絶対的に正しいわけではありません。また，飼育本のようにモルモットについて網羅するようなものでもありません。あくまでご参考程度にお読みいただければ幸いです。そして自己責任の範囲内でお試しいただければと思います。
-      </div>
-    </section>
-    <br>
-    <section>
-      <div class="section-wrapper">
-        <h2 class="section-title">モルモットと暮らすためには・・</h2>
-      </div>
-      <ul>
-        <li><a href="#cost">経済的な余裕</a></li>
-        <li><a href="#time">時間的・心理的な余裕</a></li>
-        <li><a href="#allergies">あなたや家族のアレルギーの有無</a></li>
-        <li><a href="#hospital">かかりつけにできる小動物・エキゾチックアニマル専門病院</a></li>
-      </ul>
-      <p>少なくとも上記4点はモルモットと暮らす前に必ず確認しておくべきかと思います。</p>
-    </section>
-    <section>
-      <h3 id="cost"><span class="marker">1万円強。</span></h3>
-      <p>これは1頭のモルモットにかかるひと月当たりの費用です。モルモットの体質によって差はあるかと思いますが「ちゃんと」飼育しようと思うと1万円では収まりません。ちなみに我が家の場合，モルモット1頭に対する月あたりの出費は<a
-          href="#table1">表1</a>の通りです：</p>
-    </section>
-    <section>
-      <h5 id="table1" style="text-align: center; font-weight: bold;">表1. ひと月あたりの１頭にかかる費用（円）</h5>
-      <div class="table-container">
-        <table>
-          <tr>
-            <th>牧草・牧草代用ペレット</th>
-            <th>青果</th>
-            <th>サプリメント</th>
-            <th>清掃</th>
-            <th>備品</th>
-            <th>その他</th>
-            <th style="font-weight: bold;">合計</th>
-          </tr>
-          <tr>
-            <td>4,000</td>
-            <td>2,000</td>
-            <td>2,000</td>
-            <td>500</td>
-            <td>3,000</td>
-            <td>3,000</td>
-            <td style="font-weight: bold;">15,000</td>
-          </tr>
-        </table>
-      </div>
-    </section><br>
-    <section>
-      <p>
-        例えば，我が家では1袋500~700円の牧草を週あたり2袋は買います。それに加えて「牧草代用ペレット」というその名の通り牧草でできたペレットも買っています（牧草は色々なものを継続して試しましたが，個体によってはいずれも食いつきが悪く不正咬合になりかねないので）。野菜や果物に関しては，2~3種類を10日に1回ほど買います。またサプリメントに関しては，年間で1~2万円かかります（これも個体に依存します）。清掃に関する出費項目としてはウエットティッシュや粘着カーペットクリーナーなど。備品としては，給水器や給水器に入れる薬剤，シリンジ，タオル，齧り技など。その他にも，光熱費（年中空調をつけることになります），病院代（年間3万はかかると思ってください）などたくさんのお金がかかります。
-      </p>
-      <p>
-        モルモット自体の購入費用は，安くて3千円くらいから高くて3~4万円くらい。「時世」，「ペットショップ」，「モルモットの出身地」によって変動しますが，多くは5千円~1万5千円で購入できる印象です。犬猫と比較すると安価なため初期費用がかかりにくいです。一方で前述の通りラーニングコストは決して安くありません。モルモットの寿命は平均5年程度と言われていますがあくまで代表値。10年くらい一緒に暮らせるかも知れません。いずれにせよ決して短くない時間，モルモットのために毎月お金をかけられるのか，今一度よく考えてみてください。
-      </p>
-    </section>
-    <br>
-    <section>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+.top-image2 {
+  width: 100%;
+  /* レスポンシブ対応 */
+  max-width: 960px;
+  /* 最大幅を指定 */
+  height: 35vw;
+  /* ビューポートに応じて高さ可変（目安） */
+  max-height: 400px;
+  /* 高さの上限を設定 */
+  overflow: hidden;
+  margin: 0 auto;
+  /* 中央寄せ */
+}
 
-        <div>
-          <a href="https://mimolme.github.io/img/tips/mol_tim2.jpg"><img id="fig1"
-              src="https://mimolme.github.io/img/tips/mol_tim2.jpg" alt="mol_tim2" height="200px"
-              style="width: auto;"></a>
-        </div>
-      </div>
-    </section>
-    <div class="btn-wrapper">
-      <div class="btn-container">
-        <a href="https://mimolme.github.io/feeding-environment/tools/" class="btn1"><i class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットに必要なツール
-        </a>
+.top-image2 img {
+  width: 100%;
+  /* 親要素にフィット */
+  height: auto;
+  display: block;
+  transform: translateY(-45%);
+  /* 上方向へずらす。調整可 */
+  opacity: 0.8;
+}
 
-        <a href="https://mimolme.github.io/feeding-environment/feeding/" class="btn1"><i class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>
-          モルモットの食べ物
-        </a>
-      </div>
-    </div>
-    </section>
-    <section>
-      <h3 id="time"><span class="marker">1時間弱。</span></h3>
-      <p>
-        これは1頭のモルモットの管理にかかる１日あたりの時間です。モルモットは排泄量がとても多いです（特に糞）。また，いかなる個体であっても，完全にトイレの場所を守ることは困難です。個体によっては糞尿をいたるところに撒き散らす癖（テリトリーを守っているのでしょう）を持つ子もいます。なお，これも個体差ありますが，モルモットの毛は抜けやすいです。抜けた毛を放置するとエサと一緒に接種してしまい糞詰まりを起こすことがあります。これに輪をかけて，モルモットは皮膚病に罹りやすいと言われています。結論，モルモットの住処は清潔に保つ必要があります。
-      </p>
-      <p>
-        清掃範囲はモルモットの住処とモルモット本体です。我が家では，基本的に朝晩行っています。お休みの日はこれに加えて「ケージ内が汚れている」と感じたらすぐに糞尿を取り除いたりもします。ちなみにテキパキ作業しても20分はかかります。
-      </p>
-      <p>
-        他にも，野菜を洗って切る，硬いサプリメントを砕く，給水器を丁寧に洗う，などといった作業にも時間を割くことになります。仕事から疲れて帰ってきて，あるいは貴重な休みの日に，掃除や給餌ができるのか，よく考えてみてください。
-      </p>
-    </section>
-    <section>
-      <h3 id="allergies"><span class="marker">モルモットアレルギーかも？</span></h3>
-      <p>
-        「モルモットに近づくとくしゃみが止まらない」，「モルモットを素肌で抱っこすると湿疹が出る」といった経験はありませんか？それはモルモットに対するアレルギーである可能性があります。かくいう私自身も実は「モルモットアレルギー」のようです。皮膚の症状に関しては個体に関わらず，場合によっては服越しでも，必ず生じます。一方で「くしゃみ・鼻水」に関しては必ず生じるわけではありません。むしろチモシーの粉塵で生じている気がします。ところで私はモルモットと暮らすまで恥ずかしながらモルモットに興味がありませんでした。ですので動物園でモルモットと触れ合うといった経験もありませんでした。従ってモルモットと暮らすとくしゃみや鼻水，湿疹が出るとは思いもよりませんでした。
-      </p>
-      <p>ところで，どれくらいのヒトがモルモットアレルギーなのでしょう？一般のヒトの有病率に関する調査はすぐには見当たりませんでしたが，実験動物関係の従事者のうちモルモット担当者の有病率は約10%であることを示唆する報告<sup><a
-            href="#ref1">[1]</a></sup>や猫・犬アレルギー患者の73%がモルモットアレルゲンにIgE陽性との報告<sup><a
-            href="#ref2">[2]</a></sup><sup>※1</sup>もあります。「モルモットアレルギー」か調べるには，シングルアレルゲン検査で「モルモット上皮」を含めると良いでしょう。シングルアレルゲン検査は皮膚科/耳鼻咽喉科/呼吸器科などで対応しています。もしお近くの病院では対応していない場合，view39など一般的なアレルギー検査を受けてみて「犬・猫」項目の結果を参考にしてみても良いかもしれませんね。<br><sup>※1:
-          猫・犬アレルゲンとの交差反応で陽性になっただけのケースが混在</sup></p>
-      <p>
-        ちなみに，一般人が耳鼻科や呼吸器科で受けられるアレルギー検査の大半は「血液検査」です。明らかにモルモット関係で湿疹や呼吸器関係の不調が生じているのに血液検査の結果「陰性」というケースもあります。かくいう私も明らかにアレルギー反応が出ているのに検査結果は陰性でした。先生曰く，アレルギー検査（血液検査）はあくまで指標の一つです。検査結果が陰性でもモルモットと暮らす限り不調が出る可能性は十分にあります。また，一緒に暮らしているうちにアレルギー性鼻炎や気管支炎喘息などを発症するケースも少なくないようです。あなたは嫌になりませんか？通院しながらモルモットと暮らしたいですか？モルモットと暮らすならばこうしたリスクも念頭に置いておく必要があるのです。
-      </p>
-      <p>やっぱり飼えない，もう一緒に暮らせない，などは許されないのです。というよりもこのような状態に陥ることを，あなたにとってもモルモットにとっても，事前に回避する必要があるのです。</p>
-    </section>
-    <section>
-      <h3 id="hospital"><span class="marker">エキゾチックアニマル専門病院が近所にありますか？</span></h3>
-      <p>
-        ご近所を思い浮かべてください。動物病院はいくつありますか？私の自宅の半径1.5km圏内にはなんと7件以上あります。皆さんのご近所にも動物病院自体はいくつかあるのではないかと思います。</p>
-      <p>
-        しかし，その中でモルモットを診察可能な病院がいくつあるでしょうか？大抵は犬猫専門です。まれにウサギ専門の動物病院があったり，対応可能な動物に「モルモット」が含まれている動物病院もあります。しかし，ご注意ください。「エキゾチックアニマル専門」あるいは「小動物専門」と掲げていない限り頼るべきではありません。現に私はウサギ専門病院やモルモット対応可能と謳っている動物病院に訪問した経験があります。これらの病院には事前に電話でもモルモット対応可否を確認した上で訪れましたが，
-      </p>
-      <p>・とりあえずレントゲンを撮って結局何もわからない，なんとなくとりあえず点滴をうつ<br>・モルモットの餌すら把握していない<br></p>
-      <p>
-        という信じ難い獣医さんに出会いました。「読影できない」ということは診断・治療ができないだけでなく，お金の無駄遣いをすることにもなります。また「何を食べているかわからない」ということは「〇〇を食べさせて良いのか」もわかりませんし，それ以前に現在の食生活が適切なものなのかも判断できない，助言してもらえない，ということです。もちろん私が出会った獣医さんが単に「ハズレ」だった可能性もあります。しかし大切なモルモットの命がかかっています。専門医に診てもらうことを強く推奨します。
-      </p>
-      <p>
-        ここで本セクション冒頭の問いに戻りましょう。ご自宅の近所に，モルモットを「的確に」診察できる先生はいますか？モルモットの体調がすぐれない時に遠方まで車・電車で運搬するのは好ましくありません。明確な目安は存在しませんが人間であっても数時間移動すると疲れますよね？移動だけでなくおそらく病院内でも待ち時間が発生します。
-      </p>
-      <p>
-        これらを踏まえ，あまりにも遠方にしか専門の動物病院が存在しない場合には，モルモットとの同居は控えた方が良いかも知れません（モルモットにとってもあなたにとっても）。我が家では，なんだかんだ年に少なくとも3回は通院します。それは例えば「うんちが少し柔らかい」となったら「診察（&薬の処方あり）→予後観察1回」というようにあっという間に2回通院。さらに定期検診として通院することもあります。「病気になった時だけ行けば良いのでは？」と考えている方もいらっしゃるかも知れませんがそれは違います。病気になった時では遅いのです。以上を踏まえ，モルモットに精通した獣医さんがいる小動物専門動物病院を探し，モルモットと同居できるか検討しましょう。
-      </p>
-    </section>
-    <section>
-      <div class="references">
-        <h2>参考文献</h2>
-        <ul>
-          <li id="ref1">[1] <i>E6 guinea pig epithelium</i> Retrieved Jun 2, 2025, from <a
-              href="https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html">https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html</a>
-          </li>
-          <li id="ref2">[2] Swiontek, Kler, Lehners, Ollert, Hentges, & Hilger. (2021). Component‐resolved diagnosis
-            using guinea‐pig
-            allergens elucidates allergen sensitization profiles in allergy to furry animals. <i>Clinical &Amp;
-              Experimental Allergy, 51</i>(6), 829. <a
-              href="https://pubmed.ncbi.nlm.nih.gov/33797108/">doi:10.1111/cea.13873</a></li>
-        </ul>
-      </div>
 
-    </section>
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 1.5rem;
+  cursor: pointer;
+  color: #ccc8af;
+}
 
-    <a href="#top" class="back-to-top">▲</a>
-    <!-- モーダル -->
-    <div id="modal" class="modal">
-      <img class="modal-content" id="modal-img">
-    </div>
-  </main>
+nav.nav-menu {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  font-family: inherit, monospace, sans-serif;
+}
 
-  <footer>
-    <p>&copy; 2023-2025 mimolme</p>
-  </footer>
+.nav-menu>* {
+  position: relative;
+}
 
-  <script>
-    // ハンバーガーメニューの開閉
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-menu');
+.nav-menu>*:not(:first-child)::before {
+  content: '‖';
+  color: #ccc8af;
+  font-size: 0.9rem;
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: pre;
+}
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
+.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-family: inherit, monospace, sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-    // メニュー外クリックで閉じる
-    document.addEventListener('click', (e) => {
-      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
-      if (!isClickInsideMenu && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-      }
-    });
-    // モーダル表示（画像クリック）
-    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        modal.style.display = "block";
-        modalImg.src = this.href;
-        document.body.classList.add("modal-open");
-      });
-    });
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 0%;
+  height: 2px;
+  background-color: #ccc8af;
+  transition: width 0.3s ease;
+}
 
-    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
-    document.getElementById("modal").addEventListener("click", function () {
-      this.style.display = "none";
-      document.body.classList.remove("modal-open");
-    });
+.nav-menu a:hover::after {
+  width: 80%;
+}
 
-  </script>
-</body>
+.dropdown {
+  position: relative;
+}
 
-</html>
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  border: none;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: max-content;
+  border-radius: 4px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  color: #737373;
+  text-decoration: none;
+  position: relative;
+}
+
+.submenu li a::after {
+  content: none !important;
+}
+
+.submenu li a:hover {
+  background-color: #fafafa;
+  color: #699196;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+main {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* ボタン */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  /* 横中央揃え */
+  margin: 40px auto;
+  /* 上下の余白 */
+}
+
+.btn-container {
+  display: flex;
+  gap: 16px;
+  /* ボタン間のスペース */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn1 {
+  display: inline-flex;
+  align-items: center;
+  background-color: #008697;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn1:hover {
+  color: #fefefe;
+  background-color: #4b8991;
+}
+
+/* 見出し(h2用) */
+.section-wrapper {
+  position: relative;
+  background-color: #fff;
+  border-top: 2px solid #cecece;
+  border-bottom: 2px solid #cecece;
+  padding: 0.1rem 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 1.5em;
+  width: 0;
+  height: 0;
+  /* 吹き出しの枠線部分 */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #cecece;
+}
+
+.section-wrapper::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 1px);
+  /* ボーダーにくっつける */
+  left: 1.5em;
+  width: 0;
+  height: 0;
+
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #fff;
+  /* 三角形の中を背景色で塗る */
+  z-index: 1;
+}
+
+.section-title {
+  color: #333;
+  padding: 0.5rem;
+  margin: 0;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 見出し(h3用) */
+.box-heading {
+  background-color: #ffffff;
+  border-left: 8px solid #008697;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.box-heading2 {
+  background-color: #ffffff;
+  border-left: 8px solid #a0a0a0;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.box-heading h3 {
+  margin: 0;
+}
+
+.box-heading2 h3 {
+  margin: 0;
+}
+
+
+/* マーカー */
+.marker {
+  background: linear-gradient(transparent 70%, #ffeccb 70%);
+}
+
+/* 記事ラベル */
+.label {
+  display: inline-block;
+  width: 35px;
+  /* 固定幅 */
+  text-align: center;
+  margin-right: 7px;
+  padding: 2px 6px;
+  font-size: 0.7em;
+  border-radius: 4px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+
+.label.new {
+  background-color: #00bcd4;
+}
+
+.label.editing {
+  background-color: #ff7043;
+}
+
+
+
+/* 表 */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.no-bullet {
+  list-style: none;
+  padding-left: 0;
+  font-size: small;
+}
+
+.no-bullet2 {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+/* コラム */
+.box {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 6px solid #ccc;
+  border-radius: 5px;
+}
+
+.column-box {
+  border-left-color: #00ced1;
+  background-color: #eef6fb;
+}
+
+.other-box {
+  border-left-color: #a0a0a0;
+  background-color: #fff;
+}
+
+.warning-box {
+  border-left-color: #ff735a;
+  background-color: #faedec;
+}
+
+/* 事例ボックス */
+.custom-box .box-title {
+  display: table;
+  margin: 0 0 0 0;
+  padding: 0 0.75em;
+  border: 2px solid #a0a0a0;
+  border-radius: 5px 5px 0 0;
+  background-color: #a0a0a0;
+  color: #ffffff;
+}
+
+.custom-box .box-content {
+  margin: 0 0 2em 0;
+  padding: 0.5em 1em;
+  border: 2px solid #a0a0a0;
+  border-radius: 0 5px 5px 5px;
+}
+
+.custom-box .box-content i {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 表（食べ物） */
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  table-layout: fixed;
+}
+
+.food-table th,
+.food-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.food-table th {
+  background-color: #f7f7f7;
+}
+
+.food-table caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* プロフィール */
+.profiles {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+.profiles table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 400px;
+  table-layout: fixed;
+}
+
+.profiles th,
+.profiles td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.profiles th {
+  background-color: #f7f7f7;
+  color: white;
+}
+
+.profiles .labelp {
+  background-color: #f7f7f7;
+  font-weight: bold;
+  width: 25%;
+}
+
+.profiles .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #cecece;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+.profiles thead tr:first-child th {
+  background-color: transparent;
+  border: none;
+}
+
+/* 音声 */
+.audio-player {
+  width: 100%;
+  max-width: 270px;
+  display: flex;
+  align-items: center;
+  background: #f2f4f5;
+  border-radius: 999px;
+  padding: 10px 20px;
+  gap: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.play-btn,
+.volume-btn,
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.time {
+  font-size: 14px;
+  white-space: nowrap;
+  width: 70px;
+  text-align: center;
+}
+
+.volume-slider {
+  width: 100px;
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #888;
+  border-radius: 50%;
+}
+
+.menu-btn::before {
+  content: '⋮';
+  font-size: 18px;
+  line-height: 1;
+  display: block;
+}
+
+audio {
+  display: none;
+}
+
+/* モーダル */
+#image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#image-modal img {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 5% auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #fff;
+  transition: transform 0.3s;
+}
+
+/* フッター */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* トップに戻る */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  box-shadow: 0 0 20px #fff;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 参考文献 */
+.references {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  font-size: 14px;
+  text-align: left;
+  border-top: 2px solid #ccc;
+  margin-top: 2rem;
+}
+
+.references h2 {
+  font-size: 16px;
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.references ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.references li {
+  margin-bottom: 0.5rem;
+}
+
+.references a {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+
+/* モーダル上のハンバーガメニュー非表示 */
+body.modal-open .menu-toggle {
+  display: none !important;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 600px) {
+  .top-image2 img {
+    transform: translateY(-45%);
+  }
+
+  .menu-toggle {
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    font-size: 2rem;
+    position: fixed;
+    top: 0.3rem;
+    right: 1.5rem;
+    z-index: 1001;
+    padding: 0.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+  }
+
+  nav.nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  nav.nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu>*:not(:first-child)::before {
+    content: none;
+  }
+
+  nav.nav-menu a {
+    justify-content: flex-start;
+    padding-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav.nav-menu a::after {
+    left: 0;
+    width: 0;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown>a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+  }
+
+  .profiles table {
+    font-size: 12px;
+    table-layout: auto;
+  }
+
+  .profiles .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profiles th,
+  .profiles td {
+    padding: 6px;
+  }
+
+  .responsive-png {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .responsive-jpg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .btn1 {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
