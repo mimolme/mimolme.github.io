@@ -190,7 +190,7 @@ main {
   align-items: center;
   background-color: #008697;
   color: white;
-  padding: 12px 30px;
+  padding: 12px 20px;
   border-radius: 9999px;
   font-size: 1rem;
   text-decoration: none;
@@ -200,7 +200,7 @@ main {
 
 .btn1:hover {
   color: #fefefe;
-  background-color: #4b8991;
+  background-color: #4a98a2;
 }
 
 /* 見出し(h2用) */
