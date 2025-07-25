@@ -168,6 +168,24 @@ main {
   padding: 0 1rem;
 }
 
+/* ボタン */
+.btn1 {
+  display: inline-flex;
+  align-items: center;
+  background-color: #008697;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn1:hover:hover {
+  background-color: #008697;
+}
+
 /* 見出し(h2用) */
 .section-wrapper {
   position: relative;
@@ -714,5 +732,10 @@ body.modal-open .menu-toggle {
     height: auto;
     display: block;
     margin: 0 auto;
+  }
+
+  .btn1 {
+    font-size: 0.9rem;
+    padding: 10px 16px;
   }
 }
