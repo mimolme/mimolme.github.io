@@ -144,6 +144,7 @@
         モルモット自体の購入費用は，安くて3千円くらいから高くて3~4万円くらい。「時世」，「ペットショップ」，「モルモットの出身地」によって変動しますが，多くは5千円~1万5千円で購入できる印象です。犬猫と比較すると安価なため初期費用がかかりにくいです。一方で前述の通りラーニングコストは決して安くありません。モルモットの寿命は平均5年程度と言われていますがあくまで代表値。10年くらい一緒に暮らせるかも知れません。いずれにせよ決して短くない時間，モルモットのために毎月お金をかけられるのか，今一度よく考えてみてください。
       </p>
     </section>
+    <br>
     <section>
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
@@ -249,6 +250,23 @@
       if (!isClickInsideMenu && nav.classList.contains('open')) {
         nav.classList.remove('open');
       }
+    });
+    // モーダル表示（画像クリック）
+    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        modal.style.display = "block";
+        modalImg.src = this.href;
+        document.body.classList.add("modal-open");
+      });
+    });
+
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+      this.style.display = "none";
+      document.body.classList.remove("modal-open");
     });
 
   </script>
