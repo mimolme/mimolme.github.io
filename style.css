@@ -280,7 +280,7 @@ main {
 
 /* マーカー */
 .marker {
-  background: linear-gradient(transparent 40%, #ff9373 80%);
+  background: linear-gradient(transparent 40%, #ffa185 80%);
 }
 
 /* 記事ラベル */
@@ -364,7 +364,7 @@ th {
 
 .warning-box {
   border-left-color: #ff7043;
-  background-color: #ffd7ca;
+  background-color: #ffeae3;
 }
 
 /* 事例ボックス */
