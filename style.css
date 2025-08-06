@@ -280,7 +280,7 @@ main {
 
 /* マーカー */
 .marker {
-  background: linear-gradient(transparent 40%, #ffa185 80%);
+  background: linear-gradient(transparent 60%, #ffa083 60%);
 }
 
 /* 記事ラベル */
