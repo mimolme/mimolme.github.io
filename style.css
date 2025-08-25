@@ -397,13 +397,16 @@ table.food-table {
   width: 100%;
   min-width: 330px;
 }
+
 table.food-table th,
 table.food-table td {
   border: 1px solid #333;
-  padding: 3px 3px;   /* 横余白をさらに狭める */
+  padding: 3px 3px;
+  /* 横余白をさらに狭める */
   text-align: center;
   font-size: 0.9em;
 }
+
 table.food-table th {
   background-color: #f2f2f2;
 }
@@ -412,7 +415,8 @@ table.food-table th {
 table.food-table th:first-child,
 table.food-table td:first-child {
   text-align: left;
-  width: 30%; /* 食品列 */
+  width: 30%;
+  /* 食品列 */
   white-space: nowrap;
 }
 
@@ -722,14 +726,17 @@ body.modal-open .menu-toggle {
 
   table.food-table th,
   table.food-table td {
-    font-size: 0.8em;  /* 文字小さめ */
-    padding: 3px 3px;  /* 余白さらに削減 */
+    font-size: 0.8em;
+    /* 文字小さめ */
+    padding: 3px 3px;
+    /* 余白さらに削減 */
   }
+
   table.food-table th:first-child,
   table.food-table td:first-child {
     width: 28%;
   }
-  
+
   .profiles table {
     font-size: 12px;
     table-layout: auto;
