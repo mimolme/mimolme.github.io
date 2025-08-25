@@ -400,7 +400,7 @@ table.food-table {
 table.food-table th,
 table.food-table td {
   border: 1px solid #333;
-  padding: 6px 6px;   /* 横余白をさらに狭める */
+  padding: 3px 3px;   /* 横余白をさらに狭める */
   text-align: center;
   font-size: 0.9em;
 }
@@ -414,14 +414,6 @@ table.food-table td:first-child {
   text-align: left;
   width: 30%; /* 食品列 */
   white-space: nowrap;
-}
-table.food-table th:nth-child(2),
-table.food-table td:nth-child(2),
-table.food-table th:nth-child(3),
-table.food-table td:nth-child(3),
-table.food-table th:nth-child(4),
-table.food-table td:nth-child(4) {
-  width: 23%; /* モル／メル／レム列を均等に */
 }
 
 /* プロフィール */
@@ -731,19 +723,11 @@ body.modal-open .menu-toggle {
   table.food-table th,
   table.food-table td {
     font-size: 0.8em;  /* 文字小さめ */
-    padding: 3px 4px;  /* 余白さらに削減 */
+    padding: 3px 3px;  /* 余白さらに削減 */
   }
   table.food-table th:first-child,
   table.food-table td:first-child {
     width: 28%;
-  }
-  table.food-table th:nth-child(2),
-  table.food-table td:nth-child(2),
-  table.food-table th:nth-child(3),
-  table.food-table td:nth-child(3),
-  table.food-table th:nth-child(4),
-  table.food-table td:nth-child(4) {
-    width: 24%; /* 2〜4列をさらに圧縮 */
   }
   
   .profiles table {
