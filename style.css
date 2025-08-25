@@ -392,32 +392,23 @@ th {
 
 
 /* 表（食べ物） */
-.food-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  table-layout: fixed;
-}
-
-.food-table th,
-.food-table td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  text-align: left;
-  vertical-align: top;
-  word-break: break-word;
-  white-space: normal;
-}
-
-.food-table th {
-  background-color: #f7f7f7;
-}
-
-.food-table caption {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
+table.food-table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+    table.food-table th,
+    table.food-table td {
+      border: 1px solid #333;
+      padding: 6px 10px;
+      text-align: center;
+    }
+    table.food-table th {
+      background-color: #f2f2f2;
+    }
+    table.food-table td:first-child {
+      text-align: left; /* 食品名は左寄せ */
+    }
 /* プロフィール */
 .profiles {
   max-width: 800px;
