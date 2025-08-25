@@ -393,26 +393,35 @@ th {
 
 /* 表（食べ物） */
 table.food-table {
-      border-collapse: collapse;
-      width: 80%;
-      margin: 20px auto;
-    }
-    table.food-table th,
-    table.food-table td {
-      border: 1px solid #333;
-      padding: 6px 10px;
-      text-align: center;
-    }
-    table.food-table th {
-      background-color: #f2f2f2;
-    }
-    table.food-table td:first-child {
-      text-align: left; /* 食品名は左寄せ */
-    }
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 360px;
+}
+table.food-table th,
+table.food-table td {
+  border: 1px solid #333;
+  padding: 6px 6px;   /* 横余白をさらに狭める */
+  text-align: center;
+  font-size: 0.9em;
+}
+table.food-table th {
+  background-color: #f2f2f2;
+}
 
+/* 列ごとの幅指定 */
 table.food-table th:first-child,
 table.food-table td:first-child {
-  width: 30%; /* 食品列を全体の30%に制限 */
+  text-align: left;
+  width: 30%; /* 食品列 */
+  white-space: nowrap;
+}
+table.food-table th:nth-child(2),
+table.food-table td:nth-child(2),
+table.food-table th:nth-child(3),
+table.food-table td:nth-child(3),
+table.food-table th:nth-child(4),
+table.food-table td:nth-child(4) {
+  width: 23%; /* モル／メル／レム列を均等に */
 }
 
 /* プロフィール */
@@ -718,15 +727,25 @@ body.modal-open .menu-toggle {
     box-sizing: border-box;
     padding: 0.5rem 1rem;
   }
-table.food-table th,
+
+  table.food-table th,
   table.food-table td {
-    font-size: 0.8em;  /* 文字サイズを小さくする */
-    padding: 4px 6px;  /* 余白も減らす */
+    font-size: 0.8em;  /* 文字小さめ */
+    padding: 3px 4px;  /* 余白さらに削減 */
   }
   table.food-table th:first-child,
   table.food-table td:first-child {
-    width: 28%; /* 食品列をさらに狭める */
+    width: 28%;
   }
+  table.food-table th:nth-child(2),
+  table.food-table td:nth-child(2),
+  table.food-table th:nth-child(3),
+  table.food-table td:nth-child(3),
+  table.food-table th:nth-child(4),
+  table.food-table td:nth-child(4) {
+    width: 24%; /* 2〜4列をさらに圧縮 */
+  }
+  
   .profiles table {
     font-size: 12px;
     table-layout: auto;
