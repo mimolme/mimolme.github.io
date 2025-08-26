@@ -402,7 +402,6 @@ table.food-table th,
 table.food-table td {
   border: 1px solid #333;
   padding: 3px 3px;
-  /* 横余白をさらに狭める */
   text-align: center;
   font-size: 0.9em;
 }
@@ -416,9 +415,37 @@ table.food-table th:first-child,
 table.food-table td:first-child {
   text-align: left;
   width: 30%;
-  /* 食品列 */
   white-space: nowrap;
 }
+
+/* 表（評価） */
+.rating li::before {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  margin-right: 0.3em;
+}
+
+.rating .good::before {
+  content: "◎";
+}
+
+.rating .normal::before {
+  content: "○";
+}
+
+.rating .meh::before {
+  content: "△";
+}
+
+.rating .bad::before {
+  content: "×";
+}
+
+.rating .none::before {
+  content: "-";
+}
+
 
 /* プロフィール */
 .profiles {
