@@ -392,6 +392,12 @@ th {
 
 
 /* 表（食べ物） */
+.foodTable-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
 table.food-table {
   border-collapse: collapse;
   width: 100%;
