@@ -151,7 +151,7 @@
       <p>
         「石」を<strong>これ以上増大せず</strong>に<strong>排出する</strong>しかない。水分は常日頃から麦茶やら豆乳やら飲んでいることから、レムの好物の香草（パセリ、セロリ、三つ葉等）緑色の濃い野菜の給餌は控えるようにと言われる。そして水分を豊富に含むレタスや利尿作用のあるスイカなどを与えるようにと言われる。ちなみに水分量の多い青果を多量摂取して下痢にならないか尋ねると、草食動物が野菜を多めに摂取してもお腹を壊す確率は低いと教わった。
       </p>
-      <p><strong>抗生剤と止血剤を混ぜた液体</strong>そして尿を酸性に保つためのサプリメント<span class="marker">ウロアクト</span>を処方された。</p>
+      <p><strong>抗生剤と止血剤を混ぜた液体</strong>そして尿を酸性に保つためのサプリメント「<span class="marker">ウロアクト</span>」を処方された。</p>
       <br>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -215,6 +215,67 @@
       this.style.display = "none";
       document.body.classList.remove("modal-open");
     });
+
+    // 🎧 音声プレーヤー機能：各.audio-playerを個別に動かす
+      document.querySelectorAll('.audio-player').forEach(player => {
+        const audio = player.querySelector('audio');
+        const playBtn = player.querySelector('.play-btn');
+        const volumeSlider = player.querySelector('.volume-slider');
+        const volumeBtn = player.querySelector('.volume-btn');
+        const currentTimeEl = player.querySelector('.current');
+        const durationEl = player.querySelector('.duration');
+
+        function formatTime(time) {
+          const min = Math.floor(time / 60);
+          const sec = Math.floor(time % 60).toString().padStart(2, '0');
+          return `${min}:${sec}`;
+        }
+
+        audio.addEventListener('loadedmetadata', () => {
+          durationEl.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener('timeupdate', () => {
+          currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+
+        playBtn.addEventListener('click', () => {
+          // 他のプレーヤーをすべて停止
+          document.querySelectorAll('.audio-player audio').forEach(otherAudio => {
+            if (otherAudio !== audio) {
+              otherAudio.pause();
+              otherAudio.currentTime = 0;
+              const otherPlayBtn = otherAudio.closest('.audio-player').querySelector('.play-btn');
+              if (otherPlayBtn) {
+                otherPlayBtn.innerHTML = '<i class="fa-solid fa-play" style="color: #a9aaab;"></i>';
+              }
+            }
+          });
+
+          if (audio.paused) {
+            audio.play();
+            playBtn.innerHTML = '<i class="fa-solid fa-stop" style="color: #a9aaab;"></i>';
+          } else {
+            audio.pause();
+            playBtn.innerHTML = '<i class="fa-solid fa-play" style="color: #a9aaab;"></i>';
+          }
+        });
+
+        volumeSlider.addEventListener('input', () => {
+          audio.volume = volumeSlider.value;
+          volumeBtn.innerHTML = audio.volume == 0
+            ? '<i class="fa-solid fa-volume-xmark" style="color: #a9aaab;"></i>'
+            : '<i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>';
+        });
+
+        volumeBtn.addEventListener('click', () => {
+          audio.muted = !audio.muted;
+          volumeBtn.innerHTML = audio.muted
+            ? '<i class="fa-solid fa-volume-xmark" style="color: #a9aaab;"></i>'
+            : '<i class="fa-solid fa-volume-high" style="color: #a9aaab;"></i>';
+          volumeSlider.value = audio.muted ? 0 : audio.volume;
+        });
+      });
   </script>
 </body>
 
