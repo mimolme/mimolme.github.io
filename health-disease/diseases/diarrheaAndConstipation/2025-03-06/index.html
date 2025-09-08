@@ -24,49 +24,14 @@
 </head>
 
 <body>
-  <div id="top"></div>
-  <header>
+  <header id="top">
     <div class="top-image2">
       <a href="/health-disease/diseases/diarrheaAndConstipation/">
         <img src="https://mimolme.github.io/img/tips/25-03-06-d.jpg" alt="top_img">
       </a>
     </div>
     <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <nav class="nav-menu">
-      <a href="https://mimolme.github.io">もるらぼ</a>
-
-      <div class="dropdown">
-        <a href="/feeding-environment">食べ物と環境</a>
-        <ul class="submenu">
-          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
-          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
-          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
-          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/health-disease">健康と病気</a>
-        <ul class="submenu">
-          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
-          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
-          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
-          <li><a href="/health-disease/diseases">4. 病気</a></li>
-          <li><a href="/health-disease/primaryVeterinarian/">5. かかりつけ医</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/log">もるログ</a>
-        <ul class="submenu">
-          <li><a href="/log/profiles">1. プロフィール</a></li>
-          <li><a href="/log/weightTracking">2. 体重の推移</a></li>
-          <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
-          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
-        </ul>
-      </div>
-      <a href="/wool-mol">羊毛モル</a>
-      <a href="/terms_of_use">利用規約</a>
-      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
-    </nav>
+    <div id="nav-placeholder"></div>
   </header>
   <main>
     <p class="update"><i class="fa-solid fa-pen-nib" style="color: #888888;"></i>&nbsp;投稿日: 07/17/2025<br><i
@@ -98,7 +63,7 @@
         </div>
       </div>
       <p>
-        掃除をしながら様子を見ていると，うんちをもう１つ発見。
+        掃除をしながら様子を見ていると、うんちをもう１つ発見。
       </p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -108,7 +73,7 @@
         </div>
       </div>
       <p>
-        とはいえど，やはり形がイビツ。元気がない（歩き回らずぐったりしている。眼光が乏しい。冷蔵庫を開けても野菜を欲しがらない。）。
+        とはいえど、やはり形がイビツ。元気がない（歩き回らずぐったりしている。眼光が乏しい。冷蔵庫を開けても野菜を欲しがらない。）。
       </p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -118,7 +83,7 @@
         </div>
       </div>
       <p>
-        体重を測ってみると1019 g（約3時間後，病院における測定値は1007 g）。
+        体重を測ってみると1019 g（約3時間後、病院における測定値は1007 g）。
       </p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -138,11 +103,12 @@
         </div>
       </div>
       <p>
-        早速かかりつけの病院を予約。有給休暇を頂戴してうんちを持って病院に。症状を伝えると，先生は排尿量や排尿時の様子をしきりに気にしていた。尿路結石の罹患経験があるためである。しかし排尿量や色は通常と変わらず排尿時に鳴くこともない。
+        早速かかりつけの病院を予約。有給休暇を頂戴してうんちを持って病院に。症状を伝えると、先生は排尿量や排尿時の様子をしきりに気にしていた。尿路結石の罹患経験があるためである。しかし排尿量や色は通常と変わらず排尿時に鳴くこともない。
       </p>
       <p>
-        他にも「水分は十分摂っているのか」（脱水の可能性）や「ブラッシングはしているのか」（毛詰まりの可能性）などを尋ねられたが，<br><br>・麦茶を30
-        cc程度飲んでいたこと<br>・豆乳も5 cc程度飲んでいること<br>・野菜を十分接種していること<br>・ブラッシングも毎日していること<br>・持参したフンから毛が出てこないこと<br><br>などから原因を推定できず，また尿路結石の疑いも捨てきれないことからレントゲンを撮ることに。
+        他にも「水分は十分摂っているのか」（脱水の可能性）や「ブラッシングはしているのか」（毛詰まりの可能性）などを尋ねられたが、<br><br>・麦茶を30
+        cc程度飲んでいたこと<br>・豆乳も5
+        cc程度飲んでいること<br>・野菜を十分接種していること<br>・ブラッシングも毎日していること<br>・持参したフンから毛が出てこないこと<br><br>などから原因を推定できず、また尿路結石の疑いも捨てきれないことからレントゲンを撮ることに。
       </p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -157,7 +123,7 @@
         </div>
       </div>
       <p>
-        結果，結石等は見当たらなかった。「よかった」と先生は心から安堵した様子でそう言った。脱水でも毛詰まりでも結石でもないとなると一時的な症状かもしれない，室温・湿度だけでなくヒトと同様，気圧変化に影響を受けることもある，とのこと。食欲増進剤（ペリアクチン）<sup>※1</sup>と消化管機能亢進薬（プリンペラン）を処方された。
+        結果、結石等は見当たらなかった。「よかった」と先生は心から安堵した様子でそう言った。脱水でも毛詰まりでも結石でもないとなると一時的な症状かもしれない、室温・湿度だけでなくヒトと同様、気圧変化に影響を受けることもある、とのこと。食欲増進剤（ペリアクチン）<sup>※1</sup>と消化管機能亢進薬（プリンペラン）を処方された。
       </p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -166,9 +132,9 @@
               style="width: auto;"></a>
         </div>
       </div>
-      <small>※1: ペリアクチンはヒトでは「抗ヒスタミン剤」としてお馴染み。小動物や犬・猫では，本剤の副作用として知られる「食欲増進作用」を利用して食欲不振時に処方されることがある。</small>
+      <small>※1: ペリアクチンはヒトでは「抗ヒスタミン剤」としてお馴染み。小動物や犬・猫では、本剤の副作用として知られる「食欲増進作用」を利用して食欲不振時に処方されることがある。</small>
       <p>
-        帰宅後，早速２つの薬剤を投与。1時間程度で野菜やらチモシーやらモリモリ食べ始める。動きも機敏だ。目も輝きを取り戻している。
+        帰宅後、早速２つの薬剤を投与。1時間程度で野菜やらチモシーやらモリモリ食べ始める。動きも機敏だ。目も輝きを取り戻している。
       </p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
@@ -182,7 +148,7 @@
               style="width: auto;"></a>
         </div>
       </div>
-      <p>しばらくすると，うんちも2個3個と断続的に排出される。稀に水っぽいものも含まれたが概ね正常である。</p>
+      <p>しばらくすると、うんちも2個3個と断続的に排出される。稀に水っぽいものも含まれたが概ね正常である。</p>
       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
           <a href="https://mimolme.github.io/img/tips/25-03-06-4.jpg"><img id="fig12"
@@ -196,7 +162,7 @@
         </div>
       </div>
       <p>夜に体重を測ってみると973 g。摂取量・排出量・活動量全て正常に戻った模様。</p>
-       <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
+      <div style="display: flex; justify-content: left; gap: 20px; flex-wrap: wrap; text-align: left;">
         <div>
           <a href="https://mimolme.github.io/img/tips/25-03-06-w2.jpg"><img id="fig14"
               src="https://mimolme.github.io/img/tips/25-03-06-w2.jpg" alt="25-03-06-w2" height="250px"
@@ -213,10 +179,7 @@
     </div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2023-2025 mimolme</p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <script>
     // ハンバーガーメニューの開閉
@@ -251,6 +214,28 @@
       this.style.display = "none";
       document.body.classList.remove("modal-open");
     });
+    // ナビゲーションの読み込み
+    fetch("/nav.html")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("ナビゲーションの読み込みに失敗しました");
+        }
+        return res.text();
+      })
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
+      });
+
+    // フッター読み込み
+    fetch("/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+
   </script>
 </body>
 
