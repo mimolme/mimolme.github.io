@@ -88,11 +88,7 @@
             <img class="modal-content" id="modal-img">
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2023-2025 mimolme</p>
-    </footer>
-
+    <div id="footer-placeholder"></div>
     <script>
         // ハンバーガーメニューの開閉
         const toggle = document.querySelector('.menu-toggle');
@@ -142,6 +138,13 @@
                 console.error(err);
                 document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
             });
+
+        // フッター読み込み
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+            .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+
 
     </script>
 
