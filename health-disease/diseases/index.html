@@ -26,47 +26,12 @@
 </head>
 
 <body>
-  <div id="top"></div>
-  <header>
+  <header id="top">
     <a href="/health-disease">
       <img src="https://mimolme.github.io/img/health-illness.png" alt="top_img" class="top-image">
     </a>
     <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <nav class="nav-menu">
-      <a href="https://mimolme.github.io">もるらぼ</a>
-
-      <div class="dropdown">
-        <a href="/feeding-environment">食べ物と環境</a>
-        <ul class="submenu">
-          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
-          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
-          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
-          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/health-disease">健康と病気</a>
-        <ul class="submenu">
-          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
-          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
-          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
-          <li><a href="/health-disease/diseases">4. 病気</a></li>
-          <li><a href="/health-disease/primaryVeterinarian/">5. かかりつけ医</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/log">もるログ</a>
-        <ul class="submenu">
-          <li><a href="/log/profiles">1. プロフィール</a></li>
-          <li><a href="/log/weightTracking">2. 体重の推移</a></li>
-          <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
-          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
-        </ul>
-      </div>
-      <a href="/wool-mol">羊毛モル</a>
-      <a href="/terms_of_use">利用規約</a>
-      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
-    </nav>
+    <div id="nav-placeholder"></div>
   </header>
   <main>
     <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 09/04/2025</p>
@@ -106,18 +71,24 @@
         <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>目はぱっちり開いて輝いて</strong>いますか？</li>
         <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>目ヤニ</strong>が出ていませんか？</li>
         <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>鼻水</strong>は出ていませんか？</li>
-        <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>鳴く回数</strong>が<strong>急増</strong>していませんか？</li>
-        <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>耳が欠けて</strong>いませんか？（特に多頭飼いの場合）</li>
+        <li>&nbsp;<i class="fa-solid fa-check"
+            style="color: #bababa;">&nbsp;</i><strong>鳴く回数</strong>が<strong>急増</strong>していませんか？</li>
+        <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>耳が欠けて</strong>いませんか？（特に多頭飼いの場合）
+        </li>
         <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>しこり</strong>ができていませんか？</li>
         <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i>体毛が<strong>部分的に禿げて</strong>いませんか？</li>
-        <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>足の裏</strong>が<strong>かぶれて</strong>いませんか？</li>
-        <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>生殖器（肛門や乳首、ペニスなど）</strong>が<strong>ただれて</strong>いませんか？</li>
+        <li>&nbsp;<i class="fa-solid fa-check"
+            style="color: #bababa;">&nbsp;</i><strong>足の裏</strong>が<strong>かぶれて</strong>いませんか？</li>
+        <li>&nbsp;<i class="fa-solid fa-check"
+            style="color: #bababa;">&nbsp;</i><strong>生殖器（肛門や乳首、ペニスなど）</strong>が<strong>ただれて</strong>いませんか？</li>
         <li>&nbsp;<i class="fa-solid fa-check" style="color: #bababa;">&nbsp;</i><strong>真っ直ぐ歩いて</strong>いますか？</li>
       </ul><br>
       <p>
         毎日注意深く観察し、できれば「摂食量・排泄量」などを記録しましょう。記録することは情報の正確性を担保するだけでなく、その子の「いつも」がわかるようになります。また、少しでも違和感や不調を検知した際には、日付・状況・体重などをいつもより細かに記録しかかりつけ医に正確な情報を伝えられるようにしましょう。
       </p>
-      <p>ところで、上記の各ページには（もちろん他のページも同様ですが）記録から辿れる限り事実を記載しております。十分にメモが取れていないケースもあり、誤記憶で補完することは回避するため、事例によって文字数や内容の密度が異なります。予めご了承ください。</p>
+      <p>
+        ところで、上記の各ページには（もちろん他のページも同様ですが）記録から辿れる限り事実を記載しております。十分にメモが取れていないケースもあり、誤記憶で補完することは回避するため、事例によって文字数や内容の密度が異なります。予めご了承ください。
+      </p>
     </section>
     <section>
 
@@ -129,10 +100,7 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2023-2025 mimolme</p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <script>
     // ハンバーガーメニューの開閉
@@ -182,6 +150,27 @@
         }
       });
     });
+    // ナビゲーションの読み込み
+    fetch("/nav.html")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("ナビゲーションの読み込みに失敗しました");
+        }
+        return res.text();
+      })
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
+      });
+
+    // フッター読み込み
+    fetch("/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
   </script>
 </body>
 
