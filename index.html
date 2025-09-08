@@ -26,47 +26,12 @@
 </head>
 
 <body>
-  <div id="top"></div>
-  <header>
+  <header id="top">
     <a href="https://mimolme.github.io">
       <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
     </a>
     <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <nav class="nav-menu">
-      <a href="https://mimolme.github.io">もるらぼ</a>
-
-      <div class="dropdown">
-        <a href="/feeding-environment">食べ物と環境</a>
-        <ul class="submenu">
-          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
-          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
-          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
-          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/health-disease">健康と病気</a>
-        <ul class="submenu">
-          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
-          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
-          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
-          <li><a href="/health-disease/diseases">4. 病気</a></li>
-          <li><a href="/health-disease/primaryVeterinarian/">5. かかりつけ医</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/log">もるログ</a>
-        <ul class="submenu">
-          <li><a href="/log/profiles">1. プロフィール</a></li>
-          <li><a href="/log/weightTracking">2. 体重の推移</a></li>
-          <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
-          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
-        </ul>
-      </div>
-      <a href="/wool-mol">羊毛モル</a>
-      <a href="/terms_of_use">利用規約</a>
-      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
-    </nav>
+    <div id="nav-placeholder"></div>
   </header>
   <main>
     <section>
@@ -101,7 +66,7 @@
         実際にモルモットと一緒に暮らしてみると、本に書いてある一般的な情報はあまり役立たないことが多いです。事例もあまり紹介されていません。飼育者からすると、具体的な情報や事例を知りたいですよね。
       </p>
       <p>
-      ちなみに、ネットの情報はどうかというと、本よりは具体的な情報に辿り着くことが多いです。しかし、中途半端なブログ・呟き（例：手術をしたことはわかるけど具体的な症状や術後の様子はどうなの？）や注意喚起のない危険性を含む情報（例：金属製のケージで多頭飼いしているけど大丈夫？）が<strong>多数散在</strong>しています。私たちはネットで検索する際に、例えば「モルモット　パセリ」というように共起検索し、検索結果のトップに出てきた情報を鵜呑みにしがちです（例：モルモットがパセリを食べている動画を見て「モルモットはパセリを食べていいんだ！」と判断する）。しかし、それはあくまで全体の一部分でしかありません。１例ですらない可能性があります。自分のモルモットにパセリを与えて良いのか、飼っているモルモットの体質も踏まえて給餌可否や適量を多数の情報から統合して判断する必要があります。できれば関連の論文を読んだり専門家に相談することが好ましいでしょう。
+        ちなみに、ネットの情報はどうかというと、本よりは具体的な情報に辿り着くことが多いです。しかし、中途半端なブログ・呟き（例：手術をしたことはわかるけど具体的な症状や術後の様子はどうなの？）や注意喚起のない危険性を含む情報（例：金属製のケージで多頭飼いしているけど大丈夫？）が<strong>多数散在</strong>しています。私たちはネットで検索する際に、例えば「モルモット　パセリ」というように共起検索し、検索結果のトップに出てきた情報を鵜呑みにしがちです（例：モルモットがパセリを食べている動画を見て「モルモットはパセリを食べていいんだ！」と判断する）。しかし、それはあくまで全体の一部分でしかありません。１例ですらない可能性があります。自分のモルモットにパセリを与えて良いのか、飼っているモルモットの体質も踏まえて給餌可否や適量を多数の情報から統合して判断する必要があります。できれば関連の論文を読んだり専門家に相談することが好ましいでしょう。
       </p>
       <p>
         情報が錯綜する中、私がかかりつけ医から聞いて参考になった知識や日常で試行錯誤した経験、そして事例が、少しでも誰かのお役に立てればなと思います<sup><a href="#cap1">※1</a></sup>。
@@ -110,7 +75,8 @@
         ちなみに、なぜか「モルモットは比較的飼いやすい<sup><a
             href="#easy">※2</a></sup>」と書かれた本（学術書も含める）が多いですが、私は全く同意できません。ものすごく大変です。私はこれまで3頭と暮らした経験がありますが「慣れる」作業はあっても「飼いやすい」と感じたことは一度もありません。こんなにも大変だとは思いもよりませんでした。モルモットとの同居を検討している方は本サイトをご参照の上、「本当に飼えるのか」冷静に考えてみてください。
       </p>
-      <small id="cap1">※1: <i>もるらぼ </i>の<a href="#warning">注意事項</a>と<a href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください</small><br>
+      <small id="cap1">※1: <i>もるらぼ </i>の<a href="#warning">注意事項</a>と<a
+          href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください</small><br>
       <small id="easy">※2: もしかすると「実験動物」や「動物園の動物」として飼いやすいのかもしれませんが、私はその分野の研究者でも動物管理者でもありませんので計り知れません。</small>
     </section>
     <br>
@@ -354,8 +320,10 @@
     <section>
       <div class="box warning-box" id="warning">
         <strong>⚠ 注意：</strong>
-        <i>もるらぼ </i>は、個人のサイトです。管理人は、獣医ではありません。専門分野が獣医学でもありません。可能な限り、科学的知見やかかりつけ医のアドバイス、そして個体差を鑑みた飼育経験に基づき記述をしておりますが、当然、このサイトに書かれていることが全てのモルモットに当てはまるわけではないと思います。また、飼育本のようにモルモットの情報（例えば、モルモットの種類や妊娠・繁殖について、等）を網羅するようなものでもありません。そして何より、本サイトは管理人の健忘録でもあります。以上のことを踏まえ、ご参考程度にお読みいただければ幸いです。そして自己責任の範囲内でお試しいただければと思います。ちなみに、本サイト内のページは不定期で頻繁に更新を行います。基本的には新しく入手した情報の追加や補足を行います。この場合は「最終更新日」として記載します。一方、すでに公開した情報において万一クリティカルな誤りがあった場合には、その旨明記します（例：<span
-          style="color: red;"><s>モルモットはメスの方がオスよりも体重が重くなる傾向</s></span> 正しくは「〜オスの方がメスよりも体重が重くなる〜」）。<i>もるらぼ </i>の<a href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください。
+        <i>もるらぼ
+        </i>は、個人のサイトです。管理人は、獣医ではありません。専門分野が獣医学でもありません。可能な限り、科学的知見やかかりつけ医のアドバイス、そして個体差を鑑みた飼育経験に基づき記述をしておりますが、当然、このサイトに書かれていることが全てのモルモットに当てはまるわけではないと思います。また、飼育本のようにモルモットの情報（例えば、モルモットの種類や妊娠・繁殖について、等）を網羅するようなものでもありません。そして何より、本サイトは管理人の健忘録でもあります。以上のことを踏まえ、ご参考程度にお読みいただければ幸いです。そして自己責任の範囲内でお試しいただければと思います。ちなみに、本サイト内のページは不定期で頻繁に更新を行います。基本的には新しく入手した情報の追加や補足を行います。この場合は「最終更新日」として記載します。一方、すでに公開した情報において万一クリティカルな誤りがあった場合には、その旨明記します（例：<span
+          style="color: red;"><s>モルモットはメスの方がオスよりも体重が重くなる傾向</s></span> 正しくは「〜オスの方がメスよりも体重が重くなる〜」）。<i>もるらぼ </i>の<a
+          href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください。
       </div>
     </section>
     <br>
@@ -429,6 +397,22 @@
       this.style.display = "none";
       document.body.classList.remove("modal-open");
     });
+
+    // ナビゲーションの読み込み
+    fetch("/nav.html")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("ナビゲーションの読み込みに失敗しました");
+        }
+        return res.text();
+      })
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
+      });
 
   </script>
 </body>
