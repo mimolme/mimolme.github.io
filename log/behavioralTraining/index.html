@@ -26,47 +26,13 @@
 </head>
 
 <body>
-  <div id="top"></div>
-  <header>
+  <header id="top">
     <a href="/log">
       <img src="https://mimolme.github.io/img/mol-log.png" alt="log" class="top-image">
     </a>
     <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <nav class="nav-menu">
-      <a href="https://mimolme.github.io">もるらぼ</a>
+    <div id="nav-placeholder"></div>
 
-      <div class="dropdown">
-        <a href="/feeding-environment">食べ物と環境</a>
-        <ul class="submenu">
-          <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a></li>
-          <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a></li>
-          <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a></li>
-          <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/health-disease">健康と病気</a>
-        <ul class="submenu">
-          <li><a href="/health-disease/healthCheck">1. 健康チェック</a></li>
-          <li><a href="/health-disease/soyMilkTraining">2. 豆乳トレーニング</a></li>
-          <li><a href="/health-disease/interestingBehaviors">3. 珍しい行動</a></li>
-          <li><a href="/health-disease/diseases">4. 病気</a></li>
-          <li><a href="/health-disease/primaryVeterinarian/">5. かかりつけ医</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <a href="/log">もるログ</a>
-        <ul class="submenu">
-          <li><a href="/log/profiles">1. プロフィール</a></li>
-          <li><a href="/log/weightTracking">2. 体重の推移</a></li>
-          <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a></li>
-          <li><a href="/log/behavioralTraining">4. トレーニング</a></li>
-        </ul>
-      </div>
-      <a href="/wool-mol">羊毛モル</a>
-      <a href="/terms_of_use">利用規約</a>
-      <a href="/contact_us"><i class="fa-solid fa-envelope"></i></a>
-    </nav>
   </header>
   <main>
     <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 08/06/2025</p>
@@ -106,7 +72,8 @@
         <li>グルーミング用のグローブを取り出すと：「グルルル」と鳴く/飼い主から離れる（3）</li>
       </ul>
       <p>
-        こうした行動はモルモットがすでに「学習した」ことを示しています。1と2では<strong>各行動に後続して好物が貰える/貰えたことがある</strong>のでしょう。3ではより古典的な学習<sup><a href="#respondent">※2</a></sup>が行われたようです。おそらく、グローブ（のゴムの匂い）が不快（くすぐったい？）と結びついた（対呈示されることでグローブのゴムが身体に触れなくてもグローブの匂いがするだけで警戒音を発声したりグローブから逃げたりする）のでしょう。
+        こうした行動はモルモットがすでに「学習した」ことを示しています。1と2では<strong>各行動に後続して好物が貰える/貰えたことがある</strong>のでしょう。3ではより古典的な学習<sup><a
+            href="#respondent">※2</a></sup>が行われたようです。おそらく、グローブ（のゴムの匂い）が不快（くすぐったい？）と結びついた（対呈示されることでグローブのゴムが身体に触れなくてもグローブの匂いがするだけで警戒音を発声したりグローブから逃げたりする）のでしょう。
       </p>
       <p>このように、モルモットは特定の行動を増加/減少させることができます。ただし、
       </p>
@@ -131,9 +98,9 @@
       </p>
       <p>それでは、いくつか事例を見てみましょう。</p>
     </section>
-    <small id="operant"><strong>※1</strong>:【オペラント条件づけ】行動の結果によってその行動の頻度が変化するタイプの学習（<a
-        href="#ref3">[3]</a>）</small><br>
-    <small id="respondent"><strong>※2</strong>:【レスポンデント（的な）条件づけ】他の刺激と対呈示しなくても反射を引き起こす<strong>無条件刺激（皮膚への刺激：ゴムのトゲが皮膚に刺さる、逆毛）</strong>、<strong>皮膚への刺激</strong>によって引き起こされる反応は<strong>無条件反応（身をよじる）</strong>とする。<strong>皮膚への刺激（無条件刺激）</strong>と対呈示することで警戒音を発声したり逃げ出したりするようになった<strong>ゴムの匂い</strong>は<strong>条件刺激</strong>という。条件刺激のみの提示によって引き起こされる反応（警戒音の発声・逃げ出す）を<strong>条件反応</strong>という。条件刺激を無条件刺激と対提示する手続きを<strong>レスポンデント条件付け</strong>という（<a
+    <small id="operant"><strong>※1</strong>:【オペラント条件づけ】行動の結果によってその行動の頻度が変化するタイプの学習（<a href="#ref3">[3]</a>）</small><br>
+    <small
+      id="respondent"><strong>※2</strong>:【レスポンデント（的な）条件づけ】他の刺激と対呈示しなくても反射を引き起こす<strong>無条件刺激（皮膚への刺激：ゴムのトゲが皮膚に刺さる、逆毛）</strong>、<strong>皮膚への刺激</strong>によって引き起こされる反応は<strong>無条件反応（身をよじる）</strong>とする。<strong>皮膚への刺激（無条件刺激）</strong>と対呈示することで警戒音を発声したり逃げ出したりするようになった<strong>ゴムの匂い</strong>は<strong>条件刺激</strong>という。条件刺激のみの提示によって引き起こされる反応（警戒音の発声・逃げ出す）を<strong>条件反応</strong>という。条件刺激を無条件刺激と対提示する手続きを<strong>レスポンデント条件付け</strong>という（<a
         href="#ref3">[3]</a>）。</small><br>
 
     <br>
@@ -463,9 +430,7 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2023-2025 mimolme</p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <script>
     // ハンバーガーメニューの開閉
@@ -501,6 +466,28 @@
       this.style.display = "none";
       document.body.classList.remove("modal-open");
     });
+    // ナビゲーションの読み込み
+    fetch("/nav.html")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("ナビゲーションの読み込みに失敗しました");
+        }
+        return res.text();
+      })
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
+      });
+
+    // フッター読み込み
+    fetch("/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+
   </script>
 </body>
 
