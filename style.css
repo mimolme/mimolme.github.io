@@ -10,6 +10,7 @@ body {
 }
 
 .main-wrapper {
+  padding: 1rem;
   background-color: #fff;
 }
 
@@ -35,6 +36,7 @@ header {
   height: auto;
   display: block;
   margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .top-image2 {
