@@ -362,21 +362,45 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    // ハンバーガーメニューの開閉
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-menu');
+    // ヘッダー/フッターの読み込み（必要に応じて合わせて使ってOK）
+const navPlaceholder = document.getElementById('nav-placeholder');
+const toggle = document.querySelector('.menu-toggle');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
+function wireHamburger(root) {
+  const nav = root.querySelector('.nav-menu');
+  if (!nav || !toggle) return;
 
-    // メニュー外クリックで閉じる
-    document.addEventListener('click', (e) => {
-      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
-      if (!isClickInsideMenu && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-      }
-    });
+  // 既存の開閉状態を初期化（任意）
+  nav.classList.remove('open');
+
+  // トグル
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();            // 外側クリック判定と競合しないように
+    nav.classList.toggle('open');
+  });
+
+  // メニュー外クリックで閉じる
+  document.addEventListener('click', (e) => {
+    const isInside = nav.contains(e.target) || toggle.contains(e.target);
+    if (!isInside && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+    }
+  });
+}
+
+// nav.html を読み込んでから配線するのがポイント！
+fetch('/nav.html')
+  .then(res => {
+    if (!res.ok) throw new Error('nav load failed');
+    return res.text();
+  })
+  .then(html => {
+    navPlaceholder.innerHTML = html;
+    wireHamburger(navPlaceholder);   // ← ここで初めて .nav-menu が存在する
+  })
+  .catch(() => {
+    navPlaceholder.innerHTML = '<nav>メニューを読み込めませんでした</nav>';
+  });
     // モーダル表示（画像クリック）
     document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
       link.addEventListener('click', function (e) {
