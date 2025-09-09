@@ -71,39 +71,15 @@ header {
 }
 
 nav.nav-menu {
-  position: relative; /* フェード用の疑似要素配置に必須 */
   background-color: #fafafa;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 1rem;
   font-family: inherit, monospace, sans-serif;
-  overflow: hidden; /* 擬似要素がはみ出さないように */
+  border-radius: 50px;
 }
 
-/* 両端フェード */
-nav.nav-menu::before,
-nav.nav-menu::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 40px;   /* フェードの幅を調整 */
-  height: 100%;
-  pointer-events: none; /* リンク操作を邪魔しない */
-  z-index: 1; /* テキストより上に重ねる */
-}
-
-nav.nav-menu::before {
-  left: 0;
-  background: linear-gradient(to right, #fafafa, transparent);
-}
-
-nav.nav-menu::after {
-  right: 0;
-  background: linear-gradient(to left, #fafafa, transparent);
-}
-
-/* 各メニュー要素 */
 .nav-menu>* {
   position: relative;
 }
@@ -117,7 +93,6 @@ nav.nav-menu::after {
   top: 50%;
   transform: translateY(-50%);
   white-space: pre;
-  z-index: 0; /* フェードの下に残す */
 }
 
 .nav-menu a {
@@ -130,7 +105,6 @@ nav.nav-menu::after {
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 0; /* フェードの下に残す */
 }
 
 .nav-menu a::after {
@@ -147,7 +121,6 @@ nav.nav-menu::after {
 .nav-menu a:hover::after {
   width: 80%;
 }
-
 
 .dropdown {
   position: relative;
