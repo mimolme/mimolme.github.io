@@ -208,8 +208,8 @@ main {
 .section-wrapper {
   position: relative;
   background-color: #fff;
-  border-top: 2px solid #cecece;
-  border-bottom: 2px solid #cecece;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
   padding: 0.1rem 1rem;
   font-weight: bold;
   text-align: center;
@@ -222,7 +222,6 @@ main {
   left: 1.5em;
   width: 0;
   height: 0;
-  /* 吹き出しの枠線部分 */
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #cecece;
@@ -232,15 +231,12 @@ main {
   content: "";
   position: absolute;
   top: calc(100% - 1px);
-  /* ボーダーにくっつける */
   left: 1.5em;
   width: 0;
   height: 0;
-
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-top: 9px solid #fff;
-  /* 三角形の中を背景色で塗る */
   z-index: 1;
 }
 
@@ -257,6 +253,7 @@ main {
 .box-heading {
   background-color: #ffffff;
   border-left: 8px solid #008697;
+  border-bottom: 1px solid #008697;
   padding: 0.3rem 1rem;
   font-weight: bold;
   margin: 0.5rem 0;
