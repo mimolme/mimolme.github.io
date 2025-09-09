@@ -77,7 +77,7 @@ nav.nav-menu {
   flex-wrap: wrap;
   padding-left: 1rem;
   font-family: inherit, monospace, sans-serif;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .nav-menu>* {
