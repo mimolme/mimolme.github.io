@@ -9,6 +9,10 @@ body {
   margin: auto;
 }
 
+.main-wrapper {
+  background-color: #fafafa;
+}
+
 a {
   color: #008697;
 }
