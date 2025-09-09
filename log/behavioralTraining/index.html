@@ -448,11 +448,17 @@
     </ul>
     <p>という手続きです。図で書くと単純なのですが、実戦はかなり困難です。</p>
     <p>まず、噛んで引っ張ることをなかなかやめません。直後に好物を与えなくてもです。一度「習慣化」した行動は無くなり難いです。工夫が必要です。</p>
-    <p>どうすれば良いのか？注目したのは<strong> 服から口を離したとき </strong>です。当然ながら、彼は<span class="marker">噛んで引っ張ることを永遠に継続できるわけではない</span>のです。<span class="marker">服から口を離したときに、好物を与え</span>ます。これを何度か繰り返します。噛んで引っ張らなくても好物がもらえることを"覚えて"もらいます。</p>
-    <p>次に、彼が口を私の体のどこかに接触した時に<strong> すぐ </strong>に好物を与えます。これはレムに限ったことではありませんが、彼らは餌がほしいとき、<span class="marker">餌の方に鼻から接近</span>してきます。彼らの出っ張った鼻の直下に口があります。これを利用し、例えば口が座っている私の太ももに少しでも触れたら好物を与えます。これも何度も繰り返します。</p>
+    <p>どうすれば良いのか？注目したのは<strong> 服から口を離したとき </strong>です。当然ながら、彼は<span
+        class="marker">噛んで引っ張ることを永遠に継続できるわけではない</span>のです。<span
+        class="marker">服から口を離したときに、好物を与え</span>ます。これを何度か繰り返します。噛んで引っ張らなくても好物がもらえることを"覚えて"もらいます。</p>
+    <p>次に、彼が口を私の体のどこかに接触した時に<strong> すぐ </strong>に好物を与えます。これはレムに限ったことではありませんが、彼らは餌がほしいとき、<span
+        class="marker">餌の方に鼻から接近</span>してきます。彼らの出っ張った鼻の直下に口があります。これを利用し、例えば口が座っている私の太ももに少しでも触れたら好物を与えます。これも何度も繰り返します。
+    </p>
     <p>ちなみに口は半開きのことが多いです。歯が私の皮膚に当たった時は好物を与えません。舌が当たった時に<strong> すぐ </strong>好物を与えます。これを毎日続けます。</p>
-    <p>この手続きを開始してどれくらい経過したか、夢中で記録を忘れていましたが、「舐める行動」は上述の他の手続きと同様、割とすぐに定着しました。毎日見ていると朝晩、好物を与え始めは口を私の体に接触させる程度ですが、次第に舐めてくれるようになります。</p>
-  <p>しかし「噛む行動」が、おそらく半年は続けていますが完全にはなくなりません。滅多に噛まなくなりましたが、100%なくなったわけではありません。</p>
+    <p>
+      この手続きを開始してどれくらい経過したか、夢中で記録を忘れていましたが、「舐める行動」は上述の他の手続きと同様、割とすぐに定着しました。毎日見ていると朝晩、好物を与え始めは口を私の体に接触させる程度ですが、次第に舐めてくれるようになります。
+    </p>
+    <p>しかし「噛む行動」が、おそらく半年は続けていますが完全にはなくなりません。滅多に噛まなくなりましたが、100%なくなったわけではありません。</p>
     </section>
     <div class="box-heading">
       <h3 id="overindulge">4-4.「おやつの与えすぎ」を減らす</h3>
@@ -498,21 +504,6 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    // ハンバーガーメニューの開閉
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-menu');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-
-    // メニュー外クリックで閉じる
-    document.addEventListener('click', (e) => {
-      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
-      if (!isClickInsideMenu && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-      }
-    });
     // モーダル表示（画像クリック）
     document.querySelectorAll('a[href$=".jpg"], a[href$=".png"]').forEach(link => {
       link.addEventListener('click', function (e) {
@@ -525,34 +516,62 @@
       });
     });
 
-
     // モーダル全体をクリックしたら閉じる（画像も含めてOK）
     document.getElementById("modal").addEventListener("click", function () {
       this.style.display = "none";
       document.body.classList.remove("modal-open");
     });
-    // ナビゲーションの読み込み
-    fetch("/nav.html")
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("ナビゲーションの読み込みに失敗しました");
-        }
-        return res.text();
-      })
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
-      });
-
     // フッター読み込み
     fetch("/footer.html")
       .then(res => res.text())
       .then(data => document.getElementById("footer-placeholder").innerHTML = data)
       .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+    // トグルメニュー
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const placeholder = document.getElementById('nav-placeholder');
 
+      // 1) 先に nav.html を読み込む
+      fetch('/nav.html')
+        .then(res => {
+          if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+          return res.text();
+        })
+        .then(html => {
+          // 2) DOMに挿入
+          placeholder.innerHTML = html;
+
+          // 3) ここで初めて .nav-menu を取得（今なら存在する）
+          const nav = placeholder.querySelector('.nav-menu');
+          if (!nav) {
+            console.warn('nav.html に .nav-menu が見つかりません');
+            return;
+          }
+
+          // 4) ハンバーガー開閉の配線
+          toggle.addEventListener('click', (e) => {
+            e.stopPropagation();                 // 外側クリックと競合しないように
+            nav.classList.toggle('open');
+          });
+
+          // 5) メニュー外クリックで閉じる
+          document.addEventListener('click', (e) => {
+            const inside = nav.contains(e.target) || toggle.contains(e.target);
+            if (!inside) nav.classList.remove('open');
+          });
+
+          // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+          const mql = window.matchMedia('(min-width: 601px)');
+          const closeOnWide = () => nav.classList.remove('open');
+          // 古いブラウザ対策
+          if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+          else mql.addListener(closeOnWide);
+        })
+        .catch(err => {
+          console.error(err);
+          placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+        });
+    });
   </script>
 </body>
 
