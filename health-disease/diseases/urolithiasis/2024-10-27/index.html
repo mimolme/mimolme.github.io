@@ -364,21 +364,6 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    // ハンバーガーメニューの開閉
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-menu');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-
-    // メニュー外クリックで閉じる
-    document.addEventListener('click', (e) => {
-      const isClickInsideMenu = nav.contains(e.target) || toggle.contains(e.target);
-      if (!isClickInsideMenu && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-      }
-    });
     // モーダル表示（画像クリック）
     document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
       link.addEventListener('click', function (e) {
@@ -457,28 +442,57 @@
         volumeSlider.value = audio.muted ? 0 : audio.volume;
       });
     });
-    // ナビゲーションの読み込み
-    fetch("/nav.html")
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("ナビゲーションの読み込みに失敗しました");
-        }
-        return res.text();
-      })
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById("nav-placeholder").innerHTML = "<nav>メニューを読み込めませんでした</nav>";
-      });
-
     // フッター読み込み
     fetch("/footer.html")
       .then(res => res.text())
       .then(data => document.getElementById("footer-placeholder").innerHTML = data)
       .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+    // トグルメニュー
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const placeholder = document.getElementById('nav-placeholder');
 
+      // 1) 先に nav.html を読み込む
+      fetch('/nav.html')
+        .then(res => {
+          if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+          return res.text();
+        })
+        .then(html => {
+          // 2) DOMに挿入
+          placeholder.innerHTML = html;
+
+          // 3) ここで初めて .nav-menu を取得（今なら存在する）
+          const nav = placeholder.querySelector('.nav-menu');
+          if (!nav) {
+            console.warn('nav.html に .nav-menu が見つかりません');
+            return;
+          }
+
+          // 4) ハンバーガー開閉の配線
+          toggle.addEventListener('click', (e) => {
+            e.stopPropagation();                 // 外側クリックと競合しないように
+            nav.classList.toggle('open');
+          });
+
+          // 5) メニュー外クリックで閉じる
+          document.addEventListener('click', (e) => {
+            const inside = nav.contains(e.target) || toggle.contains(e.target);
+            if (!inside) nav.classList.remove('open');
+          });
+
+          // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+          const mql = window.matchMedia('(min-width: 601px)');
+          const closeOnWide = () => nav.classList.remove('open');
+          // 古いブラウザ対策
+          if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+          else mql.addListener(closeOnWide);
+        })
+        .catch(err => {
+          console.error(err);
+          placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+        });
+    });
   </script>
 </body>
 
