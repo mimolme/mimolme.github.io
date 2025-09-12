@@ -10,6 +10,11 @@
   "soyMilkTraining": "2. 豆乳トレーニング",
   "interestingBehaviors": "3. 珍しい行動",
   "diseases": "4. 病気",
+  "diarrheaAndConstipation": "下痢と便秘",
+  "malocclusion": "不正咬合",
+  "urolithiasis": "尿路結石",
+  "keratitis": "角膜炎",
+  "lipoma": "脂肪腫",
   "primaryVeterinarian": "5. かかりつけ医",
 
   "log": "もるログ",
