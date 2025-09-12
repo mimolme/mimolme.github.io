@@ -119,9 +119,9 @@ nav.nav-menu {
 
 /* パンくず */
 .breadcrumbs {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   line-height: 1.6;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 2rem;
 }
 .breadcrumbs ol {
   display: flex;
@@ -148,7 +148,7 @@ nav.nav-menu {
   color: inherit;
   border-bottom: none;
   font-weight: bold;
-  opacity: .7
+  opacity: .5
 }
 @media (max-width: 600px) {
   .breadcrumbs { font-size: .5rem; }
