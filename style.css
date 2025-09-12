@@ -145,15 +145,11 @@ nav.nav-menu {
   border-bottom: 1px dotted currentColor;
 }
 .breadcrumbs [aria-current="page"] {
-  color: inherit;
+  color: #f68066;
   border-bottom: none;
   font-weight: bold;
   opacity: .5
 }
-@media (max-width: 600px) {
-  .breadcrumbs { font-size: .5rem; }
-}
-
 
 /* サブメニュー */
 .dropdown {
@@ -207,15 +203,12 @@ main {
 .btn-wrapper {
   display: flex;
   justify-content: center;
-  /* 横中央揃え */
   margin: 40px auto;
-  /* 上下の余白 */
 }
 
 .btn-container {
   display: flex;
   gap: 16px;
-  /* ボタン間のスペース */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -810,6 +803,11 @@ body.modal-open .menu-toggle {
     width: 100%;
     box-sizing: border-box;
     padding: 0.5rem 1rem;
+  }
+
+  .breadcrumbs {
+    font-size: .5rem;
+    margin: 0;
   }
 
   table.food-table th,
