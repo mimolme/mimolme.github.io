@@ -119,7 +119,7 @@ nav.nav-menu {
 
 /* テストここから */
 .breadcrumbs {
-  font-size: 0.95rem;
+  font-size: 0.5rem;
   line-height: 1.6;
   margin: 0.5rem 0 1rem;
 }
@@ -136,8 +136,8 @@ nav.nav-menu {
   align-items: center;
 }
 .breadcrumbs li + li::before {
-  content: "›";
-  margin: 0 .35rem;
+  content: "/";
+  margin: 0 0.5rem;
   opacity: .6;
 }
 .breadcrumbs a {
@@ -150,7 +150,7 @@ nav.nav-menu {
   font-weight: 600;
 }
 @media (max-width: 600px) {
-  .breadcrumbs { font-size: .9rem; }
+  .breadcrumbs { font-size: .5rem; }
 }
 /* テストここまで */
 
