@@ -34,6 +34,9 @@
     <div id="nav-placeholder"></div>
   </header>
   <main>
+    <nav class="breadcrumbs" aria-label="パンくずリスト">
+      <ol id="breadcrumbs"></ol>
+    </nav>
     <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 07/07/2025</p>
 
 
@@ -130,6 +133,76 @@
           placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
         });
     });
+    // 既存のフッター・ナビメニュー処理 …（省略）
+
+    // パンくずリスト生成
+    (function () {
+      const LABELS = {
+        "feeding-environment": "食べ物と環境",
+        "feeding": "1. モルモットの食べ物",
+        "drink": "2. モルモットの飲み物",
+        "environment": "3. モルモットの生育環境",
+        "tools": "4. モルモットのケアに必要なツール",
+
+        "health-disease": "健康と病気",
+        "healthCheck": "1. 健康チェック",
+        "soyMilkTraining": "2. 豆乳トレーニング",
+        "interestingBehaviors": "3. 珍しい行動",
+        "diseases": "4. 病気",
+        "primaryVeterinarian": "5. かかりつけ医",
+
+        "log": "もるログ",
+        "profiles": "1. プロフィール",
+        "weightTracking": "2. 体重の推移",
+        "guinea-pig-vocalizations": "3. 音声の種類",
+        "behavioralTraining": "4. トレーニング",
+
+        "wool-mol": "羊毛モル",
+        "terms_of_use": "利用規約",
+        "contact_us": "お問い合わせ"
+      };
+
+      const HOME_LABEL = "もるらぼ";
+      const HOME_HREF = "/";
+
+      const path = location.pathname
+        .replace(/index\.html?$/i, "")
+        .replace(/\/+$/, "");
+      const segments = path.split("/").filter(Boolean);
+
+      const ol = document.getElementById("breadcrumbs");
+      if (!ol) return;
+
+      // Home
+      const homeLi = document.createElement("li");
+      const homeA = document.createElement("a");
+      homeA.href = HOME_HREF;
+      homeA.textContent = HOME_LABEL;
+      homeLi.appendChild(homeA);
+      ol.appendChild(homeLi);
+
+      // Sub pages
+      let cumulative = "";
+      segments.forEach((seg, i) => {
+        cumulative += "/" + seg;
+        const li = document.createElement("li");
+        const isLast = i === segments.length - 1;
+        const label = LABELS[seg] || decodeURIComponent(seg).replace(/-/g, " ");
+
+        if (isLast) {
+          const span = document.createElement("span");
+          span.textContent = label;
+          span.setAttribute("aria-current", "page");
+          li.appendChild(span);
+        } else {
+          const a = document.createElement("a");
+          a.href = cumulative + "/";
+          a.textContent = label;
+          li.appendChild(a);
+        }
+        ol.appendChild(li);
+      });
+    })();
   </script>
 </body>
 
