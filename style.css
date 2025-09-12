@@ -117,9 +117,9 @@ nav.nav-menu {
   width: 80%;
 }
 
-/* テストここから */
+/* パンくず */
 .breadcrumbs {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   line-height: 1.6;
   margin: 0.5rem 0 1rem;
 }
@@ -137,8 +137,8 @@ nav.nav-menu {
 }
 .breadcrumbs li + li::before {
   content: "/";
-  margin: 0 0.5rem;
-  opacity: .6;
+  margin: 0 0.2rem;
+  opacity: .5;
 }
 .breadcrumbs a {
   text-decoration: none;
@@ -152,8 +152,9 @@ nav.nav-menu {
 @media (max-width: 600px) {
   .breadcrumbs { font-size: .5rem; }
 }
-/* テストここまで */
 
+
+/* サブメニュー */
 .dropdown {
   position: relative;
 }
