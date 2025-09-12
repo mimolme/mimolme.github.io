@@ -2,6 +2,7 @@
   const HOME_LABEL = "トップページ";
   const HOME_HREF = "/";
 
+  // ▼ ラベル辞書を読み込み
   let LABELS = {};
   try {
     const res = await fetch("/labels.json");
@@ -11,33 +12,48 @@
     console.warn("labels.json を読み込めませんでした:", err);
   }
 
+  // ▼ パスを分解
   const path = location.pathname
     .replace(/index\.html?$/i, "")
     .replace(/\/+$/, "");
   const segments = path.split("/").filter(Boolean);
 
-  // トップページならパンくずを生成せず終了
+  // トップページはパンくず不要
   if (segments.length === 0) return;
 
   const ol = document.getElementById("breadcrumbs");
   if (!ol) return;
 
+  // ▼ ヘルパー: ラベル解決
+  const getLabel = seg => LABELS[seg] || decodeURIComponent(seg).replace(/-/g, " ");
+
   // ----------------------
   // ① パンくずHTMLを生成
   // ----------------------
+
+  // Home
   const homeLi = document.createElement("li");
   const homeA = document.createElement("a");
   homeA.href = HOME_HREF;
-  homeA.textContent = HOME_LABEL;
+
+  const homeIcon = document.createElement("i");
+  homeIcon.className = "fa-solid fa-crow";
+  homeIcon.setAttribute("aria-hidden", "true");
+
+  const homeText = document.createTextNode(" " + HOME_LABEL);
+
+  homeA.appendChild(homeIcon);
+  homeA.appendChild(homeText);
   homeLi.appendChild(homeA);
   ol.appendChild(homeLi);
 
+  // Sub
   let cumulative = "";
   segments.forEach((seg, i) => {
     cumulative += "/" + seg;
     const li = document.createElement("li");
     const isLast = i === segments.length - 1;
-    const label = LABELS[seg] || decodeURIComponent(seg).replace(/-/g, " ");
+    const label = getLabel(seg);
 
     if (isLast) {
       const span = document.createElement("span");
@@ -75,7 +91,7 @@
       items.push({
         "@type": "ListItem",
         position: pos++,
-        name: LABELS[seg] || decodeURIComponent(seg).replace(/-/g, " "),
+        name: getLabel(seg),
         item: location.origin + cum + "/"
       });
     });
