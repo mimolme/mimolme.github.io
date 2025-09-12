@@ -142,10 +142,11 @@ nav.nav-menu {
 }
 .breadcrumbs a {
   text-decoration: none;
-  border-bottom: 1px dotted currentColor;
+  border-bottom: 1px dotted #a2a2a2;
+  color: #a2a2a2;
 }
 .breadcrumbs [aria-current="page"] {
-  color: #f68066;
+  color: #ff735a;
   border-bottom: none;
   font-weight: bold;
   opacity: .5
