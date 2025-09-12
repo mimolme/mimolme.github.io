@@ -35,16 +35,11 @@ header {
 
 .top-image2 {
   width: 100%;
-  /* レスポンシブ対応 */
   max-width: 960px;
-  /* 最大幅を指定 */
   height: 35vw;
-  /* ビューポートに応じて高さ可変（目安） */
   max-height: 400px;
-  /* 高さの上限を設定 */
   overflow: hidden;
   margin: 0 auto;
-  /* 中央寄せ */
 }
 
 .top-image2 img {
@@ -121,6 +116,43 @@ nav.nav-menu {
 .nav-menu a:hover::after {
   width: 80%;
 }
+
+/* テストここから */
+.breadcrumbs {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.5rem 0 1rem;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+}
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 .35rem;
+  opacity: .6;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+.breadcrumbs [aria-current="page"] {
+  color: inherit;
+  border-bottom: none;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .breadcrumbs { font-size: .9rem; }
+}
+/* テストここまで */
 
 .dropdown {
   position: relative;
