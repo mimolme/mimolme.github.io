@@ -1,5 +1,5 @@
 (async function () {
-  const HOME_LABEL = "もるらぼ";
+  const HOME_LABEL = "トップページ";
   const HOME_HREF = "/";
 
   let LABELS = {};
