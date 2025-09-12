@@ -147,7 +147,8 @@ nav.nav-menu {
 .breadcrumbs [aria-current="page"] {
   color: inherit;
   border-bottom: none;
-  font-weight: 600;
+  font-weight: bold;
+  opacity: .7
 }
 @media (max-width: 600px) {
   .breadcrumbs { font-size: .5rem; }
