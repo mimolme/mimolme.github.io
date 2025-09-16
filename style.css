@@ -744,6 +744,7 @@ body.modal-open .menu-toggle {
 @media screen and (max-width: 600px) {
   .top-image2 img {
     transform: translateY(-45%);
+    margin-bottom: 1rem;
   }
 
   .menu-toggle {
