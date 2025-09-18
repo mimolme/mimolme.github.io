@@ -742,9 +742,11 @@ body.modal-open .menu-toggle {
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
+  .top-image2 {
+    margin-bottom: 0.5rem;
+  }
   .top-image2 img {
     transform: translateY(-45%);
-    margin-bottom: 1rem;
   }
 
   .menu-toggle {
