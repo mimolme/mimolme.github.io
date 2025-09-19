@@ -66,13 +66,14 @@ header {
 }
 
 nav.nav-menu {
-  background-color: #fafafa;
+  background-color: #ececec;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 1rem;
   font-family: inherit, monospace, sans-serif;
-  border-radius: 5px;
+  border-radius: 50px;
+  border-top: 0.7rem;
 }
 
 .nav-menu>* {
