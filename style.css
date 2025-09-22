@@ -790,7 +790,7 @@ body.modal-open .menu-toggle {
 
   nav.nav-menu a {
     justify-content: flex-start;
-    padding-left: 0;
+    padding-left: 0.5rem;
     width: 100%;
     box-sizing: border-box;
   }
