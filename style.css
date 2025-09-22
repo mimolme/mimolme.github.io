@@ -171,7 +171,7 @@ nav.nav-menu {
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   width: max-content;
-  border-radius: 4px;
+  border-radius: 15px;
 }
 
 .submenu li a {
@@ -761,7 +761,6 @@ body.modal-open .menu-toggle {
     right: 1.5rem;
     z-index: 1001;
     padding: 0.5rem;
-    border-radius: 15px;
     backdrop-filter: blur(4px);
   }
 
