@@ -761,7 +761,7 @@ body.modal-open .menu-toggle {
     right: 1.5rem;
     z-index: 1001;
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: 15px;
     backdrop-filter: blur(4px);
   }
 
