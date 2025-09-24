@@ -764,6 +764,8 @@ body.modal-open .menu-toggle {
     z-index: 1001;
     padding: 0.5rem;
     backdrop-filter: blur(4px);
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
   }
 
   nav.nav-menu {
