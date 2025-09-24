@@ -118,10 +118,6 @@ nav.nav-menu {
   width: 80%;
 }
 
-.submenu li a:hover {
-  color: #ff735a;
-}
-
 /* パンくず */
 .breadcrumbs {
   font-size: 0.65rem;
@@ -194,7 +190,7 @@ nav.nav-menu {
 
 .submenu li a:hover {
   background-color: #fafafa;
-  color: #699196;
+  color: #ff735a;
 }
 
 .dropdown:hover .submenu {
