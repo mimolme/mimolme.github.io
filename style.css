@@ -168,15 +168,15 @@ nav.nav-menu {
   list-style: none;
   background-color: white;
   border: none;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 7px 7px 21px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   width: max-content;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .submenu li a {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.7rem;
   white-space: nowrap;
   color: #737373;
   text-decoration: none;
