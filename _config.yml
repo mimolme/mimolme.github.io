@@ -1,0 +1,13 @@
+title: "もるらぼ -GuineaPigLab-"
+description: "サイト全体のデフォルト説明（ページ個別が無い時の予備）"
+keywords: "もるらぼ, モルモット, Guinea Pig, 飼い方, 飼育, 健康, 環境"
+url: "https://mimolme.github.io"
+baseurl: ""
+lang: ja
+
+# G-TAG
+ga_measurement_id: "G-85BH18E352"
+
+# GitHub Pagesで使えるSEOプラグイン
+plugins:
+- jekyll-seo-tag
