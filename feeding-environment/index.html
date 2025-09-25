@@ -1,157 +1,133 @@
-<!DOCTYPE html>
-<html lang="ja">
+---
+layout: default
+title: "食べ物と環境"
+# description: "このページ専用のもるらぼの紹介文："
+keywords: "もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい,
+モルモットの飼育方法, モルモットの食べ物，モルモットの飲み物，モルモットに必要なもの"
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>食べ物と環境</title>
-  <meta name="description" content="もるらぼ -GuineaPigLab- は、モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
-  <meta name="keywords"
-    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察，モルモットの食べ物，モルモットの飲み物，モルモットに必要なもの">
+<header id="top">
+  <a href="/feeding-environment">
+    <img src="https://mimolme.github.io/img/food-environment.png" alt="FE_img" class="top-image">
+  </a>
+  <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+  <div id="nav-placeholder"></div>
+  <nav class="breadcrumbs" aria-label="パンくずリスト">
+    <ol id="breadcrumbs"></ol>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>モルモットは何を食べるの？住処は？必要な道具は？</h2>
+    <h3 style="color: #2f4f4f">- 目次 -</h3>
+    <ul class="no-bullet">
+      <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a>
+        <ul>
+          <li class="no-bullet"><a href="/feeding-environment/feeding#timothy">1-1. チモシー</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/feeding#vegetables">1-2. 青果</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/feeding#supplement">1-3. サプリメント</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/feeding#chewBranch">1-4. 齧り木</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/feeding#TimothyPellets">1-5. 牧草代用ペレット</a></li>
+        </ul>
+      </li>
+      <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a>
+        <ul>
+          <li class="no-bullet"><a href="/feeding-environment/drink#water">2-1. 水</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/drink#barleyTea">2-2. 麦茶</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/drink#soymilk">2-3. 無調整豆乳</a></li>
+        </ul>
+      </li>
+      <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a>
+        <ul>
+          <li class="no-bullet"><a href="/feeding-environment/environment#cage">3-1. ケージ</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/environment#temperatureAndHumidity">3-2. 室温・湿度</a>
+          </li>
+          <li class="no-bullet"><a href="/feeding-environment/environment#placement">3-3. 場所</a></li>
+        </ul>
+      </li>
+      <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a>
+        <ul>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#thermoHygrometer">4-1. 温湿度計</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#scale">4-2. 体重計（はかり）</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#syringe">4-3. シリンジ</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#glove">4-4. グルーミンググローブ</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#wetWipes">4-5. ウェットティッシュ</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#lintRoller">4-6. 粘着カーペットクリーナー</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#eyeDrops">4-7. 目薬</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#urineScaleRemover">4-8. 尿石除去液</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#waterBottle">4-9. 給水ボトル</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#waterPurifier">4-10. 浄水剤</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#nailScissors">4-11. 爪切りハサミ</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#stypticPowder">4-12. 止血剤</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#petCarrier">4-13. キャリーケース</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#shampoo">4-14. モルモット専用シャンプー</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#coolingPlate">4-15. 冷感プレート</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#heater">4-16. ヒーター</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#woodToy">4-17. ウッドトイ</a></li>
+          <li class="no-bullet"><a href="/feeding-environment/tools/#towel">4-18. タオル</a></li>
 
-
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-85BH18E352');
-  </script>
-
-</head>
-
-<body>
-  <header id="top">
-    <a href="/feeding-environment">
-      <img src="https://mimolme.github.io/img/food-environment.png" alt="FE_img" class="top-image">
-    </a>
-    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <div id="nav-placeholder"></div>
-    <nav class="breadcrumbs" aria-label="パンくずリスト">
-      <ol id="breadcrumbs"></ol>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>モルモットは何を食べるの？住処は？必要な道具は？</h2>
-      <h3 style="color: #2f4f4f">- 目次 -</h3>
-      <ul class="no-bullet">
-        <li><a href="/feeding-environment/feeding">1. モルモットの食べ物</a>
-          <ul>
-            <li class="no-bullet"><a href="/feeding-environment/feeding#timothy">1-1. チモシー</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/feeding#vegetables">1-2. 青果</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/feeding#supplement">1-3. サプリメント</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/feeding#chewBranch">1-4. 齧り木</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/feeding#TimothyPellets">1-5. 牧草代用ペレット</a></li>
-          </ul>
-        </li>
-        <li><a href="/feeding-environment/drink">2. モルモットの飲み物</a>
-          <ul>
-            <li class="no-bullet"><a href="/feeding-environment/drink#water">2-1. 水</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/drink#barleyTea">2-2. 麦茶</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/drink#soymilk">2-3. 無調整豆乳</a></li>
-          </ul>
-        </li>
-        <li><a href="/feeding-environment/environment">3. モルモットの生育環境</a>
-          <ul>
-            <li class="no-bullet"><a href="/feeding-environment/environment#cage">3-1. ケージ</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/environment#temperatureAndHumidity">3-2. 室温・湿度</a>
-            </li>
-            <li class="no-bullet"><a href="/feeding-environment/environment#placement">3-3. 場所</a></li>
-          </ul>
-        </li>
-        <li><a href="/feeding-environment/tools">4. モルモットのケアに必要なツール</a>
-          <ul>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#thermoHygrometer">4-1. 温湿度計</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#scale">4-2. 体重計（はかり）</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#syringe">4-3. シリンジ</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#glove">4-4. グルーミンググローブ</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#wetWipes">4-5. ウェットティッシュ</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#lintRoller">4-6. 粘着カーペットクリーナー</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#eyeDrops">4-7. 目薬</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#urineScaleRemover">4-8. 尿石除去液</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#waterBottle">4-9. 給水ボトル</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#waterPurifier">4-10. 浄水剤</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#nailScissors">4-11. 爪切りハサミ</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#stypticPowder">4-12. 止血剤</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#petCarrier">4-13. キャリーケース</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#shampoo">4-14. モルモット専用シャンプー</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#coolingPlate">4-15. 冷感プレート</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#heater">4-16. ヒーター</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#woodToy">4-17. ウッドトイ</a></li>
-            <li class="no-bullet"><a href="/feeding-environment/tools/#towel">4-18. タオル</a></li>
-
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-
-    <a href="#top" class="back-to-top">▲</a>
-  </main>
+        </ul>
+      </li>
+    </ul>
   </section>
-  <div id="footer-placeholder"></div>
 
-  <script>
-    // フッター読み込み
-    fetch("/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
-      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
-    // トグルメニュー
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.querySelector('.menu-toggle');
-      const placeholder = document.getElementById('nav-placeholder');
 
-      // 1) 先に nav.html を読み込む
-      fetch('/nav.html')
-        .then(res => {
-          if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
-          return res.text();
-        })
-        .then(html => {
-          // 2) DOMに挿入
-          placeholder.innerHTML = html;
+  <a href="#top" class="back-to-top">▲</a>
+</main>
+</section>
+<div id="footer-placeholder"></div>
 
-          // 3) ここで初めて .nav-menu を取得（今なら存在する）
-          const nav = placeholder.querySelector('.nav-menu');
-          if (!nav) {
-            console.warn('nav.html に .nav-menu が見つかりません');
-            return;
-          }
+<script>
+  // フッター読み込み
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+    .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+  // トグルメニュー
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const placeholder = document.getElementById('nav-placeholder');
 
-          // 4) ハンバーガー開閉の配線
-          toggle.addEventListener('click', (e) => {
-            e.stopPropagation();                 // 外側クリックと競合しないように
-            nav.classList.toggle('open');
-          });
+    // 1) 先に nav.html を読み込む
+    fetch('/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+        return res.text();
+      })
+      .then(html => {
+        // 2) DOMに挿入
+        placeholder.innerHTML = html;
 
-          // 5) メニュー外クリックで閉じる
-          document.addEventListener('click', (e) => {
-            const inside = nav.contains(e.target) || toggle.contains(e.target);
-            if (!inside) nav.classList.remove('open');
-          });
+        // 3) ここで初めて .nav-menu を取得（今なら存在する）
+        const nav = placeholder.querySelector('.nav-menu');
+        if (!nav) {
+          console.warn('nav.html に .nav-menu が見つかりません');
+          return;
+        }
 
-          // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
-          const mql = window.matchMedia('(min-width: 601px)');
-          const closeOnWide = () => nav.classList.remove('open');
-          // 古いブラウザ対策
-          if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
-          else mql.addListener(closeOnWide);
-        })
-        .catch(err => {
-          console.error(err);
-          placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+        // 4) ハンバーガー開閉の配線
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();                 // 外側クリックと競合しないように
+          nav.classList.toggle('open');
         });
-    });
-  </script>
-  <script src="/js/breadcrumbs.js"></script>
-</body>
 
-</html>
+        // 5) メニュー外クリックで閉じる
+        document.addEventListener('click', (e) => {
+          const inside = nav.contains(e.target) || toggle.contains(e.target);
+          if (!inside) nav.classList.remove('open');
+        });
+
+        // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+        const mql = window.matchMedia('(min-width: 601px)');
+        const closeOnWide = () => nav.classList.remove('open');
+        // 古いブラウザ対策
+        if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+        else mql.addListener(closeOnWide);
+      })
+      .catch(err => {
+        console.error(err);
+        placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+      });
+  });
+</script>
+<script src="/js/breadcrumbs.js"></script>
