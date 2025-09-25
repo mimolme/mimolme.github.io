@@ -1,147 +1,124 @@
-<!DOCTYPE html>
-<html lang="ja">
+---
+layout: default
+title: "豆乳トレーニング"
+# description: "このページ専用のもるらぼの紹介文："
+keywords: "もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, 豆乳トレーニング，モルモット 豆乳トレーニング，モルモット
+健康，モルモットの病気，モルモットのメンテナンス"
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>豆乳トレーニング</title>
-  <meta name="description" content="もるらぼ -GuineaPigLab- は、モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
-  <meta name="keywords"
-    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, 豆乳トレーニング，モルモット　豆乳トレーニング，モルモット　健康，モルモットの病気，モルモットのメンテナンス，モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
+<header id="top">
+  <a href="/health-disease">
+    <img src="https://mimolme.github.io/img/health-illness.png" alt="top_img" class="top-image">
+  </a>
+  <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+  <div id="nav-placeholder"></div>
+  <nav class="breadcrumbs" aria-label="パンくずリスト">
+    <ol id="breadcrumbs"></ol>
+  </nav>
+</header>
+<main>
+  <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 06/30/2025</p>
 
+  <section>
+    <div class="section-wrapper">
+      <h2 class="section-title">2. 豆乳トレーニング</h2>
+    </div>
+  </section>
+  <section>
+    <p>
+      無調整豆乳はタンパク質を効率よく摂取できます。我が家では「10 ml前後/1日あたり」を目安に朝晩与えています。また、豆乳トレーニングはシリンジから水分を補給する練習にもなります。ぜひ幼い頃から試みてください。
+    </p>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-85BH18E352');
-  </script>
-</head>
-
-<body>
-  <header id="top">
-    <a href="/health-disease">
-      <img src="https://mimolme.github.io/img/health-illness.png" alt="top_img" class="top-image">
-    </a>
-    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <div id="nav-placeholder"></div>
-    <nav class="breadcrumbs" aria-label="パンくずリスト">
-      <ol id="breadcrumbs"></ol>
-    </nav>
-  </header>
-  <main>
-    <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 06/30/2025</p>
-
-    <section>
-      <div class="section-wrapper">
-        <h2 class="section-title">2. 豆乳トレーニング</h2>
-      </div>
-    </section>
-    <section>
-      <p>
-        無調整豆乳はタンパク質を効率よく摂取できます。我が家では「10 ml前後/1日あたり」を目安に朝晩与えています。また、豆乳トレーニングはシリンジから水分を補給する練習にもなります。ぜひ幼い頃から試みてください。
-      </p>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
-
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_soymilk.jpg"><img id="fig1"
+            src="https://mimolme.github.io/img/tips/mol_soymilk.jpg" alt="豆乳トレーニング" height="200px"
+            style="width: auto;"></a>
         <div>
-          <a href="https://mimolme.github.io/img/tips/mol_soymilk.jpg"><img id="fig1"
-              src="https://mimolme.github.io/img/tips/mol_soymilk.jpg" alt="豆乳トレーニング" height="200px"
-              style="width: auto;"></a>
-          <div>
-            <small>図1. 豆乳トレーニング</small>
-          </div>
-        </div>
-
-        <a href="#top" class="back-to-top">▲</a>
-        <!-- モーダル -->
-        <div id="modal" class="modal">
-          <img class="modal-content" id="modal-img">
+          <small>図1. 豆乳トレーニング</small>
         </div>
       </div>
-    </section>
-  </main>
-  <div id="footer-placeholder"></div>
 
-  <script>
-    // モーダル表示（画像クリック）
-    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        modal.style.display = "block";
-        modalImg.src = this.href;
-        document.body.classList.add("modal-open");
-      });
+      <a href="#top" class="back-to-top">▲</a>
+      <!-- モーダル -->
+      <div id="modal" class="modal">
+        <img class="modal-content" id="modal-img">
+      </div>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+
+<script>
+  // モーダル表示（画像クリック）
+  document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.style.display = "block";
+      modalImg.src = this.href;
+      document.body.classList.add("modal-open");
     });
+  });
 
-    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
-    document.getElementById("modal").addEventListener("click", function () {
-      this.style.display = "none";
-      document.body.classList.remove("modal-open");
-    });
+  // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+  document.getElementById("modal").addEventListener("click", function () {
+    this.style.display = "none";
+    document.body.classList.remove("modal-open");
+  });
 
-    // フッター読み込み
-    fetch("/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
-      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
-    // トグルメニュー
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.querySelector('.menu-toggle');
-      const placeholder = document.getElementById('nav-placeholder');
+  // フッター読み込み
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+    .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+  // トグルメニュー
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const placeholder = document.getElementById('nav-placeholder');
 
-      // 1) 先に nav.html を読み込む
-      fetch('/nav.html')
-        .then(res => {
-          if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
-          return res.text();
-        })
-        .then(html => {
-          // 2) DOMに挿入
-          placeholder.innerHTML = html;
+    // 1) 先に nav.html を読み込む
+    fetch('/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+        return res.text();
+      })
+      .then(html => {
+        // 2) DOMに挿入
+        placeholder.innerHTML = html;
 
-          // 3) ここで初めて .nav-menu を取得（今なら存在する）
-          const nav = placeholder.querySelector('.nav-menu');
-          if (!nav) {
-            console.warn('nav.html に .nav-menu が見つかりません');
-            return;
-          }
+        // 3) ここで初めて .nav-menu を取得（今なら存在する）
+        const nav = placeholder.querySelector('.nav-menu');
+        if (!nav) {
+          console.warn('nav.html に .nav-menu が見つかりません');
+          return;
+        }
 
-          // 4) ハンバーガー開閉の配線
-          toggle.addEventListener('click', (e) => {
-            e.stopPropagation();                 // 外側クリックと競合しないように
-            nav.classList.toggle('open');
-          });
-
-          // 5) メニュー外クリックで閉じる
-          document.addEventListener('click', (e) => {
-            const inside = nav.contains(e.target) || toggle.contains(e.target);
-            if (!inside) nav.classList.remove('open');
-          });
-
-          // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
-          const mql = window.matchMedia('(min-width: 601px)');
-          const closeOnWide = () => nav.classList.remove('open');
-          // 古いブラウザ対策
-          if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
-          else mql.addListener(closeOnWide);
-        })
-        .catch(err => {
-          console.error(err);
-          placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+        // 4) ハンバーガー開閉の配線
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();                 // 外側クリックと競合しないように
+          nav.classList.toggle('open');
         });
-    });
 
-  </script>
-  <script src="/js/breadcrumbs.js"></script>
-</body>
+        // 5) メニュー外クリックで閉じる
+        document.addEventListener('click', (e) => {
+          const inside = nav.contains(e.target) || toggle.contains(e.target);
+          if (!inside) nav.classList.remove('open');
+        });
 
-</html>
+        // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+        const mql = window.matchMedia('(min-width: 601px)');
+        const closeOnWide = () => nav.classList.remove('open');
+        // 古いブラウザ対策
+        if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+        else mql.addListener(closeOnWide);
+      })
+      .catch(err => {
+        console.error(err);
+        placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+      });
+  });
+
+</script>
+<script src="/js/breadcrumbs.js"></script>
