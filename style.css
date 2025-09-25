@@ -170,7 +170,9 @@ nav.nav-menu {
   border: none;
   box-shadow: 7px 7px 21px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  width: max-content;
+  /*t*/
+  width: var(--submenu-w);
+  min-width: var(--submenu-w); /* 念のため固定 */
   border-radius: 15px;
 }
 
@@ -183,6 +185,10 @@ nav.nav-menu {
   position: relative;
   border-radius: 25px;
   font-size:small;
+  /*t*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .submenu li a::after {
@@ -790,6 +796,7 @@ body.modal-open .menu-toggle {
   .nav-menu>*:not(:first-child)::before {
     content: none;
   }
+  .nav-menu { --submenu-w: 90vw; } /* 例：画面の9割 */
 
   nav.nav-menu a {
     justify-content: flex-start;
