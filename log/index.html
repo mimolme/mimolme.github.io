@@ -1,147 +1,123 @@
-<!DOCTYPE html>
-<html lang="ja">
+---
+layout: default
+title: "もるログ"
+# description: "このページ専用のもるらぼの紹介文："
+keywords: "もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい,
+モルモットの飼育方法, モルモット 観察，モルモットの体重，モルモットの音声，モルモットの訓練方法，モルモットのトイレトレーニング"
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>もるログ</title>
-  <meta name="description" content="もるらぼ -GuineaPigLab- は、モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
-  <meta name="keywords"
-    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察，モルモットの体重，モルモットの音声，モルモットの訓練方法，モルモットのトイレトレーニング">
+<header id="top">
+  <a href="/log">
+    <img src="https://mimolme.github.io/img/mol-log.png" alt="log" class="top-image">
+  </a>
+  <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+  <div id="nav-placeholder"></div>
+  <nav class="breadcrumbs" aria-label="パンくずリスト">
+    <ol id="breadcrumbs"></ol>
+  </nav>
 
+</header>
+<main>
+  <section>
+    <h2>モルモットの体重推移・音声の種類や訓練方法は？</h2>
+    <h3 style="color: #2f4f4f">- 目次 -</h3>
+    <ul class="no-bullet">
+      <li><a href="/log/profiles">1. プロフィール</a></li>
+      <li><a href="/log/weightTracking">2. 体重の推移</a></li>
+      <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a>
+        <ul>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#purring_mol">3-1. 撫でられたとき（モル）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#purring_rem">3-2. 撫でられたとき（レム）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#mel_brushing">3-3. ブラッシングされているとき（メル）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#mol_brushing">3-4. ブラッシングされているとき（モル）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#rem_tickle">3-5. くすぐられているとき（レム）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#rem_begging">3-6. 飼い主帰宅時（レム）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#rem_alert">3-7. 急に触られたとき（レム）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#nasal">3-8. 鼻音（レム）</a></li>
+          <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#urolithiasis">3-9. 尿路結石に罹患したとき（レム）</a></li>
+        </ul>
+      </li>
+      <li><a href="/log/behavioralTraining/">4. トレーニング</a>
+        <ul>
 
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+          <li class="no-bullet"><a href="/log/behavioralTraining#litterTraining">4-1. トイレトレーニング</a></li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#taming">4-2. 「懐いた！」を増やす</a></li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#bitingBehavior">4-3. 「噛まれた！」を減らす</a>
+          </li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#overindulge">4-4. 「おやつの与えすぎ」を減らす</a>
+          </li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#untrainable">4-5. 無効な訓練</li>
+        </ul>
+      </li>
+    </ul>
+    </ul>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <a href="#top" class="back-to-top">▲</a>
+    <!-- モーダル -->
+    <div id="modal" class="modal">
+      <img class="modal-content" id="modal-img">
+    </div>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
 
-    gtag('config', 'G-85BH18E352');
-  </script>
+<script>
 
-</head>
+  // モーダル画像クリックで閉じる
+  document.getElementById("modal-img").addEventListener("click", function () {
+    document.getElementById("modal").style.display = "none";
+  });
+  // フッター読み込み
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+    .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+  // トグルメニュー
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const placeholder = document.getElementById('nav-placeholder');
 
-<body>
-  <header id="top">
-    <a href="/log">
-      <img src="https://mimolme.github.io/img/mol-log.png" alt="log" class="top-image">
-    </a>
-    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <div id="nav-placeholder"></div>
-    <nav class="breadcrumbs" aria-label="パンくずリスト">
-      <ol id="breadcrumbs"></ol>
-    </nav>
+    // 1) 先に nav.html を読み込む
+    fetch('/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+        return res.text();
+      })
+      .then(html => {
+        // 2) DOMに挿入
+        placeholder.innerHTML = html;
 
-  </header>
-  <main>
-    <section>
-      <h2>モルモットの体重推移・音声の種類や訓練方法は？</h2>
-      <h3 style="color: #2f4f4f">- 目次 -</h3>
-      <ul class="no-bullet">
-        <li><a href="/log/profiles">1. プロフィール</a></li>
-        <li><a href="/log/weightTracking">2. 体重の推移</a></li>
-        <li><a href="/log/guinea-pig-vocalizations">3. 音声の種類</a>
-          <ul>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#purring_mol">3-1. 撫でられたとき（モル）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#purring_rem">3-2. 撫でられたとき（レム）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#mel_brushing">3-3. ブラッシングされているとき（メル）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#mol_brushing">3-4. ブラッシングされているとき（モル）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#rem_tickle">3-5. くすぐられているとき（レム）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#rem_begging">3-6. 飼い主帰宅時（レム）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#rem_alert">3-7. 急に触られたとき（レム）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#nasal">3-8. 鼻音（レム）</a></li>
-            <li class="no-bullet"><a href="/log/guinea-pig-vocalizations#urolithiasis">3-9. 尿路結石に罹患したとき（レム）</a></li>
-          </ul>
-        </li>
-        <li><a href="/log/behavioralTraining/">4. トレーニング</a>
-          <ul>
+        // 3) ここで初めて .nav-menu を取得（今なら存在する）
+        const nav = placeholder.querySelector('.nav-menu');
+        if (!nav) {
+          console.warn('nav.html に .nav-menu が見つかりません');
+          return;
+        }
 
-            <li class="no-bullet"><a href="/log/behavioralTraining#litterTraining">4-1. トイレトレーニング</a></li>
-            <li class="no-bullet"><a href="/log/behavioralTraining#taming">4-2. 「懐いた！」を増やす</a></li>
-            <li class="no-bullet"><a href="/log/behavioralTraining#bitingBehavior">4-3. 「噛まれた！」を減らす</a>
-            </li>
-            <li class="no-bullet"><a href="/log/behavioralTraining#overindulge">4-4. 「おやつの与えすぎ」を減らす</a>
-            </li>
-            <li class="no-bullet"><a href="/log/behavioralTraining#untrainable">4-5. 無効な訓練</li>
-          </ul>
-        </li>
-      </ul>
-      </ul>
-
-      <a href="#top" class="back-to-top">▲</a>
-      <!-- モーダル -->
-      <div id="modal" class="modal">
-        <img class="modal-content" id="modal-img">
-      </div>
-      </div>
-    </section>
-  </main>
-  <div id="footer-placeholder"></div>
-
-  <script>
-
-    // モーダル画像クリックで閉じる
-    document.getElementById("modal-img").addEventListener("click", function () {
-      document.getElementById("modal").style.display = "none";
-    });
-    // フッター読み込み
-    fetch("/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
-      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
-    // トグルメニュー
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.querySelector('.menu-toggle');
-      const placeholder = document.getElementById('nav-placeholder');
-
-      // 1) 先に nav.html を読み込む
-      fetch('/nav.html')
-        .then(res => {
-          if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
-          return res.text();
-        })
-        .then(html => {
-          // 2) DOMに挿入
-          placeholder.innerHTML = html;
-
-          // 3) ここで初めて .nav-menu を取得（今なら存在する）
-          const nav = placeholder.querySelector('.nav-menu');
-          if (!nav) {
-            console.warn('nav.html に .nav-menu が見つかりません');
-            return;
-          }
-
-          // 4) ハンバーガー開閉の配線
-          toggle.addEventListener('click', (e) => {
-            e.stopPropagation();                 // 外側クリックと競合しないように
-            nav.classList.toggle('open');
-          });
-
-          // 5) メニュー外クリックで閉じる
-          document.addEventListener('click', (e) => {
-            const inside = nav.contains(e.target) || toggle.contains(e.target);
-            if (!inside) nav.classList.remove('open');
-          });
-
-          // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
-          const mql = window.matchMedia('(min-width: 601px)');
-          const closeOnWide = () => nav.classList.remove('open');
-          // 古いブラウザ対策
-          if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
-          else mql.addListener(closeOnWide);
-        })
-        .catch(err => {
-          console.error(err);
-          placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+        // 4) ハンバーガー開閉の配線
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();                 // 外側クリックと競合しないように
+          nav.classList.toggle('open');
         });
-    });
-  </script>
-  <script src="/js/breadcrumbs.js"></script>
-</body>
 
-</html>
+        // 5) メニュー外クリックで閉じる
+        document.addEventListener('click', (e) => {
+          const inside = nav.contains(e.target) || toggle.contains(e.target);
+          if (!inside) nav.classList.remove('open');
+        });
+
+        // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+        const mql = window.matchMedia('(min-width: 601px)');
+        const closeOnWide = () => nav.classList.remove('open');
+        // 古いブラウザ対策
+        if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+        else mql.addListener(closeOnWide);
+      })
+      .catch(err => {
+        console.error(err);
+        placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+      });
+  });
+</script>
+<script src="/js/breadcrumbs.js"></script>
