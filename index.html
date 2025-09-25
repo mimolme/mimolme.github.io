@@ -1,444 +1,419 @@
-<!DOCTYPE html>
-<html lang="ja">
+---
+layout: default
+title: "もるらぼ -GuineaPigLab-"
+# description: "このページ専用のもるらぼの紹介文："
+# keywords: "このページ専用のもるらぼのキーワード："
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>もるらぼ -GuineaPigLab- </title>
-  <meta name="description" content="もるらぼ -GuineaPigLab- は、モルモットと一緒に暮らすのに役立つ情報を提供するサイトです。">
-  <meta name="keywords"
-    content="もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの飼い方, モルモットと暮らしたい, モルモットの飼育方法, モルモット観察">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/fav.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85BH18E352"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-85BH18E352');
-  </script>
-
-</head>
-
-<body>
-  <header id="top">
-    <a href="https://mimolme.github.io">
-      <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
-    </a>
-    <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
-    <div id="nav-placeholder"></div>
-  </header>
-  <main>
-    <section>
-      <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 09/04/2025</p>
-    </section>
-    <section>
-      <div class="section-wrapper">
-        <h2 class="section-title">もるらぼとは？</h2>
-      </div>
-      <br>
-      <ul>
-        <li>モルモットと一緒に暮らしたい</li>
-        <li>モルモットと暮らしているけどわからないことだらけ</li>
-        <li>モルモットの本をいくつか読んだけど「ウチの子の飼育」に役立つ情報が意外と少ない</li>
-        <li>実体験をもっと詳しく知りたい</li>
-        <li>一緒に暮らすからにはモルモットにとって最善を尽くしたい</li>
-      </ul>
-      <br>
-      <p>
-        そんな思いを抱いている方にとって、<strong class="marker"> 飼い主目線
-        </strong>で少しでも有益な情報を配信できたらと思い、このサイトを立ち上げました。モルモットが安心して健やかに暮らせること、これを可能な限り追求し続けるために管理人（私）は日々試行錯誤の繰り返しです。
-      </p>
-      <div class="btn-wrapper">
-        <div class="btn-container">
-          <a href="https://mimolme.github.io/log/profiles/" class="btn1"><i class="fa-solid fa-circle-chevron-right"
-              style="color: #fefefe;">&nbsp;</i><i>もるらぼ</i>&nbsp;のモルモット
-          </a>
-        </div>
-      </div>
-      <p>
-        ところで、モルモットと暮らしているとわからないことだらけですよね。にもかかわらず、とにかく確たる情報が少ない。ペットショップの店員さん、獣医さん、飼育本の著者、Webライター、みなさん違ったことを主張してきます。
-      </p>
-      <p>
-        実際にモルモットと一緒に暮らしてみると、本に書いてある一般的な情報はあまり役立たないことが多いです。事例もあまり紹介されていません。飼育者からすると、具体的な情報や事例を知りたいですよね。
-      </p>
-      <p>
-        ちなみに、ネットの情報はどうかというと、本よりは具体的な情報に辿り着くことが多いです。しかし、中途半端なブログ・呟き（例：手術をしたことはわかるけど具体的な症状や術後の様子はどうなの？）や注意喚起のない危険性を含む情報（例：金属製のケージで多頭飼いしているけど大丈夫？）が多数散在しています。私たちはネットで検索する際に、例えば「モルモット　パセリ」というように共起検索し、検索結果のトップに出てきた情報を鵜呑みにしがちです（例：モルモットがパセリを食べている動画を見て「モルモットはパセリを食べていいんだ！」と判断する）。しかし、それはあくまで全体の一部分でしかありません。１例ですらない可能性があります。自分のモルモットにパセリを与えて良いのか、飼っているモルモットの体質も踏まえて給餌可否や適量を多数の情報から統合して判断する必要があります。できれば関連の論文を読んだり専門家に相談することが好ましいでしょう。
-      </p>
-      <p>
-        情報が錯綜する中、私がかかりつけ医から聞いて参考になった知識や日常で試行錯誤した経験、そして事例が、少しでも誰かのお役に立てればなと思います<sup><a href="#cap1">※1</a></sup>。
-      </p>
-      <p>
-        ちなみに、なぜか「モルモットは比較的飼いやすい<sup><a
-            href="#easy">※2</a></sup>」と書かれた本（学術書も含める）が多いですが、私は全く同意できません。ものすごく大変です。私はこれまで3頭と暮らした経験がありますが「慣れる」作業はあっても「飼いやすい」と感じたことは一度もありません。こんなにも大変だとは思いもよりませんでした。モルモットとの同居を検討している方は本サイトをご参照の上、「本当に飼えるのか」冷静に考えてみてください。
-      </p>
-      <small id="cap1">※1: <i>もるらぼ </i>の<a href="#warning">注意事項</a>と<a
-          href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください</small><br>
-      <small id="easy">※2: もしかすると「実験動物」や「動物園の動物」として飼いやすいのかもしれませんが、私はその分野の研究者でも動物管理者でもありませんので計り知れません。</small>
-    </section>
+<header id="top">
+  <a href="https://mimolme.github.io">
+    <img src="https://mimolme.github.io/img/MolLabTop.png" alt="top_img" class="top-image">
+  </a>
+  <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+  <div id="nav-placeholder"></div>
+</header>
+<main>
+  <section>
+    <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 09/04/2025</p>
+  </section>
+  <section>
+    <div class="section-wrapper">
+      <h2 class="section-title">もるらぼとは？</h2>
+    </div>
     <br>
-    <section>
-      <div class="section-wrapper">
-        <h2 class="section-title">モルモットと暮らすためには・・</h2>
-      </div>
-      <br>
-      <ul>
-        <li><a href="#cost">経済的な余裕</a></li>
-        <li><a href="#time">時間的・心理的な余裕</a></li>
-        <li><a href="#allergies">あなたや家族のアレルギーの有無</a></li>
-        <li><a href="#hospital">かかりつけにできる小動物・エキゾチックアニマル専門病院</a></li>
-      </ul>
-      <p>少なくとも上記4点はモルモットと暮らす前に必ず確認しておくべきかと思います。</p>
-    </section>
+    <ul>
+      <li>モルモットと一緒に暮らしたい</li>
+      <li>モルモットと暮らしているけどわからないことだらけ</li>
+      <li>モルモットの本をいくつか読んだけど「ウチの子の飼育」に役立つ情報が意外と少ない</li>
+      <li>実体験をもっと詳しく知りたい</li>
+      <li>一緒に暮らすからにはモルモットにとって最善を尽くしたい</li>
+    </ul>
     <br>
-    <section>
-      <div class="box-heading">
-        <h3 id="cost">１万円強。</h3>
-      </div>
-      <p>これは1頭のモルモットにかかるひと月当たりの費用です。モルモットの体質や飼育環境によって差はあるかと思いますが「ちゃんと」飼育しようと思うと1万円では収まりません。ちなみに我が家の<a
-          href="https://mimolme.github.io/log/profiles#rem">レム</a>の場合、月あたりの出費は<a href="#table1">表1</a>の通りです：</p>
-    </section>
-    <section>
-      <div class="table-container">
-        <h5 id="table1" style="text-align: center; font-weight: bold;">表1. ひと月あたりの１頭にかかる費用（円）</h5>
-        <table class="cost-table">
-          <tr>
-            <th>牧草・牧草代用ペレット</th>
-            <td>8,000</td>
-          </tr>
-          <tr>
-            <th>青果</th>
-            <td>1,500</td>
-          </tr>
-          <tr>
-            <th>サプリメント</th>
-            <td>2,000</td>
-          </tr>
-          <tr>
-            <th>清掃</th>
-            <td>500</td>
-          </tr>
-          <tr>
-            <th>備品</th>
-            <td>3,000</td>
-          </tr>
-          <tr>
-            <th>その他</th>
-            <td>3,000</td>
-          </tr>
-          <tr>
-            <th style="font-weight: bold;">合計</th>
-            <td style="font-weight: bold;">18,000</td>
-          </tr>
-        </table>
-      </div>
-    </section><br>
-    <section>
-      <p>
-        例えば、我が家では1袋900~1000円の牧草を週あたり2袋程度買います。それに加えて「牧草代用ペレット」というその名の通り牧草でできたペレットも買っています。野菜や果物に関しては、2~3種類を10日に1回ほど買います。またサプリメントに関しては、年間で1~2万円かかります。これも個体に依存します（レムは尿路結石になりやすい体質なので、一般的な<a
-          href="https://mimolme.github.io/feeding-environment/feeding#supplement">サプリメント</a>に加え、専用のサプリを服用しています）。清掃に関する出費項目としてはウエットティッシュや粘着カーペットクリーナーなど。備品としては、遊具や給水器や給水器に入れる薬剤、シリンジ、タオル、齧り技など。その他にも、光熱費（年中空調をつけることになります）、病院代（年間3万はかかると思ってください）などたくさんのお金がかかります。
-      </p>
-      <p>
-        モルモット自体の購入費用は、安くて3千円くらいから高くて3~4万円くらい。「時世」、「ペットショップ」、「モルモットの出身地」によって変動しますが、多くは5千円~1万5千円で購入できる印象です。犬猫と比較すると安価なため初期費用は安い、と感じる方も多いと思います。他方、前述の通りラーニングコストは決して安くありません。
-      </p>
-      <p>
-        また、このサイトを読んでいるあなたならお分かりかと思いますが、単に「飼うことができれば良い」わけではないでしょう。病気の予防もしなければなりませんし、備品やおもちゃが劣化したら交換しなければなりません。彼らがより快適に過ごせるようにケージ内の配置を変えたり、食いつきが悪ければ餌を変えたりもします<sup><a
-            href="#EnvironmentalEnrichment">※2</a></sup>。健康に生きることはもってのほか、モルモットがより快適かつ自然に過ごせるように工夫するにはお金がかかります。モルモットの寿命は平均5年程度と言われていますがあくまで代表値。10年くらい一緒に暮らせるかも知れません。いずれにせよ決して短くない期間、モルモットのために毎月お金をかけられるのか、今一度よく考えてみてください。
-      </p>
-    </section>
-    <br>
-    <section>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
-
-        <div>
-          <a href="https://mimolme.github.io/img/tips/mol_tim2.jpg"><img id="fig1"
-              src="https://mimolme.github.io/img/tips/mol_tim2.jpg" alt="mol_tim2" height="200px"
-              style="width: auto;"></a>
-        </div>
-      </div>
-    </section><br>
-    <small id="EnvironmentalEnrichment">※2: 環境エンリッチメント。動物福祉の立場から飼育動物の幸福な暮らしを実現するための具体的な方法で、飼育環境を豊かにすること<sup><a
-          href="#ref1">[1]</a></sup>。ケージの広さや給餌を考慮するだけでなくケージ内のレイアウトや給餌方法、おもちゃの提供、人とコミュニケーションをとるなど様々な方法がある<sup><a
-          href="#ref1">[1]</a></sup>。</small>
-
+    <p>
+      そんな思いを抱いている方にとって、<strong class="marker"> 飼い主目線
+      </strong>で少しでも有益な情報を配信できたらと思い、このサイトを立ち上げました。モルモットが安心して健やかに暮らせること、これを可能な限り追求し続けるために管理人（私）は日々試行錯誤の繰り返しです。
+    </p>
     <div class="btn-wrapper">
       <div class="btn-container">
-        <a href="https://mimolme.github.io/feeding-environment/tools/" class="btn1"><i
-            class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットに必要なツール
-        </a>
-        <a href="https://mimolme.github.io/feeding-environment/environment/" class="btn1"><i
-            class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>
-          モルモットの生育環境
-        </a>
-        <a href="https://mimolme.github.io/feeding-environment/feeding/" class="btn1"><i
-            class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>
-          モルモットの食べ物
+        <a href="https://mimolme.github.io/log/profiles/" class="btn1"><i class="fa-solid fa-circle-chevron-right"
+            style="color: #fefefe;">&nbsp;</i><i>もるらぼ</i>&nbsp;のモルモット
         </a>
       </div>
     </div>
-    </section>
+    <p>
+      ところで、モルモットと暮らしているとわからないことだらけですよね。にもかかわらず、とにかく確たる情報が少ない。ペットショップの店員さん、獣医さん、飼育本の著者、Webライター、みなさん違ったことを主張してきます。
+    </p>
+    <p>
+      実際にモルモットと一緒に暮らしてみると、本に書いてある一般的な情報はあまり役立たないことが多いです。事例もあまり紹介されていません。飼育者からすると、具体的な情報や事例を知りたいですよね。
+    </p>
+    <p>
+      ちなみに、ネットの情報はどうかというと、本よりは具体的な情報に辿り着くことが多いです。しかし、中途半端なブログ・呟き（例：手術をしたことはわかるけど具体的な症状や術後の様子はどうなの？）や注意喚起のない危険性を含む情報（例：金属製のケージで多頭飼いしているけど大丈夫？）が多数散在しています。私たちはネットで検索する際に、例えば「モルモット　パセリ」というように共起検索し、検索結果のトップに出てきた情報を鵜呑みにしがちです（例：モルモットがパセリを食べている動画を見て「モルモットはパセリを食べていいんだ！」と判断する）。しかし、それはあくまで全体の一部分でしかありません。１例ですらない可能性があります。自分のモルモットにパセリを与えて良いのか、飼っているモルモットの体質も踏まえて給餌可否や適量を多数の情報から統合して判断する必要があります。できれば関連の論文を読んだり専門家に相談することが好ましいでしょう。
+    </p>
+    <p>
+      情報が錯綜する中、私がかかりつけ医から聞いて参考になった知識や日常で試行錯誤した経験、そして事例が、少しでも誰かのお役に立てればなと思います<sup><a href="#cap1">※1</a></sup>。
+    </p>
+    <p>
+      ちなみに、なぜか「モルモットは比較的飼いやすい<sup><a
+          href="#easy">※2</a></sup>」と書かれた本（学術書も含める）が多いですが、私は全く同意できません。ものすごく大変です。私はこれまで3頭と暮らした経験がありますが「慣れる」作業はあっても「飼いやすい」と感じたことは一度もありません。こんなにも大変だとは思いもよりませんでした。モルモットとの同居を検討している方は本サイトをご参照の上、「本当に飼えるのか」冷静に考えてみてください。
+    </p>
+    <small id="cap1">※1: <i>もるらぼ </i>の<a href="#warning">注意事項</a>と<a
+        href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください</small><br>
+    <small id="easy">※2: もしかすると「実験動物」や「動物園の動物」として飼いやすいのかもしれませんが、私はその分野の研究者でも動物管理者でもありませんので計り知れません。</small>
+  </section>
+  <br>
+  <section>
+    <div class="section-wrapper">
+      <h2 class="section-title">モルモットと暮らすためには・・</h2>
+    </div>
     <br>
-    <section>
-      <div class="box-heading">
-        <h3 id="time">１時間強。</h3>
+    <ul>
+      <li><a href="#cost">経済的な余裕</a></li>
+      <li><a href="#time">時間的・心理的な余裕</a></li>
+      <li><a href="#allergies">あなたや家族のアレルギーの有無</a></li>
+      <li><a href="#hospital">かかりつけにできる小動物・エキゾチックアニマル専門病院</a></li>
+    </ul>
+    <p>少なくとも上記4点はモルモットと暮らす前に必ず確認しておくべきかと思います。</p>
+  </section>
+  <br>
+  <section>
+    <div class="box-heading">
+      <h3 id="cost">１万円強。</h3>
+    </div>
+    <p>これは1頭のモルモットにかかるひと月当たりの費用です。モルモットの体質や飼育環境によって差はあるかと思いますが「ちゃんと」飼育しようと思うと1万円では収まりません。ちなみに我が家の<a
+        href="https://mimolme.github.io/log/profiles#rem">レム</a>の場合、月あたりの出費は<a href="#table1">表1</a>の通りです：</p>
+  </section>
+  <section>
+    <div class="table-container">
+      <h5 id="table1" style="text-align: center; font-weight: bold;">表1. ひと月あたりの１頭にかかる費用（円）</h5>
+      <table class="cost-table">
+        <tr>
+          <th>牧草・牧草代用ペレット</th>
+          <td>8,000</td>
+        </tr>
+        <tr>
+          <th>青果</th>
+          <td>1,500</td>
+        </tr>
+        <tr>
+          <th>サプリメント</th>
+          <td>2,000</td>
+        </tr>
+        <tr>
+          <th>清掃</th>
+          <td>500</td>
+        </tr>
+        <tr>
+          <th>備品</th>
+          <td>3,000</td>
+        </tr>
+        <tr>
+          <th>その他</th>
+          <td>3,000</td>
+        </tr>
+        <tr>
+          <th style="font-weight: bold;">合計</th>
+          <td style="font-weight: bold;">18,000</td>
+        </tr>
+      </table>
+    </div>
+  </section><br>
+  <section>
+    <p>
+      例えば、我が家では1袋900~1000円の牧草を週あたり2袋程度買います。それに加えて「牧草代用ペレット」というその名の通り牧草でできたペレットも買っています。野菜や果物に関しては、2~3種類を10日に1回ほど買います。またサプリメントに関しては、年間で1~2万円かかります。これも個体に依存します（レムは尿路結石になりやすい体質なので、一般的な<a
+        href="https://mimolme.github.io/feeding-environment/feeding#supplement">サプリメント</a>に加え、専用のサプリを服用しています）。清掃に関する出費項目としてはウエットティッシュや粘着カーペットクリーナーなど。備品としては、遊具や給水器や給水器に入れる薬剤、シリンジ、タオル、齧り技など。その他にも、光熱費（年中空調をつけることになります）、病院代（年間3万はかかると思ってください）などたくさんのお金がかかります。
+    </p>
+    <p>
+      モルモット自体の購入費用は、安くて3千円くらいから高くて3~4万円くらい。「時世」、「ペットショップ」、「モルモットの出身地」によって変動しますが、多くは5千円~1万5千円で購入できる印象です。犬猫と比較すると安価なため初期費用は安い、と感じる方も多いと思います。他方、前述の通りラーニングコストは決して安くありません。
+    </p>
+    <p>
+      また、このサイトを読んでいるあなたならお分かりかと思いますが、単に「飼うことができれば良い」わけではないでしょう。病気の予防もしなければなりませんし、備品やおもちゃが劣化したら交換しなければなりません。彼らがより快適に過ごせるようにケージ内の配置を変えたり、食いつきが悪ければ餌を変えたりもします<sup><a
+          href="#EnvironmentalEnrichment">※2</a></sup>。健康に生きることはもってのほか、モルモットがより快適かつ自然に過ごせるように工夫するにはお金がかかります。モルモットの寿命は平均5年程度と言われていますがあくまで代表値。10年くらい一緒に暮らせるかも知れません。いずれにせよ決して短くない期間、モルモットのために毎月お金をかけられるのか、今一度よく考えてみてください。
+    </p>
+  </section>
+  <br>
+  <section>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_tim2.jpg"><img id="fig1"
+            src="https://mimolme.github.io/img/tips/mol_tim2.jpg" alt="mol_tim2" height="200px"
+            style="width: auto;"></a>
       </div>
-      <p>
-        これは1頭のモルモットの管理にかかる１日あたりの時間です。モルモットは排泄量がとても多いです。また、いかなる個体であっても、完全にトイレの場所を守ることは困難です。個体によっては糞尿をいたるところに撒き散らす癖（テリトリーを守っているのでしょう）を持つ子もいます。なお、個体差はありますが、モルモットの毛は抜けやすいです。抜けた毛を放置するとエサと一緒に接種してしまい糞詰まりを起こすことがあります（モルモットは猫のように毛玉を吐き出すことはできません）。これに輪をかけて、モルモットは皮膚病に罹りやすいと言われています。結論、モルモットの住処は清潔に保つ必要があります。
-      </p>
-      <p>
-        我が家では朝晩、ケージの清掃、餌の補充、モルモット本体のブラッシングや健康チェック、給水器など道具洗浄（朝のみ）を行っています。テキパキ作業をしても20分以上かかります。お休みの日はこれに加えて「ケージ内が汚れている」と感じたらすぐに糞尿を取り除いたりもします。
-      </p>
-      <p>
-        他にも、野菜を洗って切る、硬いサプリメントを砕く・調合する、などといった作業にも時間を割くことになります。慌ただしい朝、仕事から疲れて帰宅後、貴重な休みの日に、掃除や給餌や諸々管理ができるのか、よく考えてみてください。
-      </p>
-    </section>
-    <br>
+    </div>
+  </section><br>
+  <small id="EnvironmentalEnrichment">※2: 環境エンリッチメント。動物福祉の立場から飼育動物の幸福な暮らしを実現するための具体的な方法で、飼育環境を豊かにすること<sup><a
+        href="#ref1">[1]</a></sup>。ケージの広さや給餌を考慮するだけでなくケージ内のレイアウトや給餌方法、おもちゃの提供、人とコミュニケーションをとるなど様々な方法がある<sup><a
+        href="#ref1">[1]</a></sup>。</small>
+
+  <div class="btn-wrapper">
+    <div class="btn-container">
+      <a href="https://mimolme.github.io/feeding-environment/tools/" class="btn1"><i
+          class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットに必要なツール
+      </a>
+      <a href="https://mimolme.github.io/feeding-environment/environment/" class="btn1"><i
+          class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>
+        モルモットの生育環境
+      </a>
+      <a href="https://mimolme.github.io/feeding-environment/feeding/" class="btn1"><i
+          class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>
+        モルモットの食べ物
+      </a>
+    </div>
+  </div>
+  </section>
+  <br>
+  <section>
+    <div class="box-heading">
+      <h3 id="time">１時間強。</h3>
+    </div>
+    <p>
+      これは1頭のモルモットの管理にかかる１日あたりの時間です。モルモットは排泄量がとても多いです。また、いかなる個体であっても、完全にトイレの場所を守ることは困難です。個体によっては糞尿をいたるところに撒き散らす癖（テリトリーを守っているのでしょう）を持つ子もいます。なお、個体差はありますが、モルモットの毛は抜けやすいです。抜けた毛を放置するとエサと一緒に接種してしまい糞詰まりを起こすことがあります（モルモットは猫のように毛玉を吐き出すことはできません）。これに輪をかけて、モルモットは皮膚病に罹りやすいと言われています。結論、モルモットの住処は清潔に保つ必要があります。
+    </p>
+    <p>
+      我が家では朝晩、ケージの清掃、餌の補充、モルモット本体のブラッシングや健康チェック、給水器など道具洗浄（朝のみ）を行っています。テキパキ作業をしても20分以上かかります。お休みの日はこれに加えて「ケージ内が汚れている」と感じたらすぐに糞尿を取り除いたりもします。
+    </p>
+    <p>
+      他にも、野菜を洗って切る、硬いサプリメントを砕く・調合する、などといった作業にも時間を割くことになります。慌ただしい朝、仕事から疲れて帰宅後、貴重な休みの日に、掃除や給餌や諸々管理ができるのか、よく考えてみてください。
+    </p>
+  </section>
+  <br>
+  <section>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_height.jpg"><img id="fig2"
+            src="https://mimolme.github.io/img/tips/mel_height.jpg" alt="mel_height" height="200px"
+            style="width: auto;"></a>
+      </div>
+    </div>
+  </section>
+  <div class="btn-wrapper">
+    <div class="btn-container">
+      <a href="https://mimolme.github.io/health-disease/healthCheck/" class="btn1"><i
+          class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットの健康チェック
+      </a>
+
+      <a href="https://mimolme.github.io/feeding-environment/environment/" class="btn1"><i
+          class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットの生育環境
+      </a>
+    </div>
+  </div>
+  <br>
+  <section>
+    <div class="box-heading">
+      <h3 id="allergies">モルモットアレルギーかも？</h3>
+    </div>
+    <p>
+      「モルモットに近づくとくしゃみが止まらない」、「モルモットを素肌で抱っこすると湿疹が出る」といった経験はありませんか？それはモルモットに対するアレルギーである可能性があります。かくいう私自身も「モルモットアレルギー」のようです。皮膚の症状に関しては個体に関わらず、場合によっては服越しでも、必ず生じます。毛虫に刺された時のように湿疹が出ます。尿が付着したチモシーに触れることでも生じます。一方で「くしゃみ・鼻水」に関しては必ず生じるわけではありません。むしろチモシーの粉塵や花粉で生じている気がします。ところで私はモルモットと暮らすまで恥ずかしながらモルモットに興味がありませんでした。ですので動物園でモルモットと触れ合うといった経験もありませんでした。従ってモルモットと暮らすことによって、くしゃみや鼻水、湿疹が出るとは思いもよりませんでした。
+    </p>
+    <p>ところで、どれくらいのヒトがモルモットアレルギーなのでしょう？一般のヒトの有病率に関する調査はすぐには見当たりませんでしたが、実験動物関係の従事者のうちモルモット担当者の有病率は約10%であることを示唆する報告<sup><a
+          href="#ref2">[2]</a></sup>や猫・犬アレルギー患者の73%がモルモットアレルゲンにIgE陽性との報告<sup><a href="#ref3">[3]</a></sup><sup><a
+          href="#cross-reaction">※3</a></sup>もあります。</p>
+    <p>
+      「モルモットアレルギー」か調べるには、シングルアレルゲン検査で<span
+        class="marker">モルモット上皮</span>を含めると良いでしょう。シングルアレルゲン検査は皮膚科/耳鼻咽喉科/呼吸器科などで対応しています。もしお近くの病院では対応していない場合、view39など一般的なアレルギー検査を受けてみて「犬・猫」項目の結果を参考にしてみても良いかもしれませんね。
+    </p><small id="cross-reaction">※3:
+      猫・犬アレルゲンとの交差反応で陽性になっただけのケースが混在</small>
+    <p>
+      ちなみに、一般人が耳鼻科や呼吸器科で受けられるアレルギー検査の大半は「血液検査」（アレルゲン：モルモット上皮）です。明らかにモルモット関係で湿疹や呼吸器関係の不調が生じているのに血液検査の結果「陰性」というケースもあります。かくいう私も明らかにアレルギー反応が出ているのに検査結果は陰性でした。病院の先生曰く、アレルギー検査（血液検査）はあくまで指標の一つです。検査結果が陰性でもモルモットと暮らす限り不調が出る可能性は十分にあります。モルモットの尿やその他体液に対してアレルギー反応が出る可能性も大いにあります。また、一緒に暮らしているうちにアレルギー性鼻炎や気管支炎喘息などを発症するケースも少なくないようです。あなたは嫌になりませんか？痒みや咳、鼻水、くしゃみに悩まされながらモルモットと暮らしたいですか？
+    </p>
+    <p>
+      やっぱり飼えない、もう一緒に暮らせない、などは許されないのです。このような状態に陥ることを、あなたにとってもモルモットにとっても、事前に回避する必要があります。モルモットと暮らすならばこうしたリスクも念頭に置いておく必要があるのです。
+    </p>
+  </section>
+  <br>
+  <section>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel1.jpg"><img id="fig3"
+            src="https://mimolme.github.io/img/tips/mel1.jpg" alt="mel1" height="200px" style="width: auto;"></a>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section>
+    <div class="box-heading">
+      <h3 id="hospital">エキゾチックアニマル専門病院が近所にありますか？</h3>
+    </div>
+    <p>
+      ご近所を思い浮かべてください。動物病院はいくつありますか？私の自宅の半径1.5km圏内にはなんと7件以上あります。皆さんのご近所にも動物病院自体はいくつかあるのではないかと思います。</p>
+    <p>
+      しかし、その中でモルモットを診察可能な病院がいくつあるでしょうか？大抵は犬猫専門のはずです。まれにウサギ専門の動物病院があったり、対応可能な動物に「モルモット」が含まれている動物病院もあります。しかし、ご注意ください。<strong>
+        「エキゾチックアニマル専門」あるいは「小動物専門」と掲げていない限り頼るべきではありません。
+      </strong>現に私はウサギ専門病院やモルモット対応可能と謳っている動物病院に訪問した経験があります。これらの病院には事前に電話でもモルモット対応可否を確認した上で訪れましたが、
+    </p>
+    <ul>
+      <li>とりあえずレントゲンを撮って結局何もわからない</li>
+      <li>なんとなくとりあえず点滴をうつ</li>
+      <li>モルモットの餌すら把握していない</li>
+    </ul>
+    <p>
+      という信じ難い獣医さんに出会いました（記録は<a
+        href="https://mimolme.github.io/health-disease/diseases/diarrheaAndConstipation/2020-11-26/">こちら</a>）。「読影できない」ということは診断・治療ができないだけでなく、お金の無駄遣いをすることにもなります。また「何を食べているかわからない」ということは「〇〇を食べさせて良いのか」もわかりませんし、それ以前に現在の食生活が適切なものなのかも判断できない、助言してもらえない、ということです。そもそもレントゲンを撮って良い状態か判断が怪しい獣医は（言わずもがなではありますが）モルモットにとってとても危険です。というのも、みなさん、モルモットのX線検査がどのように実施されるかご存知でしょうか？
+    </p>
+    <ul>
+      <li>腹背像撮影：仰向けにして前肢と後肢を牽引、つまり手足を引っ張られた状態で撮影</li>
+      <li>ラテラル像：横向きにして、前肢と後肢を伸ばされて撮影</li>
+    </ul>
+    <p>モルモットに詳しくない獣医が十分に診察せず妥当な見立てもできないまま「とりあえず撮影」することは、モルモットが怪我をしたり場合によっては撮影自体が致命傷となるかもしれないのです。
+    </p>
     <section>
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
         <div>
-          <a href="https://mimolme.github.io/img/tips/mel_height.jpg"><img id="fig2"
-              src="https://mimolme.github.io/img/tips/mel_height.jpg" alt="mel_height" height="200px"
+          <a href="https://mimolme.github.io/img/tips/x-ray_mimolme.jpg"><img id="fig4"
+              src="https://mimolme.github.io/img/tips/x-ray_mimolme.jpg" alt="x-ray_mimolme" height="200px"
               style="width: auto;"></a>
         </div>
       </div>
     </section>
-    <div class="btn-wrapper">
-      <div class="btn-container">
-        <a href="https://mimolme.github.io/health-disease/healthCheck/" class="btn1"><i
-            class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットの健康チェック
-        </a>
+    <p>もちろん私が出会った獣医さんが単に「ハズレ」だった可能性もあります。しかし大切なモルモットの命がかかっています。専門医に診てもらうことを強く推奨します。
+    </p>
+    <p>
+      ここで本セクション冒頭の問いに戻りましょう。ご自宅の近所に、モルモットを「的確に」診察できる先生はいますか？モルモットの体調がすぐれない時に遠方まで車・電車で運搬するのは好ましくありません。明確な目安は存在しませんが、人間であっても数時間移動すると疲れますよね？移動のみならず病院内でも待ち時間が発生することは多いです。
+    </p>
+    <p>
+      ですので、あまりにも遠方にしか専門の動物病院が存在しない場合には、モルモットとの同居は控えた方が良いかも知れません（モルモットにとってもあなたにとっても）。我が家では、なんだかんだ年に少なくとも3回は通院します。それは例えば「うんちが少し柔らかい」となったら「診察（&薬の処方あり）→予後観察1回」というようにあっという間に2回通院。さらに定期検診として通院することもあります。
+    </p>
+    <p>
+      「病気になった時だけ行けば良いのでは？」と考えている方もいらっしゃるかも知れませんがそれは違います。病気になった時では遅いのです。特にモルモットの場合、手術など侵襲度の高い処置にめっぽう弱いです（例えばモルモットに多い「尿路結石」で手術した場合、25匹のうち、56%が術後1ヶ月以内に死亡したという報告<sup><a
+          href="#ref4">[4]</a></sup>があります）。「手術」が選択肢に入ることを避けるためには、日頃から健康チェックを怠らず、少しでも異変があればすぐに診療を受ける必要があります。定期検診も（季節・混雑具合によりますが）おすすめです。
+    </p>
+    <p>
+      ちなみに、全てのモルモットが生涯を通じていずれかの病気にかかると考えて差し支えありません。実際に1000匹のモルモットを対象とした研究で9割以上のモルモットが何かしらの疾患に罹患したとの報告があります<sup><a
+          href="#ref5">[5]</a></sup>。多くのヒトと同様、一生のうちで一度も病気にかからない個体は非常に稀なのです。
+    </p>
+    <p>
+      以上を踏まえ、モルモットに精通した獣医さんがいる小動物専門動物病院を探し、モルモットと同居できるか検討しましょう。
+    </p>
+  </section>
+  <br>
+  <section>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
-        <a href="https://mimolme.github.io/feeding-environment/environment/" class="btn1"><i
-            class="fa-solid fa-circle-chevron-right" style="color: #fefefe;">&nbsp;</i>モルモットの生育環境
-        </a>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_mel.jpg"><img id="fig5"
+            src="https://mimolme.github.io/img/tips/mol_mel.jpg" alt="mol_mel" height="200px" style="width: auto;"></a>
       </div>
     </div>
-    <br>
-    <section>
-      <div class="box-heading">
-        <h3 id="allergies">モルモットアレルギーかも？</h3>
-      </div>
-      <p>
-        「モルモットに近づくとくしゃみが止まらない」、「モルモットを素肌で抱っこすると湿疹が出る」といった経験はありませんか？それはモルモットに対するアレルギーである可能性があります。かくいう私自身も「モルモットアレルギー」のようです。皮膚の症状に関しては個体に関わらず、場合によっては服越しでも、必ず生じます。毛虫に刺された時のように湿疹が出ます。尿が付着したチモシーに触れることでも生じます。一方で「くしゃみ・鼻水」に関しては必ず生じるわけではありません。むしろチモシーの粉塵や花粉で生じている気がします。ところで私はモルモットと暮らすまで恥ずかしながらモルモットに興味がありませんでした。ですので動物園でモルモットと触れ合うといった経験もありませんでした。従ってモルモットと暮らすことによって、くしゃみや鼻水、湿疹が出るとは思いもよりませんでした。
-      </p>
-      <p>ところで、どれくらいのヒトがモルモットアレルギーなのでしょう？一般のヒトの有病率に関する調査はすぐには見当たりませんでしたが、実験動物関係の従事者のうちモルモット担当者の有病率は約10%であることを示唆する報告<sup><a
-            href="#ref2">[2]</a></sup>や猫・犬アレルギー患者の73%がモルモットアレルゲンにIgE陽性との報告<sup><a href="#ref3">[3]</a></sup><sup><a
-            href="#cross-reaction">※3</a></sup>もあります。</p>
-      <p>
-        「モルモットアレルギー」か調べるには、シングルアレルゲン検査で<span
-          class="marker">モルモット上皮</span>を含めると良いでしょう。シングルアレルゲン検査は皮膚科/耳鼻咽喉科/呼吸器科などで対応しています。もしお近くの病院では対応していない場合、view39など一般的なアレルギー検査を受けてみて「犬・猫」項目の結果を参考にしてみても良いかもしれませんね。
-      </p><small id="cross-reaction">※3:
-        猫・犬アレルゲンとの交差反応で陽性になっただけのケースが混在</small>
-      <p>
-        ちなみに、一般人が耳鼻科や呼吸器科で受けられるアレルギー検査の大半は「血液検査」（アレルゲン：モルモット上皮）です。明らかにモルモット関係で湿疹や呼吸器関係の不調が生じているのに血液検査の結果「陰性」というケースもあります。かくいう私も明らかにアレルギー反応が出ているのに検査結果は陰性でした。病院の先生曰く、アレルギー検査（血液検査）はあくまで指標の一つです。検査結果が陰性でもモルモットと暮らす限り不調が出る可能性は十分にあります。モルモットの尿やその他体液に対してアレルギー反応が出る可能性も大いにあります。また、一緒に暮らしているうちにアレルギー性鼻炎や気管支炎喘息などを発症するケースも少なくないようです。あなたは嫌になりませんか？痒みや咳、鼻水、くしゃみに悩まされながらモルモットと暮らしたいですか？
-      </p>
-      <p>
-        やっぱり飼えない、もう一緒に暮らせない、などは許されないのです。このような状態に陥ることを、あなたにとってもモルモットにとっても、事前に回避する必要があります。モルモットと暮らすならばこうしたリスクも念頭に置いておく必要があるのです。
-      </p>
-    </section>
-    <br>
-    <section>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
-
-        <div>
-          <a href="https://mimolme.github.io/img/tips/mel1.jpg"><img id="fig3"
-              src="https://mimolme.github.io/img/tips/mel1.jpg" alt="mel1" height="200px" style="width: auto;"></a>
-        </div>
-      </div>
-    </section>
-    <br>
-    <section>
-      <div class="box-heading">
-        <h3 id="hospital">エキゾチックアニマル専門病院が近所にありますか？</h3>
-      </div>
-      <p>
-        ご近所を思い浮かべてください。動物病院はいくつありますか？私の自宅の半径1.5km圏内にはなんと7件以上あります。皆さんのご近所にも動物病院自体はいくつかあるのではないかと思います。</p>
-      <p>
-        しかし、その中でモルモットを診察可能な病院がいくつあるでしょうか？大抵は犬猫専門のはずです。まれにウサギ専門の動物病院があったり、対応可能な動物に「モルモット」が含まれている動物病院もあります。しかし、ご注意ください。<strong>
-          「エキゾチックアニマル専門」あるいは「小動物専門」と掲げていない限り頼るべきではありません。
-        </strong>現に私はウサギ専門病院やモルモット対応可能と謳っている動物病院に訪問した経験があります。これらの病院には事前に電話でもモルモット対応可否を確認した上で訪れましたが、
-      </p>
-      <ul>
-        <li>とりあえずレントゲンを撮って結局何もわからない</li>
-        <li>なんとなくとりあえず点滴をうつ</li>
-        <li>モルモットの餌すら把握していない</li>
-      </ul>
-      <p>
-        という信じ難い獣医さんに出会いました（記録は<a
-          href="https://mimolme.github.io/health-disease/diseases/diarrheaAndConstipation/2020-11-26/">こちら</a>）。「読影できない」ということは診断・治療ができないだけでなく、お金の無駄遣いをすることにもなります。また「何を食べているかわからない」ということは「〇〇を食べさせて良いのか」もわかりませんし、それ以前に現在の食生活が適切なものなのかも判断できない、助言してもらえない、ということです。そもそもレントゲンを撮って良い状態か判断が怪しい獣医は（言わずもがなではありますが）モルモットにとってとても危険です。というのも、みなさん、モルモットのX線検査がどのように実施されるかご存知でしょうか？
-      </p>
-      <ul>
-        <li>腹背像撮影：仰向けにして前肢と後肢を牽引、つまり手足を引っ張られた状態で撮影</li>
-        <li>ラテラル像：横向きにして、前肢と後肢を伸ばされて撮影</li>
-      </ul>
-      <p>モルモットに詳しくない獣医が十分に診察せず妥当な見立てもできないまま「とりあえず撮影」することは、モルモットが怪我をしたり場合によっては撮影自体が致命傷となるかもしれないのです。
-      </p>
-      <section>
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
-
-          <div>
-            <a href="https://mimolme.github.io/img/tips/x-ray_mimolme.jpg"><img id="fig4"
-                src="https://mimolme.github.io/img/tips/x-ray_mimolme.jpg" alt="x-ray_mimolme" height="200px"
-                style="width: auto;"></a>
-          </div>
-        </div>
-      </section>
-      <p>もちろん私が出会った獣医さんが単に「ハズレ」だった可能性もあります。しかし大切なモルモットの命がかかっています。専門医に診てもらうことを強く推奨します。
-      </p>
-      <p>
-        ここで本セクション冒頭の問いに戻りましょう。ご自宅の近所に、モルモットを「的確に」診察できる先生はいますか？モルモットの体調がすぐれない時に遠方まで車・電車で運搬するのは好ましくありません。明確な目安は存在しませんが、人間であっても数時間移動すると疲れますよね？移動のみならず病院内でも待ち時間が発生することは多いです。
-      </p>
-      <p>
-        ですので、あまりにも遠方にしか専門の動物病院が存在しない場合には、モルモットとの同居は控えた方が良いかも知れません（モルモットにとってもあなたにとっても）。我が家では、なんだかんだ年に少なくとも3回は通院します。それは例えば「うんちが少し柔らかい」となったら「診察（&薬の処方あり）→予後観察1回」というようにあっという間に2回通院。さらに定期検診として通院することもあります。
-      </p>
-      <p>
-        「病気になった時だけ行けば良いのでは？」と考えている方もいらっしゃるかも知れませんがそれは違います。病気になった時では遅いのです。特にモルモットの場合、手術など侵襲度の高い処置にめっぽう弱いです（例えばモルモットに多い「尿路結石」で手術した場合、25匹のうち、56%が術後1ヶ月以内に死亡したという報告<sup><a
-            href="#ref4">[4]</a></sup>があります）。「手術」が選択肢に入ることを避けるためには、日頃から健康チェックを怠らず、少しでも異変があればすぐに診療を受ける必要があります。定期検診も（季節・混雑具合によりますが）おすすめです。
-      </p>
-      <p>
-        ちなみに、全てのモルモットが生涯を通じていずれかの病気にかかると考えて差し支えありません。実際に1000匹のモルモットを対象とした研究で9割以上のモルモットが何かしらの疾患に罹患したとの報告があります<sup><a
-            href="#ref5">[5]</a></sup>。多くのヒトと同様、一生のうちで一度も病気にかからない個体は非常に稀なのです。
-      </p>
-      <p>
-        以上を踏まえ、モルモットに精通した獣医さんがいる小動物専門動物病院を探し、モルモットと同居できるか検討しましょう。
-      </p>
-    </section>
-    <br>
-    <section>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
-
-        <div>
-          <a href="https://mimolme.github.io/img/tips/mol_mel.jpg"><img id="fig5"
-              src="https://mimolme.github.io/img/tips/mol_mel.jpg" alt="mol_mel" height="200px"
-              style="width: auto;"></a>
-        </div>
-      </div>
-    </section>
-    <br>
-    <section>
-      <div class="box warning-box" id="warning">
-        <strong>⚠ 注意：</strong>
-        <i>もるらぼ
-        </i>は、個人のサイトです。管理人は、獣医ではありません。専門分野が獣医学でもありません。可能な限り、科学的知見やかかりつけ医のアドバイス、そして個体差を鑑みた飼育経験に基づき記述をしておりますが、当然、このサイトに書かれていることが全てのモルモットに当てはまるわけではないと思います。また、飼育本のようにモルモットの情報（例えば、モルモットの種類や妊娠・繁殖について、等）を網羅するようなものでもありません。そして何より、本サイトは管理人の健忘録でもあります。以上のことを踏まえ、ご参考程度にお読みいただければ幸いです。そして自己責任の範囲内でお試しいただければと思います。ちなみに、本サイトのページは不定期で更新を行います。基本的には新しく入手した情報の追加や補足を行います。この場合は「最終更新日」として記載します。一方、すでに公開した情報において万一クリティカルな誤りがあった場合には、その旨明記します（例：<span
-          style="color: red;"><s>モルモットはメスの方がオスよりも体重が重くなる傾向</s></span> 正しくは「〜オスの方がメスよりも体重が重くなる〜」）。<i>もるらぼ </i>の<a
-          href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください。
-      </div>
-    </section>
-    <br>
-    <section>
-      <div class="references">
-        <h2>参考文献</h2>
-        <ul>
-          <li id="ref1">[1] 霍野晋吉., 横須賀誠 (2021). <i>カラーアトラスエキゾチックアニマル 哺乳類編 第３版 ─種類・生態・飼育・疾病─</i>. 緑書房</li>
-          <li id="ref2">[2] <i>E6 guinea pig epithelium</i> Retrieved Jun 2, 2025, from <a
-              href="https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html">https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html</a>
-          </li>
-          <li id="ref3">[3] Swiontek, Kler, Lehners, Ollert, Hentges, & Hilger. (2021). Component‐resolved diagnosis
-            using guinea‐pig
-            allergens elucidates allergen sensitization profiles in allergy to furry animals. <i>Clinical &Amp;
-              Experimental Allergy, 51</i>(6), 829. <a
-              href="https://pubmed.ncbi.nlm.nih.gov/33797108/">doi:10.1111/cea.13873</a></li>
-          <li id="ref4">[4] Behrens, K. N., Cray, M. T., & Noonan, B. (2024). Risk factors, complications, and
-            outcomes of cystotomy in guinea pigs: 25 cases (2010-2023). <i>Journal of the American Veterinary Medical
-              Association, 263</i>(2), 178–183. <a
-              href="https://avmajournals.avma.org/view/journals/javma/263/2/javma.24.08.0558.xml">doi:10.2460/javma.24.08.0558</a>
-          </li>
-          <li id="ref5">[5] Minarikova, A., Hauptman, K., Jeklova, E., Knotek, Z., & Jekl, V. (2015). Diseases in pet
-            guinea pigs: A retrospective study in 1000 animals. <i>The Veterinary Record, 177</i>(8), 200. <a
-              href="https://bvajournals.onlinelibrary.wiley.com/doi/epdf/10.1136/vr.103053">doi:10.1136/vr.103053</li>
-        </ul>
-      </div>
-
-    </section>
-
-    <a href="#top" class="back-to-top">▲</a>
-    <!-- モーダル -->
-    <div id="modal" class="modal">
-      <img class="modal-content" id="modal-img">
+  </section>
+  <br>
+  <section>
+    <div class="box warning-box" id="warning">
+      <strong>⚠ 注意：</strong>
+      <i>もるらぼ
+      </i>は、個人のサイトです。管理人は、獣医ではありません。専門分野が獣医学でもありません。可能な限り、科学的知見やかかりつけ医のアドバイス、そして個体差を鑑みた飼育経験に基づき記述をしておりますが、当然、このサイトに書かれていることが全てのモルモットに当てはまるわけではないと思います。また、飼育本のようにモルモットの情報（例えば、モルモットの種類や妊娠・繁殖について、等）を網羅するようなものでもありません。そして何より、本サイトは管理人の健忘録でもあります。以上のことを踏まえ、ご参考程度にお読みいただければ幸いです。そして自己責任の範囲内でお試しいただければと思います。ちなみに、本サイトのページは不定期で更新を行います。基本的には新しく入手した情報の追加や補足を行います。この場合は「最終更新日」として記載します。一方、すでに公開した情報において万一クリティカルな誤りがあった場合には、その旨明記します（例：<span
+        style="color: red;"><s>モルモットはメスの方がオスよりも体重が重くなる傾向</s></span> 正しくは「〜オスの方がメスよりも体重が重くなる〜」）。<i>もるらぼ </i>の<a
+        href="https://mimolme.github.io/terms_of_use/">利用規約</a>も併せてご確認ください。
     </div>
-  </main>
-  <div id="footer-placeholder"></div>
+  </section>
+  <br>
+  <section>
+    <div class="references">
+      <h2>参考文献</h2>
+      <ul>
+        <li id="ref1">[1] 霍野晋吉., 横須賀誠 (2021). <i>カラーアトラスエキゾチックアニマル 哺乳類編 第３版 ─種類・生態・飼育・疾病─</i>. 緑書房</li>
+        <li id="ref2">[2] <i>E6 guinea pig epithelium</i> Retrieved Jun 2, 2025, from <a
+            href="https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html">https://www.thermofisher.com/phadia/us/en/resources/allergen-encyclopedia/e6.html</a>
+        </li>
+        <li id="ref3">[3] Swiontek, Kler, Lehners, Ollert, Hentges, & Hilger. (2021). Component‐resolved diagnosis
+          using guinea‐pig
+          allergens elucidates allergen sensitization profiles in allergy to furry animals. <i>Clinical &Amp;
+            Experimental Allergy, 51</i>(6), 829. <a
+            href="https://pubmed.ncbi.nlm.nih.gov/33797108/">doi:10.1111/cea.13873</a></li>
+        <li id="ref4">[4] Behrens, K. N., Cray, M. T., & Noonan, B. (2024). Risk factors, complications, and
+          outcomes of cystotomy in guinea pigs: 25 cases (2010-2023). <i>Journal of the American Veterinary Medical
+            Association, 263</i>(2), 178–183. <a
+            href="https://avmajournals.avma.org/view/journals/javma/263/2/javma.24.08.0558.xml">doi:10.2460/javma.24.08.0558</a>
+        </li>
+        <li id="ref5">[5] Minarikova, A., Hauptman, K., Jeklova, E., Knotek, Z., & Jekl, V. (2015). Diseases in pet
+          guinea pigs: A retrospective study in 1000 animals. <i>The Veterinary Record, 177</i>(8), 200. <a
+            href="https://bvajournals.onlinelibrary.wiley.com/doi/epdf/10.1136/vr.103053">doi:10.1136/vr.103053</li>
+      </ul>
+    </div>
 
-  <script>
-    // モーダル表示（画像クリック）
-    document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        modal.style.display = "block";
-        modalImg.src = this.href;
-        document.body.classList.add("modal-open");
-      });
+  </section>
+
+  <a href="#top" class="back-to-top">▲</a>
+  <!-- モーダル -->
+  <div id="modal" class="modal">
+    <img class="modal-content" id="modal-img">
+  </div>
+</main>
+<div id="footer-placeholder"></div>
+
+<script>
+  // モーダル表示（画像クリック）
+  document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.style.display = "block";
+      modalImg.src = this.href;
+      document.body.classList.add("modal-open");
     });
+  });
 
-    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
-    document.getElementById("modal").addEventListener("click", function () {
-      this.style.display = "none";
-      document.body.classList.remove("modal-open");
-    });
+  // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+  document.getElementById("modal").addEventListener("click", function () {
+    this.style.display = "none";
+    document.body.classList.remove("modal-open");
+  });
 
-    // フッター読み込み
-    fetch("/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
-      .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+  // フッター読み込み
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+    .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
 
-    // トグルメニュー
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.querySelector('.menu-toggle');
-      const placeholder = document.getElementById('nav-placeholder');
+  // トグルメニュー
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const placeholder = document.getElementById('nav-placeholder');
 
-      // 1) 先に nav.html を読み込む
-      fetch('/nav.html')
-        .then(res => {
-          if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
-          return res.text();
-        })
-        .then(html => {
-          // 2) DOMに挿入
-          placeholder.innerHTML = html;
+    // 1) 先に nav.html を読み込む
+    fetch('/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+        return res.text();
+      })
+      .then(html => {
+        // 2) DOMに挿入
+        placeholder.innerHTML = html;
 
-          // 3) ここで初めて .nav-menu を取得（今なら存在する）
-          const nav = placeholder.querySelector('.nav-menu');
-          if (!nav) {
-            console.warn('nav.html に .nav-menu が見つかりません');
-            return;
-          }
+        // 3) ここで初めて .nav-menu を取得（今なら存在する）
+        const nav = placeholder.querySelector('.nav-menu');
+        if (!nav) {
+          console.warn('nav.html に .nav-menu が見つかりません');
+          return;
+        }
 
-          // 4) ハンバーガー開閉の配線
-          toggle.addEventListener('click', (e) => {
-            e.stopPropagation();                 // 外側クリックと競合しないように
-            nav.classList.toggle('open');
-          });
-
-          // 5) メニュー外クリックで閉じる
-          document.addEventListener('click', (e) => {
-            const inside = nav.contains(e.target) || toggle.contains(e.target);
-            if (!inside) nav.classList.remove('open');
-          });
-
-          // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
-          const mql = window.matchMedia('(min-width: 601px)');
-          const closeOnWide = () => nav.classList.remove('open');
-          // 古いブラウザ対策
-          if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
-          else mql.addListener(closeOnWide);
-        })
-        .catch(err => {
-          console.error(err);
-          placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+        // 4) ハンバーガー開閉の配線
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();                 // 外側クリックと競合しないように
+          nav.classList.toggle('open');
         });
-    });
 
-  </script>
-  <script src="/js/breadcrumbs.js"></script>
-</body>
+        // 5) メニュー外クリックで閉じる
+        document.addEventListener('click', (e) => {
+          const inside = nav.contains(e.target) || toggle.contains(e.target);
+          if (!inside) nav.classList.remove('open');
+        });
 
-</html>
+        // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+        const mql = window.matchMedia('(min-width: 601px)');
+        const closeOnWide = () => nav.classList.remove('open');
+        // 古いブラウザ対策
+        if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+        else mql.addListener(closeOnWide);
+      })
+      .catch(err => {
+        console.error(err);
+        placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+      });
+  });
+
+</script>
+<script src="/js/breadcrumbs.js"></script>
