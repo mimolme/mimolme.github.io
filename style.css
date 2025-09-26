@@ -754,18 +754,32 @@ body.modal-open .menu-toggle {
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;                /* 縦に積む準備 */
+    flex-direction: column;       /* 上：三本線, 下：MENU */
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.5);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2rem;              /* 三本線（&#9776;）の大きさ */
+    line-height: 1;
     position: fixed;
     top: 1rem;
     right: 2rem;
     z-index: 1001;
-    padding: 0 0.2rem;
+    padding: 0.4rem 0.6rem;       /* ラベルの分だけ少し余裕を持たせる */
     backdrop-filter: blur(4px);
     border: solid 1px #eee;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  /* ↓ これで「MENU」を三本線の下に表示 */
+  .menu-toggle::after {
+    content: "MENU";
+    display: block;
+    font-size: 0.75rem;          /* 小さめ */
+    letter-spacing: 0.08em;      /* ほんの少し字間を空ける */
+    color: #3c3c3c;              /* お好みで */
+    opacity: 0.85;
+    margin-top: 0.2rem;          /* 三本線との間隔 */
   }
 
   nav.nav-menu {
@@ -776,20 +790,16 @@ body.modal-open .menu-toggle {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 1rem;
     position: fixed;
-    top: 60px;
+    top: 60px;                   /* 必要なら70〜80pxに調整（ボタンが高くなった場合） */
     right: 0;
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
-  nav.nav-menu.open {
-    display: flex;
-  }
+  nav.nav-menu.open { display: flex; }
 
-  .nav-menu>*:not(:first-child)::before {
-    content: none;
-  }
+  .nav-menu>*:not(:first-child)::before { content: none; }
 
   nav.nav-menu a {
     justify-content: flex-start;
@@ -798,14 +808,9 @@ body.modal-open .menu-toggle {
     box-sizing: border-box;
   }
 
-  nav.nav-menu a::after {
-    left: 0;
-    width: 0;
-  }
+  nav.nav-menu a::after { left: 0; width: 0; }
 
-  .dropdown {
-    width: 100%;
-  }
+  .dropdown { width: 100%; }
 
   .dropdown>a {
     display: block;
