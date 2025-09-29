@@ -66,7 +66,7 @@ header {
 }
 
 nav.nav-menu {
-  border: solid 3px #ececec;
+  background-color: #ffeeee;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
