@@ -82,7 +82,7 @@ nav.nav-menu {
 
 .nav-menu>*:not(:first-child)::before {
   content: '‖';
-  color: #ccc8af;
+  color: #f1f1f1;
   font-size: 0.9rem;
   position: absolute;
   left: -0.5rem;
