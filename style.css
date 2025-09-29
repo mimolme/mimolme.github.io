@@ -66,7 +66,7 @@ header {
 }
 
 nav.nav-menu {
-  background-color: #fcf5f5;
+  background-color: #f1f1f1;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -82,7 +82,7 @@ nav.nav-menu {
 
 .nav-menu>*:not(:first-child)::before {
   content: '‖';
-  color: #f1f1f1;
+  color: #ccc8af;
   font-size: 0.9rem;
   position: absolute;
   left: -0.5rem;
