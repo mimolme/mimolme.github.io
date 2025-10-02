@@ -61,10 +61,11 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
             src="https://mimolme.github.io/img/tips/cranialSkeleton.png" alt="モルモットの頭蓋骨格模式図" height="300px"
             style="width: auto;"></a>
         <div>
-          <small>図1-1. モルモットの頭蓋骨格（模式図）</small>
+          <small>図1-1. モルモットの頭蓋骨格：正面（模式図）</small>
         </div>
       </div>
     </div>
+    <br>
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
       <div>
@@ -244,7 +245,7 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
 
 <script>
   // モーダル表示（画像クリック）
-  document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+  document.querySelectorAll('a[href$=".jpg"], a[href$=".png"]').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const modal = document.getElementById("modal");
