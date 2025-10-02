@@ -54,12 +54,11 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
     <p>
       モルモットには前歯（計4本）と臼歯（計16本）があり、前歯はモルモット自身で枝や木製の玩具をかじることで研ぐことができます（<a href="#fig1-1">図1</a>）。しかし奥歯である臼歯は、基本的に繊維質の食べ物を咀嚼することによってのみ削ることができます。一般的なペレットや野菜のみを摂取するのでは臼歯は摩耗しませんので毎日必ずチモシーを与え、一定量減っているか確認する必要があります。
     </p>
-    <br>
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
 
       <div>
-        <a href="https://mimolme.github.io/img/tips/cranialSkeleton.png"><img id="fig1"
-            src="https://mimolme.github.io/img/tips/cranialSkeleton.png" alt="モルモットの頭蓋骨格模式図" height="200px"
+        <a href="https://mimolme.github.io/img/tips/cranialSkeleton.png"><img id="fig1" class="responsive-png"
+            src="https://mimolme.github.io/img/tips/cranialSkeleton.png" alt="モルモットの頭蓋骨格模式図" height="300px"
             style="width: auto;"></a>
         <div>
           <small>図1. モルモットの頭蓋骨格（模式図）</small>
@@ -357,6 +356,18 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
       tr.appendChild(td);
     });
     tbody.appendChild(tr);
+  });
+
+  // モーダル表示（画像クリック）
+  document.querySelectorAll('a[href$=".jpg"], a[href$=".png"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.style.display = "block";
+      modalImg.src = this.href;
+      document.body.classList.add("modal-open");
+    });
   });
 
   // モーダル全体をクリックしたら閉じる（画像も含めてOK）
