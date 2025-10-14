@@ -827,10 +827,6 @@ body.modal-open .menu-toggle {
   nav.nav-menu a::after {
     left: 0;
     width: 0;
-    background-color: none;
-  }
-  .nav-menu a:hover {
-    background: none !important;
   }
 
   .dropdown {
@@ -843,6 +839,16 @@ body.modal-open .menu-toggle {
     box-sizing: border-box;
     padding: 0.5rem 1rem;
   }
+
+  nav.nav-menu a:hover,
+  nav.nav-menu a:focus,
+  nav.nav-menu a:active,
+  .dropdown>a:hover,
+  .dropdown>a:focus,
+  .dropdown>a:active {
+    background: transparent !important;
+  }
+
 
   .breadcrumbs {
     font-size: .5rem;
