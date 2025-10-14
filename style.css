@@ -829,6 +829,15 @@ body.modal-open .menu-toggle {
     width: 0;
     background-color: none;
   }
+  /* スマホでは hover エフェクトを無効化 */
+  .nav-menu a:hover::after {
+    width: 0 !important;
+  }
+
+  /* 背景色を付けている場合にも備えてリセット */
+  .nav-menu a:hover {
+    background: none !important;
+  }
 
   .dropdown {
     width: 100%;
