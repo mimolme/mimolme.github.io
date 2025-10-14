@@ -827,6 +827,7 @@ body.modal-open .menu-toggle {
   nav.nav-menu a::after {
     left: 0;
     width: 0;
+    background-color: none;
   }
 
   .dropdown {
