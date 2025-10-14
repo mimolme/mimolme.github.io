@@ -839,15 +839,17 @@ body.modal-open .menu-toggle {
     box-sizing: border-box;
     padding: 0.5rem 1rem;
   }
-/* --- スマホでのタップ時の灰色ハイライトを消す --- */
+
+  /* --- スマホでのタップ時の灰色ハイライトを消す --- */
   .nav-menu a,
-  .dropdown > a {
-    -webkit-tap-highlight-color: transparent; /* iOS/Androidのタップ時ハイライトを無効化 */
+  .dropdown>a {
+    -webkit-tap-highlight-color: transparent;
+    /* iOS/Androidのタップ時ハイライトを無効化 */
   }
 
   /* 念のため、UAの:activeで背景が入るケースも抑止 */
   .nav-menu a:active,
-  .dropdown > a:active {
+  .dropdown>a:active {
     background: transparent !important;
   }
 
