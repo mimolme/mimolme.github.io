@@ -340,9 +340,7 @@ main {
   background-color: #ff7043;
 }
 
-
-
-/* 表 */
+/* 表0 */
 .table-container {
   width: 100%;
   overflow-x: auto;
@@ -365,6 +363,65 @@ td {
 th {
   background-color: #f2f2f2;
 }
+
+/* 表1 */
+:root {
+  --test-head-bg: #f1f1f1;
+  /* ヘッダー背景色 */
+  --test-head-fg: #1e7a84;
+  /* ヘッダー文字色（お好みで） */
+  --test-border: #cfcfcf;
+  /* 罫線色 */
+  --test-text: #333;
+  /* 本文文字色 */
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  /* 狭い画面で横スクロール */
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+
+table.test {
+  width: 100%;
+  border-collapse: collapse;
+  /* いちばんシンプル */
+  color: var(--test-text);
+  background: #fff;
+  font-size: 16px;
+}
+
+.test caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  padding: .5rem 0;
+}
+
+.test th,
+.test td {
+  border: 1px solid var(--test-border);
+  padding: .6rem .8rem;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+  /* 長い語でも折り返す */
+}
+
+.test thead th {
+  background: var(--test-head-bg);
+  color: var(--test-head-fg);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 行見出し（先頭列）があるときは少し強調 */
+.test tbody th[scope="row"] {
+  font-weight: 600;
+}
+
 
 /* 表（食べ物） */
 .foodTable-wrapper {
@@ -857,6 +914,16 @@ body.modal-open .menu-toggle {
   .breadcrumbs {
     font-size: .5rem;
     margin: 0;
+  }
+
+  /* 表1 */
+  table.test {
+    font-size: 15px;
+  }
+
+  .test th,
+  .test td {
+    padding: .55rem .7rem;
   }
 
   table.food-table th,
