@@ -394,13 +394,12 @@ table.test {
   padding: .2rem 0;
 }
 
-.test th,
-.test td {
-  border: 1px solid var(--test-border);
-  padding: .5rem .5rem;
-  text-align: left;
-  vertical-align: top;
-  word-break: break-word;
+.test th, .test td{
+  border:1px solid var(--test-border);
+  padding:.35rem .6rem;
+  text-align:left;
+  vertical-align:middle;
+  word-break:break-word;
 }
 
 .test thead th {
