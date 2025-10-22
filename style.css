@@ -912,7 +912,10 @@ body.modal-open .menu-toggle {
     margin: 0;
   }
 
-  /* 表1 */
+  .table-wrap {
+    width: 100%;
+  }
+
   table.test {
     width: 100%;
     font-size: 15px;
