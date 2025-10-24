@@ -377,12 +377,12 @@ th {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 1rem 0.2rem;
+  
 }
 
 table.test {
   width: 80%;
   max-width: 700px;
-  margin: 0 auto;
   border-collapse: collapse;
   color: var(--test-text);
   background: #fff;
