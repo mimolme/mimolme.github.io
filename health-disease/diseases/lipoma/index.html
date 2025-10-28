@@ -1,0 +1,179 @@
+---
+layout: default
+title: "脂肪腫"
+# description: "このページ専用のもるらぼの紹介文："
+keywords: "モルモット 脂肪腫，モルモット 腫瘍，モルモット 良性腫瘍，モルモット 背部皮下腫瘤，モルモット 皮下腫瘤，モルモット しこり"
+---
+
+<header id="top">
+  <div class="top-image2">
+    <a href="/health-disease/diseases/">
+      <img src="https://mimolme.github.io/img/tips/mol_PDR1-1.jpg" alt="top_img">
+    </a>
+  </div>
+  <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+  <div id="nav-placeholder"></div>
+  <nav class="breadcrumbs" aria-label="パンくずリスト">
+    <ol id="breadcrumbs"></ol>
+  </nav>
+</header>
+<main>
+  <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 10/28/2025</p>
+  <section>
+    <div class="section-wrapper">
+      <h2 class="section-title">脂肪腫
+      </h2>
+    </div>
+    <br>
+    <section>
+      <div class="custom-box">
+        <div class="box-title">
+          <i class="fa-solid fa-crow" style="color: fff;"> 事例</i>
+        </div>
+        <div class="box-content">
+          <ul>
+            <li class="no-bullet2" data-status="new"><a
+                href="/health-disease/diseases/keratitis/2022-07-22">2022-07-22：脂肪腫
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <p>
+      いつの間にかモルモットにしこり・腫瘍ができていることがあるかもしれません。
+    </p>
+    <br>
+    <div class="box-heading">
+      <h3>しこり・腫瘍がある場合</h3>
+    </div>
+    <p>
+      早めに病院で検査を受けましょう。そして今後の方針についてかかりつけ医と話し合いましょう。
+    </p>
+    <p>良性であっても病巣やサイズ、年齢によっては切除を勧められるかもしれません。なぜなら例えば、足の付け根に発生した場合、腫瘍肥大化に伴い歩行困難となる可能性があるからです。</p>
+    <p>反対に、悪性であっても年齢によっては手術を勧められない可能性があります。モルモットは侵襲性の高い処置にすこぶる弱いです。特に高齢の場合、術後の合併症や抗生物質を投与するリスク医師から強く伝えられると思います。</p>
+    <p>
+      なお、モルモットの腫瘍において脂肪腫（良性）の発生率は比較的多く<sup><a href="#ref1">[1]</a><a href="#ref2">[2]</a></sup>、3歳以上<sup><a
+          href="#ref2">[2]</a><a href="#ref3">[3]</a></sup>のモルモットで発生する傾向が示唆されています。
+    </p>
+
+  </section>
+  <section>
+    <div class="references">
+      <h2>参考文献</h2>
+      <ul>
+        <li id="ref1">[1] Otrocka-Domagała, I., Paździor-Czapula, K., Fiedorowicz, J., Mikiewicz, M., Piotrowska, A., &
+          Gesek, M. (2022). Cutaneous and subcutaneous tumours of small pet mammals-retrospective study of 256 cases
+          (2014-2021). <i>Animals : An Open Access Journal from MDPI,</i> 12(8), 965. <a
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9028556/">doi:10.3390/ani12080965</a>.
+        </li>
+        <li id="ref2">[2] Dobromylskyj, M. J., Hederer, R., & Smith, K. C. (2023). Lumpy, bumpy guinea pigs: A
+          retrospective study of 619 biopsy samples of externally palpable masses submitted from pet guinea pigs for
+          histopathology. <i>Journal of Comparative Pathology,</i> 203, 13–18.<a
+            href="https://pubmed.ncbi.nlm.nih.gov/37130485/">doi:10.1016/j.jcpa.2023.04.001</a>.
+        </li>
+        <li id="ref3">[3] Shomer, N. H., Holcombe, H., & Harkness, J. E. (2015). Biology and diseases of guinea pigs.
+          <i>Laboratory Animal Medicine,</i> 247–283.<a
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7158311/">doi:10.1016/B978-0-12-409527-4.00006-7</a>.
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <a href="#top" class="back-to-top">▲</a>
+  <!-- モーダル -->
+  <div id="modal" class="modal">
+    <img class="modal-content" id="modal-img">
+  </div>
+  </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+
+<script>
+  // モーダル表示（画像クリック）
+  document.querySelectorAll('a[href$=".jpg"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.style.display = "block";
+      modalImg.src = this.href;
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+  document.getElementById("modal").addEventListener("click", function () {
+    this.style.display = "none";
+    document.body.classList.remove("modal-open");
+  });
+
+  // 記事ラベル
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("li[data-status]").forEach(li => {
+      const status = li.dataset.status;
+      const label = document.createElement("span");
+      label.classList.add("label", status);
+      label.textContent = status === "new" ? "New !" : "準備中";
+
+      const link = li.querySelector("a");
+      if (link) {
+        li.insertBefore(label, link);
+      }
+    });
+  });
+  // フッター読み込み
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+    .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+  // トグルメニュー
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const placeholder = document.getElementById('nav-placeholder');
+
+    // 1) 先に nav.html を読み込む
+    fetch('/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+        return res.text();
+      })
+      .then(html => {
+        // 2) DOMに挿入
+        placeholder.innerHTML = html;
+
+        // 3) ここで初めて .nav-menu を取得（今なら存在する）
+        const nav = placeholder.querySelector('.nav-menu');
+        if (!nav) {
+          console.warn('nav.html に .nav-menu が見つかりません');
+          return;
+        }
+
+        // 4) ハンバーガー開閉の配線
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();                 // 外側クリックと競合しないように
+          nav.classList.toggle('open');
+        });
+
+        // 5) メニュー外クリックで閉じる
+        document.addEventListener('click', (e) => {
+          const inside = nav.contains(e.target) || toggle.contains(e.target);
+          if (!inside) nav.classList.remove('open');
+        });
+
+        // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+        const mql = window.matchMedia('(min-width: 601px)');
+        const closeOnWide = () => nav.classList.remove('open');
+        // 古いブラウザ対策
+        if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+        else mql.addListener(closeOnWide);
+      })
+      .catch(err => {
+        console.error(err);
+        placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+      });
+  });
+
+</script>
+<script src="/js/breadcrumbs.js"></script>
