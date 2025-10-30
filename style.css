@@ -337,7 +337,7 @@ main {
 }
 
 .label.editing {
-  background-color: #ff7043;
+  color: #ff7043;
 }
 
 /* 表0 */
@@ -377,7 +377,7 @@ th {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 1rem 0.2rem;
-  
+  text-align: center;
 }
 
 table.test {
