@@ -10,7 +10,7 @@ body {
 }
 
 small {
-  font-size: 0.688 rem;
+  font-size: 0.688 rem!important;
 }
 
 a {
