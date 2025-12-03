@@ -9,6 +9,10 @@ body {
   margin: auto;
 }
 
+small {
+  font-size: 0.688 rem;
+}
+
 a {
   color: #008697;
 }
