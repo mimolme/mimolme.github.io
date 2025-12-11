@@ -714,7 +714,7 @@ footer {
 .social-buttons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .circle-btn {
