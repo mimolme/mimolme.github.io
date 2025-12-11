@@ -703,6 +703,7 @@ audio {
 }
 
 /* フッター */
+
 footer {
   margin-top: 2.5rem;
   text-align: center;
@@ -710,6 +711,32 @@ footer {
   font-size: 0.9rem;
 }
 
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.circle-btn {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  transition: 0.3s;
+}
+
+.circle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* HTML */
 html {
   scroll-behavior: smooth;
 }
