@@ -704,11 +704,10 @@ audio {
 
 /* フッター */
 footer {
-  width: 100vw;          /* 画面幅いっぱい */
-  margin-left: calc(50% - 50vw); /* コンテナ中央寄せの影響を打ち消す */
-  background-color: #008697;
-  color: #fff;
-  padding: 1rem 0;
+  margin-top: 2.5rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
 }
 
 html {
