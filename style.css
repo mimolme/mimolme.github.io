@@ -726,13 +726,13 @@ footer {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 1.8rem;
   transition: 0.3s;
 }
 
 .circle-btn:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: red;
   transform: scale(1.05);
 }
 
