@@ -704,11 +704,11 @@ audio {
 
 /* フッター */
 footer {
-  margin-top: 2.5rem;
+  background-color: #000;
+  color: #fff;
   text-align: center;
-  color: #888;
+  padding: 2rem 0;
   font-size: 0.9rem;
-  background-color: #008697;
 }
 
 html {
