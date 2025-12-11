@@ -720,7 +720,7 @@ footer {
 .circle-btn {
   width: 70px;
   height: 70px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
