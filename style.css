@@ -913,6 +913,10 @@ body.modal-open .menu-toggle {
     width: 0;
   }
 
+  .nav_x:hover{
+    color: #5baff0;
+  }
+
   .dropdown {
     width: 100%;
   }
