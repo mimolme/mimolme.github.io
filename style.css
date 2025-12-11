@@ -733,6 +733,7 @@ footer {
 
 .circle-btn:hover {
   background-color: #5cb0f0;
+  color: #fff;
   transform: scale(1.05);
 }
 
