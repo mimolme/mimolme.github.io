@@ -48,11 +48,9 @@ header {
 
 .top-image2 img {
   width: 100%;
-  /* 親要素にフィット */
   height: auto;
   display: block;
   transform: translateY(-45%);
-  /* 上方向へずらす。調整可 */
   opacity: 0.8;
 }
 
@@ -207,6 +205,7 @@ nav.nav-menu {
   display: block;
 }
 
+/* main */
 main {
   margin-top: 2rem;
   padding: 0 1rem;
@@ -325,7 +324,6 @@ main {
 .label {
   display: inline-block;
   width: 35px;
-  /* 固定幅 */
   text-align: center;
   margin-right: 7px;
   padding: 2px 6px;
@@ -878,6 +876,7 @@ body.modal-open .menu-toggle {
     margin-top: 0.1rem;
   }
 
+  /* ナビ */
   nav.nav-menu {
     display: none;
     flex-direction: column;
@@ -913,9 +912,10 @@ body.modal-open .menu-toggle {
     width: 0;
   }
 
-  .nav_x a:hover{
-    color: #5baff0;
-  }
+  nav.nav-menu a.nav_x:hover,
+nav.nav-menu a.nav_x:hover i {
+  color: #5baff0;
+}
 
   .dropdown {
     width: 100%;
