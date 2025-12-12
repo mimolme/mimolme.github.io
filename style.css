@@ -120,8 +120,7 @@ nav.nav-menu {
   width: 80%;
 }
 
-nav.nav-menu a.nav_x:hover,
-nav.nav-menu a.nav_x:hover i {
+.nav_x:hover {
   color: #5baff0;
 }
 
