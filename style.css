@@ -120,6 +120,11 @@ nav.nav-menu {
   width: 80%;
 }
 
+nav.nav-menu a.nav_x:hover,
+nav.nav-menu a.nav_x:hover i {
+  color: #5baff0;
+}
+
 /* パンくず */
 .breadcrumbs {
   font-size: 0.65rem;
@@ -911,11 +916,6 @@ body.modal-open .menu-toggle {
     left: 0;
     width: 0;
   }
-
-  nav.nav-menu a.nav_x:hover,
-nav.nav-menu a.nav_x:hover i {
-  color: #5baff0;
-}
 
   .dropdown {
     width: 100%;
