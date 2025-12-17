@@ -16,8 +16,7 @@ keywords: "モルモットのお世話，給餌・掃除，モルモットのお
 
 </header>
 <main>
-    <p class="update"><i class="fa-solid fa-pen-nib" style="color: #888888;"></i>&nbsp;作成日: 12/17/2025<br><i
-            class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 12/17/2025</p>
+    <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: 12/17/2025</p>
     <section>
         <div class="section-wrapper">
             <h2 class="section-title">ルーティン</h2>
@@ -44,7 +43,8 @@ keywords: "モルモットのお世話，給餌・掃除，モルモットのお
             </div>
         </div>
         <p>
-            目次を設けてはおりますが<strong> 再読用 </strong>です。お手数ですが，<span class="marker">必ず全てお読みください</span>。そして<span class="marker">全てのステップを実行</span>してください。
+            目次を設けてはおりますが<strong> 再読用 </strong>です。お手数ですが，<span class="marker">必ず全てお読みください</span>。そして<span
+                class="marker">全てのステップを実行</span>してください。
         </p>
         <h3 style="color: #2f4f4f">- 目次 -</h3>
         <ul class="no-bullet">
@@ -79,23 +79,23 @@ keywords: "モルモットのお世話，給餌・掃除，モルモットのお
 <div id="footer-placeholder"></div>
 
 <script>
-      // モーダル表示（画像クリック）
-  document.querySelectorAll('a[href$=".jpg"], a[href$=".png"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("modal-img");
-      modal.style.display = "block";
-      modalImg.src = this.href;
-      document.body.classList.add("modal-open");
+    // モーダル表示（画像クリック）
+    document.querySelectorAll('a[href$=".jpg"], a[href$=".png"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            modal.style.display = "block";
+            modalImg.src = this.href;
+            document.body.classList.add("modal-open");
+        });
     });
-  });
 
-  // モーダル全体をクリックしたら閉じる（画像も含めてOK）
-  document.getElementById("modal").addEventListener("click", function () {
-    this.style.display = "none";
-    document.body.classList.remove("modal-open");
-  });
+    // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+    document.getElementById("modal").addEventListener("click", function () {
+        this.style.display = "none";
+        document.body.classList.remove("modal-open");
+    });
 
     // フッター読み込み
     fetch("/footer.html")
