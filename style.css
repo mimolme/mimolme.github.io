@@ -305,6 +305,7 @@ main {
 .box-heading2 {
   background-color: #ffffff;
   border-left: 8px solid #a0a0a0;
+  border-bottom: 1px solid #555555;
   padding: 0.3rem 1rem;
   font-weight: bold;
   margin: 0.5rem 0;
