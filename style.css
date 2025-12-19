@@ -831,33 +831,6 @@ html {
   overflow-wrap: break-word;
 }
 
-/* zeroから開始するリスト */
-ol.zero {
-      list-style: none;
-      counter-reset: step -1; /* -1から始める→最初の表示が(0)になる */
-      padding-left: 0;
-      margin: 0;
-    }
-    ol.zero > li {
-      counter-increment: step;
-      margin: 0 0 0.6rem 0;
-    }
-    ol.zero > li::before {
-      content: "(" counter(step) ") ";
-      font-weight: 600;
-    }
-
-    /* 小リスト（・） */
-    ol.zero ul {
-      margin: 0.35rem 0 0 1.5rem;
-      padding-left: 0;
-      list-style: "・";
-    }
-    ol.zero ul li {
-      padding-left: 0.4rem; /* "・" と本文の間隔 */
-      margin: 0.15rem 0;
-    }
-    
 /* モーダル上のハンバーガメニュー非表示 */
 body.modal-open .menu-toggle {
   display: none !important;
