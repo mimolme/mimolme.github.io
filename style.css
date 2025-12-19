@@ -831,6 +831,16 @@ html {
   overflow-wrap: break-word;
 }
 
+/* 下位リストは黒丸 */
+ol ul {
+  list-style: "・";
+  padding-left: 1.2em;
+}
+ol ul li { 
+  padding-left: 0.3em; 
+}
+
+
 /* モーダル上のハンバーガメニュー非表示 */
 body.modal-open .menu-toggle {
   display: none !important;
