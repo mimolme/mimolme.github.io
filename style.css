@@ -831,6 +831,15 @@ html {
   overflow-wrap: break-word;
 }
 
+/* zeroから開始するリスト */
+.zero-list {
+  counter-reset: number 0; /* カウンタを0に初期化 */
+}
+
+.zero-list li::before {
+  counter-increment: number 1; /* 1ずつ増やす */
+  content: counter(number); /* カウンタの値を表示 */
+}
 
 /* モーダル上のハンバーガメニュー非表示 */
 body.modal-open .menu-toggle {
