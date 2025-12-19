@@ -832,15 +832,32 @@ html {
 }
 
 /* zeroから開始するリスト */
-.zero-list {
-  counter-reset: number 0; /* カウンタを0に初期化 */
-}
+ol.zero {
+      list-style: none;
+      counter-reset: step -1; /* -1から始める→最初の表示が(0)になる */
+      padding-left: 0;
+      margin: 0;
+    }
+    ol.zero > li {
+      counter-increment: step;
+      margin: 0 0 0.6rem 0;
+    }
+    ol.zero > li::before {
+      content: "(" counter(step) ") ";
+      font-weight: 600;
+    }
 
-.zero-list li::before {
-  counter-increment: number 1; /* 1ずつ増やす */
-  content: counter(number); /* カウンタの値を表示 */
-}
-
+    /* 小リスト（・） */
+    ol.zero ul {
+      margin: 0.35rem 0 0 1.5rem;
+      padding-left: 0;
+      list-style: "・";
+    }
+    ol.zero ul li {
+      padding-left: 0.4rem; /* "・" と本文の間隔 */
+      margin: 0.15rem 0;
+    }
+    
 /* モーダル上のハンバーガメニュー非表示 */
 body.modal-open .menu-toggle {
   display: none !important;
