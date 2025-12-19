@@ -831,9 +831,9 @@ html {
   overflow-wrap: break-word;
 }
 
-/* 下位リストは黒丸 */
+/* 下位リストはハイフンが好き */
 ol ul {
-  list-style: "・";
+  list-style: "-";
   padding-left: 1.2em;
 }
 ol ul li { 
