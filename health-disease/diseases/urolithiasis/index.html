@@ -32,7 +32,7 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
         </div>
         <div class="box-content">
           <ul>
-            <li class="no-bullet2" data-status="new"><a
+            <li class="no-bullet2"><a
                 href="/health-disease/diseases/urolithiasis/2024-10-27">2024-10-27：尿路結石
               </a></li>
           </ul>
@@ -142,7 +142,7 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
     document.body.classList.remove("modal-open");
   });
 
-  // 記事ラベル
+  // 記事ラベル（liの始点に挿入する場合：link.after(label); → li.insertBefore(label, link);）
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("li[data-status]").forEach(li => {
       const status = li.dataset.status;
@@ -152,7 +152,7 @@ keywords: "もるらぼ, もるラボ, モルモット研究室, モルモット
 
       const link = li.querySelector("a");
       if (link) {
-        li.insertBefore(label, link);
+        link.after(label);
       }
     });
     // 🎧 音声プレーヤー機能：各.audio-playerを個別に動かす
