@@ -31,7 +31,7 @@ keywords: "モルモット 角膜炎，モルモット ウイルス性角膜炎�
         </div>
         <div class="box-content">
           <ul>
-            <li class="no-bullet2" data-status="new"><a
+            <li class="no-bullet2"><a
                 href="/health-disease/diseases/keratitis/2023-6-21">2023-06-21：ウイルス性角膜炎？
               </a></li>
           </ul>
@@ -87,7 +87,7 @@ keywords: "モルモット 角膜炎，モルモット ウイルス性角膜炎�
     document.body.classList.remove("modal-open");
   });
 
-  // 記事ラベル
+  // 記事ラベル（liの始点に挿入する場合：link.after(label); → li.insertBefore(label, link);）
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("li[data-status]").forEach(li => {
       const status = li.dataset.status;
@@ -97,7 +97,7 @@ keywords: "モルモット 角膜炎，モルモット ウイルス性角膜炎�
 
       const link = li.querySelector("a");
       if (link) {
-        li.insertBefore(label, link);
+        link.after(label);
       }
     });
   });
