@@ -126,7 +126,7 @@ keywords: "モルモット 鼓張症，モルモット 鼓腸症，モルモッ�
     document.body.classList.remove("modal-open");
   });
 
-  // 記事ラベル
+  // 記事ラベル（liの始点に挿入する場合：link.after(label); → li.insertBefore(label, link);）
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("li[data-status]").forEach(li => {
       const status = li.dataset.status;
@@ -136,7 +136,7 @@ keywords: "モルモット 鼓張症，モルモット 鼓腸症，モルモッ�
 
       const link = li.querySelector("a");
       if (link) {
-        li.insertBefore(label, link);
+        link.after(label);
       }
     });
   });
