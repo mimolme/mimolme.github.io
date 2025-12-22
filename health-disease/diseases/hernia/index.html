@@ -31,7 +31,7 @@ keywords: "モルモット ヘルニア，モルモット ステロイド，モ�
         </div>
         <div class="box-content">
           <ul>
-            <li class="no-bullet2" data-status="new"><a
+            <li class="no-bullet2"><a
                 href="/health-disease/diseases/hernia/2023-04-02">2023-04-02：ヘルニア？
               </a></li>
           </ul>
@@ -90,7 +90,7 @@ keywords: "モルモット ヘルニア，モルモット ステロイド，モ�
     document.body.classList.remove("modal-open");
   });
 
-  // 記事ラベル
+  // 記事ラベル（liの始点に挿入する場合：link.after(label); → li.insertBefore(label, link);）
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("li[data-status]").forEach(li => {
       const status = li.dataset.status;
@@ -100,7 +100,7 @@ keywords: "モルモット ヘルニア，モルモット ステロイド，モ�
 
       const link = li.querySelector("a");
       if (link) {
-        li.insertBefore(label, link);
+        link.after(label);
       }
     });
   });
