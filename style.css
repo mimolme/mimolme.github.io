@@ -334,13 +334,12 @@ main {
   padding: 2px 6px;
   font-size: 0.7em;
   border-radius: 4px;
-  color: #fff;
   vertical-align: middle;
 }
 
 
 .label.new {
-  background-color: #00bcd4;
+  color: #00bcd4;
 }
 
 .label.editing {
