@@ -340,10 +340,12 @@ main {
 
 .label.new {
   color: #00bcd4;
+  font-weight: bold;
 }
 
 .label.editing {
   color: #ff7043;
+  font-weight: bold;
 }
 
 /* 表0 */
