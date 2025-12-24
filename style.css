@@ -67,11 +67,11 @@ header {
   color: #ccc8af;
 }
 
-nav.nav-menu{
+nav.nav-menu {
   /* 左右フェード（#fff → #f1f1f1） */
   background:
-    linear-gradient(to right, #fff 0%, #f1f1f1 60px) left / 60px 100% no-repeat,
-    linear-gradient(to left,  #fff 0%, #f1f1f1 60px) right / 60px 100% no-repeat,
+    linear-gradient(to right, #fff 0%, #f1f1f1 30px) left / 30px 100% no-repeat,
+    linear-gradient(to left, #fff 0%, #f1f1f1 170px) right / 170px 100% no-repeat,
     #f1f1f1;
 
   display: flex;
@@ -79,12 +79,12 @@ nav.nav-menu{
   flex-wrap: wrap;
   padding-left: 1rem;
   font-family: inherit, monospace, sans-serif;
-  border-radius: 25px;
   margin-top: 0.7rem;
 
-  /* submenuを切らないため、基本は hidden にしない */
+  /* submenuを消さないため */
   overflow: visible;
-  position: relative; /* 保険（なくてもOK） */
+  position: relative;
+  /* 念のため・・ */
 }
 
 
