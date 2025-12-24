@@ -76,36 +76,37 @@ nav.nav-menu {
   padding-left: 1rem;
   font-family: inherit, monospace, sans-serif;
   margin-top: 0.7rem;
-  overflow: hidden;/* フェードを内側に収める */
+  overflow: hidden;
+  /* フェードを内側に収める */
 }
 
-nav.nav-menu::before {/* 左フェード */
+nav.nav-menu::before {
+  /* 左フェード */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 30px;/* フェード幅 */
+  width: 10px;
+  /* フェード幅 */
   height: 100%;
-  background: linear-gradient(
-    to right,
-    #fff 0%,
-    #f1f1f1 100%
-  );
-  pointer-events: none;/* クリック透過 */
+  background: linear-gradient(to right,
+      #fff 0%,
+      #f1f1f1 100%);
+  pointer-events: none;
+  /* クリック透過 */
 }
 
-nav.nav-menu::after {/* 右フェード */
+nav.nav-menu::after {
+  /* 右フェード */
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
+  width: 170px;
   height: 100%;
-  background: linear-gradient(
-    to left,
-    #fff 0%,
-    #f1f1f1 100%
-  );
+  background: linear-gradient(to left,
+      #fff 0%,
+      #f1f1f1 100%);
   pointer-events: none;
 }
 
@@ -871,8 +872,9 @@ ol ul {
   list-style: "-";
   padding-left: 1.2em;
 }
-ol ul li { 
-  padding-left: 0.3em; 
+
+ol ul li {
+  padding-left: 0.3em;
 }
 
 /* 括弧付き数字リスト */
