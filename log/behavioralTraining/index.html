@@ -1,1 +1,820 @@
-BCL_plot_v3
+---
+layout: default
+title: "モルモットの行動分析｜もるらぼ - Guinea Pig Lab."
+# description: "このページ専用のもるらぼの紹介文："
+keywords: "もるらぼ, もるラボ, モルモット研究室, モルモットを飼育するための実用書, モルモット, mimolme, Guinea pig Laboratory, モルモットの行動分析，モルモットのトレーニング、モルモット
+トレーニング，モルモット 行動分析，モルモット 条件付け，モルモット 三項随伴制，モルモット オペラント条件付け，モルモット 噛み癖，モルモット 懐かない, モルモット しつけ"
+---
+
+<header id="top">
+  <a href="/log">
+    <img src="https://mimolme.github.io/img/mol-log.webp" alt="log" class="top-image">
+  </a>
+  <button class="menu-toggle" aria-label="メニュー切り替え">&#9776;</button>
+  <div id="nav-placeholder"></div>
+  <nav class="breadcrumbs" aria-label="パンくずリスト">
+    <ol id="breadcrumbs"></ol>
+  </nav>
+
+</header>
+<main>
+  <p class="update"><i class="fa-solid fa-rotate-right" style="color: #888888;"></i>&nbsp;最終更新日: <span
+      id="original_1">12/24</span>/2025</p>
+  <section>
+    <h2>特定の行動を増やすには？望ましくない行動を減らすには？</h2>
+    <ul class="no-bullet">
+      <li><a href="#conditioning">4. トレーニング</a>
+        <ul>
+          <li class="no-bullet"><a href="/log/behavioralTraining#litterTraining">4-1. トイレトレーニング</a></li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#taming">4-2. 「懐いた！」を増やす</a></li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#bitingBehavior">4-3. 「噛まれた！」を減らす</a>
+          </li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#overindulge">4-4. 「おやつの与えすぎ」を減らす</a>
+          </li>
+          <li class="no-bullet"><a href="/log/behavioralTraining#untrainable">4-5. 無効な訓練</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <br>
+  <section>
+    <div class="section-wrapper">
+      <h2 id="conditioning" class="section-title">4. トレーニング</h2>
+    </div>
+    <br><br>
+    <div class="custom-box" id="remrecord">
+      <div class="box-title">
+        <i class="fa-solid fa-crow" style="color: fff;"><a href="/log/profiles/#rem"
+            style="color: #fff">レム</a>の「噛む行動」非出現連続日数</i>
+      </div>
+      <div class="box-content">
+        <p><span class="target_1"></span>現在：<span id="original_2" style="font-weight: bold">0日</span><span
+            style="font-weight: bold">目</span>&nbsp;<small>（※詳細は<a href="#bitingBehavior">こちら</a>）</small></p>
+      </div>
+    </div>
+  </section>
+  <p>
+    モルモットは「しつけられない」「覚えられない」「学習しない」などとよく言われます。
+    研究者の間でも、他の齧歯類より訓練が難しいとされており<sup><a href="#ref1">[1]</a></sup>、行動実験<sup><a
+        href="#operant">※1</a></sup>の報告数はラットと比較すると2025年現在でも0.6%に満たないのです（PubMed: rat &
+    operant vs guinea pig & operant, c.f. <a href="#ref2">[2]</a>）。
+  </p>
+  <p>
+    しかし、実際にモルモットと暮らしてみると、彼らが数多くのことを「覚えた」ことに気づくでしょう。例えば、
+  </p>
+  <ul>
+    <li>ヒトが近づくと（聴覚・嗅覚・視覚刺激）：ヒトに接近する/立ち上がる/ケージの入り口から顔を出す（1）</li>
+    <li>冷蔵庫の開閉音がすると（聴覚刺激）：鳴き声をあげる/立ち上がる/ケージの入り口から顔を出す（2）</li>
+    <li>グルーミング用のゴム製グローブを取り出すと（嗅覚・視覚刺激）：「グルルル」と鳴く/飼い主から離れる（3）</li>
+  </ul>
+  <p>
+    １～３のような行動は、モルモットがすでに各刺激を「覚えた」ことを示しています。
+    １と２では<strong> 各行動に後続して好物が貰えている </strong>のでしょう。
+    ３ではより古典的な学習<sup><a href="#respondent">※2</a></sup>が行われたようです。
+    おそらく、グローブ（のゴムのにおい）が不快（くすぐったい？）と結びついた
+    （グローブのにおい（嗅覚刺激）と皮膚への刺激（触覚刺激）が対呈示されることで、
+    グローブが身体に触れなくてもグローブのにおいがするだけで警戒音を発声したりグローブから逃げたりする）のでしょう。
+  </p>
+  <p id="note">このように、モルモットは特定の行動を増加/減少させることができます。ただし、
+  </p>
+  <ul>
+    <li><strong> なんでもできる </strong>わけではない</li>
+    <li><strong> いつでもできる </strong>わけではない</li>
+    <li><strong> いつまでもできる </strong>わけではない</li>
+    <li><strong> 個体差 </strong>あり</li>
+  </ul>
+  <p>
+    ということを理解しておきましょう。あなたのモルモットに何かを「覚えさせたい」場合、
+  </p>
+  <ul>
+    <li><strong>モルモットの特性（身体的な限界を含む）</strong></li>
+    <li><strong>あなたのモルモットの習性（傾向・癖・好物など）</strong></li>
+  </ul>
+  <p>
+    これらを事前に把握しておく必要があります。
+    そして<strong>覚えさせたい（増やしたい）行動が出現した直後に好物を与えること </strong>を遵守する必要があります。
+    これにより、モルモットに負荷を与えることなく特定の行動を覚えさせる（増やす）ことができます。
+  </p>
+  <p>それでは、いくつか事例を見てみましょう。</p>
+  </section>
+  <br>
+  <small id="operant"><strong>※1</strong>:【オペラント条件づけ】行動の結果によってその行動の頻度が変化するタイプの学習（<a href="#ref3">[3]</a>）。</small><br>
+  <small id="respondent"><strong>※2</strong>:【レスポンデント（的な）条件づけ】他の刺激と対呈示しなくても反射を引き起こす<strong>
+      無条件刺激（皮膚への刺激：ゴムが皮膚に刺さる、逆毛） </strong>、<strong> 皮膚への刺激 </strong>によって引き起こされる反応は<strong> 無条件反応（身をよじる）
+    </strong>とする。<strong> 皮膚への刺激（無条件刺激） </strong>と対呈示することで警戒音を発声したり逃げ出したりするようになった<strong> ゴムのにおい </strong>は<strong>
+      条件刺激 </strong>という。条件刺激のみの提示によって引き起こされる反応（警戒音の発声・逃げ出す）を<strong> 条件反応 </strong>という。条件刺激を無条件刺激と対提示する手続きを<strong>
+      レスポンデント条件付け </strong>という（<a href="#ref3">[3]</a>）。</small><br>
+  <div class="box warning-box" id="warning">
+    <strong>⚠ 注意：</strong>
+    本サイトにおいて<strong> トレーニング </strong>という用語は、行動分析学における「トレーニング」の概念・手続きとは異なる意味合いで使用している場合があります。例えば、本サイトにおける<a
+      href="/log/behavioralTraining#litterTraining">トイレトレーニング</a>と<a
+      href="https://mimolme.github.io/health-disease/soyMilkTraining/">豆乳トレーニング</a>は、一般的に使われる<strong> 練習
+    </strong>の意味合いで使用しています。他にも、例えば「学習」や「刺激」、「覚える」という言葉を必ずしも専門用語として使用しているわけではありません。
+  </div>
+  <br>
+  <section>
+    <div class="box-heading">
+      <h3 id="litterTraining">4-1. トイレトレーニング</h3>
+    </div>
+    <p>
+      まずはあなたのモルモットの排泄に規則性があるか確認しましょう。
+    </p><br>
+    <section>
+      <div class="custom-box">
+        <div class="box-title">
+          <i class="fa-solid fa-crow" style="color: fff;">&nbsp;我が家のトイレトレーニング</i>
+        </div>
+        <div class="box-content">
+          <ul>
+            <li><a href="#mol_toilet">モル</a>：成功（2歳半まで持続）</li>
+            <li><a href="#mel_toilet">メル</a>：失敗</li>
+            <li><a href="#rem_toilet">レム</a>：未実施</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <p>
+      <a href="https://mimolme.github.io/log/profiles#mol" id="mol_toilet">モル</a>の場合、
+      トイレでくつろぐことが多く<strong> 四隅 </strong>で<strong> 自分のにおいが強く残る場所 </strong>に排泄する傾向がありました。
+      これを利用してトイレトレーニングを行いました。具体的には<a href="#fig1">図1</a>のような三角形のトイレを用意し<strong> それ以外の場所で排泄をした場合はすぐに取り除き
+      </strong>廃棄するかトイレに溜めるようにしました。トイレに溜まった糞尿は溢れるまで捨てずにおきました。
+      糞尿以外にも糞尿のついたチモシーも使いました。特定の場所に"においづけ"するためです。
+    </p>
+    <p>
+      その結果、モルは数日で排泄の9割をトイレで行うようになりました。ただし<a href="#fig3">図3~5</a>の通り、トイレ以外の場所や私の太ももの上で排便してしまうこともありました。
+      私としてはそれすら可愛くて仕方なかったのですが。それに９割の排泄物が決まった場所に溜まっていると掃除はとても楽でした。
+      しかし、トイレトレーニングの効果が続いたのは2歳半頃まで。<a
+        href="https://mimolme.github.io/health-disease/diseases/diarrheaAndConstipation/2020-11-26/">体調を崩した</a>ことで、
+      徐々にトイレ以外の場所での排泄が増えました。モルモットもヒトと同様に、病気や加齢によって「できていたことが、できなくなってしまう」ことがあるようです。
+    </p><br>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_toilet.jpg"><img id="fig1"
+            src="https://mimolme.github.io/img/tips/mol_toilet.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図1. モルのトイレ</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_toilet2.jpg"><img id="fig2"
+            src="https://mimolme.github.io/img/tips/mol_toilet2.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図2. コーナーにお尻を擦り付けるようにして排泄</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_toilet3.jpg"><img id="fig3"
+            src="https://mimolme.github.io/img/tips/mol_toilet3.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図3. トイレ以外の場所にもちらほらウンチが</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_toilet4.jpg"><img id="fig4"
+            src="https://mimolme.github.io/img/tips/mol_toilet4.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図4. 「100%トイレで排泄」は難しい</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mol_toilet5.jpg"><img id="fig5"
+            src="https://mimolme.github.io/img/tips/mol_toilet5.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図5. とはいえ掃除はとても楽</small>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <a href="https://mimolme.github.io/log/profiles#mel"
+      id="mel_toilet">メル</a>の場合、ケージ内のいたるところに糞をする傾向がありました。他方、モルと同様にトイレでくつろいだり食事することが多い傾向にもありました（<a
+      href="#fig6">図6~12</a>）。この「トイレに居座る傾向」を使ってモルと同様、トイレにのみ排泄物を溜めるようにしました。
+    しかし、トイレ以外の排泄物をどんなに迅速かつ頻繁に回収しても「勝手なことするな！」と言わんばかりに、回収したそばから、すぐに排泄されました。
+    自分の排泄物（におい）で縄張っているのかもしれません。トイレにのみ餌を置いたりしてみましたが、トイレ以外の場所で排泄をする傾向はなくならないどころか減ることもありませんでした。
+    </p>
+    <p>
+      トイレ以外の場所で排泄し、しばしば排泄物の上で寝ることもありました。メルは全身が白いので汚れが目立ちました（<a href="#fig13">図13</a>）。
+    </p>
+    <br>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet.jpg"><img id="fig6"
+            src="https://mimolme.github.io/img/tips/mel_toilet.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図6. トイレでくつろぐメル（爪切りの前）</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet2.jpg"><img id="fig7"
+            src="https://mimolme.github.io/img/tips/mel_toilet2.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図7. トイレに餌を置いてみるものの効果なし</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet3.jpg"><img id="fig8"
+            src="https://mimolme.github.io/img/tips/mel_toilet3.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図8. ケージのあちこちに糞をしてくつろぐメル</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet4.jpg"><img id="fig9"
+            src="https://mimolme.github.io/img/tips/mel_toilet4.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図9. 縁に頭部を乗せてくつろぐ傾向あり</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet5.jpg"><img id="fig10"
+            src="https://mimolme.github.io/img/tips/mel_toilet5.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図10. トイレが憩いの場</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet6.jpg"><img id="fig11"
+            src="https://mimolme.github.io/img/tips/mel_toilet6.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図11. 拾った側から糞をするメル</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet7.jpg"><img id="fig12"
+            src="https://mimolme.github.io/img/tips/mel_toilet7.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図12. 可愛すぎる</small>
+        </div>
+      </div>
+      <div>
+        <a href="https://mimolme.github.io/img/tips/mel_toilet8.jpg"><img id="fig13"
+            src="https://mimolme.github.io/img/tips/mel_toilet8.jpg" alt="モルモット_トイレトレーニング" height="200px"
+            style="width: auto;"></a>
+        <div>
+          <small>図13. メルのお腹は大抵黄色い</small>
+        </div>
+      </div>
+    </div>
+    <br>
+    <p>
+      <a href="https://mimolme.github.io/log/profiles#rem" id="rem_toilet">レム</a>の場合、元々気性が荒く（勢いよく走り回る、トンネルを頭で跳ね飛ばす、など）、
+      また、我が家に来た頃は若くて今以上に活発だったため、ケージ内には必要最低限の物のみ配置しました。
+      彼が最も安全で汚れにくい環境を優先した結果、トイレの設置・トイレトレーニングの実行は諦めました。
+      しかし、彼は「綺麗好き」のようで、基本的に汚れている場所に身を置くことはしません。また、"においづけ"さえしておけば同じ場所にまとめて排泄する傾向もあります。
+      また、レムはケージ外（私たちの太ももの上や床など）で排泄することは滅多にありません。モルやメル（特にモル）は私たちの太ももの上でも躊躇なく排泄したのでここにも個体差ありですね。
+      レムはスキンシップが長引くと、落ち着きがなくなることがあります。その場合、ケージに戻すとすぐに排泄を始めます。
+    </p>
+    <br><br>
+  </section>
+  <div class="box-heading">
+    <h3 id="taming">4-2.「懐いた！」を増やす</h3>
+  </div>
+  <p>
+    <strong> モルモットは人懐こい </strong>とよく言われます。我が家では<strong><a href="https://mimolme.github.io/log/profiles#mol"> モル </a> >
+      <a href="https://mimolme.github.io/log/profiles#rem"> レム </a> > <a
+        href="https://mimolme.github.io/log/profiles#mel"> メル </a></strong>の順で懐っこいと言えます。ただし、元からいわゆる人懐こかったのはモルのみです。
+  </p><br>
+  <p><a
+      href="https://mimolme.github.io/log/profiles#mol">モル</a>の場合は、意図的な訓練をせずとも、餌がなくとも、まるで「撫でてください」と言わんばかりに、我々の元によく寄ってきました。
+  </p>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/FdEbZKt0ajg" title="YouTube video player"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <br>
+  <p><a
+      href="https://mimolme.github.io/log/profiles#mel">メル</a>の場合、餌や餌がもらえる気配（冷蔵庫の開閉音や餌のにおいなど）がなければ、近寄ってくることは絶対にありませんでした。
+    ただしおでこを撫でられるのは差し支えなかったようです。以下の動画のようにおでこを撫でられると目を細めて（時にはグルグル言いながら）されるがままになることが多々ありました。
+  </p>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/Mfzhyb7mYoo" title="YouTube video player"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <br>
+  <p>
+    <a href="https://mimolme.github.io/log/profiles#rem">レム</a>は今、<a
+      href="#bitingBehavior">訓練中</a>です。彼と私たちとの関係において、彼の「噛み癖」は深刻な問題でした。
+    しかし、<a href="#bitingBehavior">訓練</a>の甲斐あって<strong>
+      ヒトや服を噛む </strong>行動が減り<strong> 舐める </strong>行動が増えてきました（詳しくは<a href="#bitingBehavior">こちら</a>）。
+  </p>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/QuR2eH5o56A" title="YouTube video player"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <br>
+  <p>ちなみに本サイトでは<strong> 飼い主が餌を持っているか否かに関わらず </strong>
+  </p>
+  <ul>
+    <li>自ら飼い主に寄ってくる</li>
+    <li>ケージから顔を出す</li>
+    <li>飼い主の身体を舐める</li>
+    <li>抱く・撫でると「頭部を飼い主の身体にのせる・身体を伸ばし力を抜く」</li>
+    <li>頭を撫でても「警戒音を出さない・逃げない・跳ね除けない・噛みつかない」</li>
+  </ul>
+  <p>といった行動・状態が<span class="marker">複数認められた場合に「人懐こい」「懐いた」と判断</span>し紹介しています。
+    他方、<span class="marker">本セクションでは特定の行動（最終目標）を「懐いた」と定義</span>し話を進めます。</p>
+  <p>
+    それでは彼らを懐かせる手順をご紹介します。ここでは<strong> 「飼い主の太ももに乗り、飼い主の身体に手を掛けて、飼い主の顔がある方に鼻先を向けること」 </strong>を<span
+      class="marker">最終目標</span>とします。※若いモルモットを想定しています。高齢のモルモットにはおすすめしません。
+  </p>
+  <p>大まかな手順として、以下のように、スモールステップごとに学習させます。</p>
+  <ul>
+    <li><a href="#step1">ステップ1</a>: 後ろ足で立ち上がり太ももに手をかける</li>
+    <li><a href="#step2">ステップ2</a>: 太ももに乗る</li>
+    <li><a href="#step3">ステップ3</a>: 太もも上でお腹に手をかける</li>
+    <li><a href="#step4">ステップ4</a>: お腹に置いた手を胸の方まで這わせる（立って飼い主の顔を見る感じ）</li>
+  </ul>
+  <p>ちなみに多くのモルモットに、「ヒトに接近する」「（後ろ足のみで）立ち上がる」傾向があると思います。その直後に餌をくれた経験があるからでしょう。動物園や<a
+      href="https://www.anitouch.com/">某ふれあい施設</a>に行くとこうした傾向を確認できます。ここではこの2つの傾向を使って、まずは<strong id="step1"> ステップ1:
+      太ももに手をかける </strong>を学習させる方法を説明します。<a
+      href="#fig15">図15</a>をご覧ください。彼らが飼い主に接近し（必然的に後ろ足のみで立ち上がり）飼い主の太ももに手を乗せたら<strong> すぐ
+    </strong>に好物（我が家では<a href="#fig14">図14</a>のように各種<a
+      href="https://mimolme.github.io/feeding-environment/feeding/#supplement">サプリ</a>、<a
+      href="https://mimolme.github.io/feeding-environment/feeding/#TimothyPellets">牧草代用ペレット</a>を割ったり野菜をちぎったりして少量ずつ）を与えます。なお、<a
+      href="#fig15">図15</a>では「太もも」と記載されていますが、別に脚のどこでも構いませんし、手や腕でも構いません。</p>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/SR+.jpg"><img id="fig14"
+          src="https://mimolme.github.io/img/tips/SR+.jpg" alt="SR+" height="200px"></a>
+      <div>
+        <small>図14. 訓練に使用する餌（※豆乳は訓練用ではない）</small>
+      </div>
+    </div>
+  </div><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_1.png"><img id="fig15"
+          src="https://mimolme.github.io/img/tips/conditioning_1.png" alt="guineapig_conditioning" height="65px"></a>
+      <div>
+        <small>図15. 「太ももに手をかける行動」を確立する</small>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <p>
+    肝心なのは<span class="marker">「増やしたい行動」（ターゲット行動、ここでは「太ももに手をかける」）が出現した直後に好物を与えること</span>です。これを<strong> 2,
+      3回繰り返す </strong>だけで<strong> ターゲット行動は増加 </strong>します。また、増加するだけでなく<strong> 行動直後に好物を与えなくてもしばらくの間続き </strong>ます。
+  </p>
+  <p>
+    次に、<strong id="step2"> ステップ2: 太ももに乗る </strong>を学習させましょう。<a
+      href="#fig16">図16</a>をご覧ください。すでに「太ももに手をかける行動」は確立されていますが、太ももに乗らせるためには太ももに手をかけただけでは好物を与えず、好物のにおいで太ももまで誘導させます。太ももに乗ったら
+    <strong> すぐ </strong>に好物を与えます。これをやはり2,
+    3回繰り返すだけで、ターゲット行動（ここでは「太ももに乗る」）は増加・しばらく定着します。
+  </p>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_2.png"><img id="fig16"
+          src="https://mimolme.github.io/img/tips/conditioning_2.png" alt="guineapig_conditioning" height="130px"></a>
+      <div>
+        <small>図16. 「太ももに乗る行動」を確立する</small>
+      </div>
+    </div>
+  </div><br>
+  <p>
+    続いて、<strong id="step3"> ステップ3: 太もも上でお腹に手をかける </strong>を学習させましょう。<a
+      href="#fig17">図17</a>をご覧ください。すでに「太ももに乗る行動」は確立されていますが、太ももに乗ったらすぐに好物を与えず、<span
+      class="marker">飼い主自身の体のそばに手をつくよう、好物のにおいで誘導</span>します。モルモットが飼い主の腹部に手を置いたら <strong> すぐ </strong>に好物を与えます。これをやはり2,
+    3回繰り返すだけで、ターゲット行動（ここでは「太もも上でお腹に手をかける」）は増加・しばらく定着します。
+  </p>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_3.png"><img id="fig17"
+          src="https://mimolme.github.io/img/tips/conditioning_3.png" alt="guineapig_conditioning" height="130px"></a>
+      <div>
+        <small>図17. 「太もも上でお腹に手をかける」を確立する</small>
+      </div>
+    </div>
+  </div><br>
+  <p>
+    最後に、<strong id="step4"> ステップ4: お腹に置いた手を胸の方まで這わせる（立って飼い主の顔を見る感じ） </strong>を学習させましょう。<a
+      href="#fig18">図18</a>をご覧ください。すでに「太もも上でお腹に手をかける」行動は確立されていますが、後ろ足で立ち上がるよう好物のにおいで飼い主の胸部付近に誘導します。モルモットが後ろ足で立ち上がり、手を飼い主の胸部方向に少し移動させたら
+    <strong> すぐ </strong>に好物を与えます。これをやはり2,
+    3回繰り返すだけで、ターゲット行動（ここでは「お腹に置いた手を胸の方まで這わせる」）は増加・しばらく定着します。
+  </p>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_4.png"><img id="fig18"
+          src="https://mimolme.github.io/img/tips/conditioning_4.png" alt="guineapig_conditioning" height="130px"></a>
+      <div>
+        <small>図18. 「お腹に置いた手を胸の方まで這わせる」を確立する</small>
+      </div>
+    </div>
+  </div><br>
+  <p>
+    以上が最終目標「飼い主の太ももに乗り身体に手を掛けて鼻先を上げること」を覚えさせるための手続き・過程でした。
+    このように、モルモットの特定の行動（ターゲット行動）を増やしたい場合、元々彼らが持っている（倫理的に問題ない）「傾向」や「癖」を使い、なおかつ、ターゲット行動の生起直後に好物を与えると、高確率で成功します。
+    反対に「傾向」や「癖」に該当する行動を減らすのは後述の通り苦労します・・
+  </p>
+  <br>
+  </section>
+  <div class="box-heading">
+    <h3 id="bitingBehavior">4-3.「噛まれた！」を減らす</h3>
+  </div>
+  <br>
+  <section>
+    <div class="box warning-box" id="warning">
+      <p>本サイトにおける<span style="font-weight: bold"> 噛む行動 </span>は以下3点のいずれかを指します：</p>
+      <ul>
+        <li>ヒトを噛む（区別が難しいので「甘噛み」も含む）</li>
+        <li>ヒトの皮膚に歯を立てる</li>
+        <li>ヒトの服や皮膚を噛みながら引っ張る</li>
+      </ul>
+    </div>
+  </section>
+  <p>
+    モルモットの行動レパートリーには <strong> 噛む </strong>行動があります。例えば、飼い主がモルモットに対して、
+  <ul>
+    <li>急にお尻付近を触る</li>
+    <li>急に鼻の前に手を近づける</li>
+  </ul>
+  すると高確率で噛まれます。我が家の3頭全てにこの傾向がありました。
+  彼らが検知できない体位・タイミングで接近・接触されると本能的に防御する（噛む）のでしょう。
+  </p>
+  <p>また、給餌を要求するときに服の裾を噛んで引っ張ったり（<a href="https://mimolme.github.io/log/profiles#rem">レム</a>）、
+    特定の（おそらく嫌な）条件下に置かれると万力のように噛んだり（<a href="https://mimolme.github.io/log/profiles#mel">メル</a>）することもあります。</p>
+  <p><span class="marker">「防御」として噛む行動</span>は、減らす必要はありません。飼い主に非があります。
+    彼らにとっておそらく不快であったり不用意に驚かせる接触・対応は極力避けるべきです。</p>
+  <p>
+    他方、給餌に関してはどうでしょう？確かに彼らが「好物を欲しいとき」にできることとして「鳴く」や「噛む」が生じても仕方ない気はします。
+    しかし、我が家に限って言えば、モルやメルは、給餌の気配を検知した時に、我々に接近してきたり太ももに手を乗せて我々を見上げて待つといったことは頻繁にありましたが、
+    噛みながら引っ張るということはまずありませんでした。噛んだり引っ張ったりして給餌をせがむのはレムだけなのです。
+  </p>
+  <p>ではなぜレムは噛むのか？</p>
+  <p>
+    レムは元々、いわゆる「噛み癖」がありました。我が家に来た時から、おでこにそっと触れようとしただけで噛みつこうとしてきたり、
+    近づいてきたモルに噛みつこうとしたり、俗にいう「警戒心が人一倍強い」というやつかもしれません。
+    私たちは何度も噛まれそうになったり、服を噛みながら引っ張られたり、毎日のように手指を噛まれていた時期もあります。
+    それ以前に、彼が我が家に来る前、私たちが彼に初めてペットショップで出会った時でさえ、指を噛まれて出血したほどです。
+    レムの「ヒトやヒトの服を噛む頻度」は我が家の他の2頭よりも明らかに多いのです。それは、単に「人一倍」歯痒いのかもしれませんし、
+    生後、歯を剥き出さなければならない経験が多かったのかもしれません。あるいは何か生得的な要因に起因するのかもしれませんし、
+    噛んだ後に餌を貰えた経験が多いのかもしれません。
+  </p>
+  <p>
+    私自身、彼が我が家に来たばかりの頃、肌を噛まれたり、服を噛みながら引っ張られた直後に、彼の好物を与えた経験が少なからずあります。
+    というのも、彼は「早く頂戴」と言えない代わりに「噛む・噛んで引っ張るしかないのだ」と考えていた時期があるからです。
+  </p>
+  <p>
+    しかし、悠長に構えてもいられなくなりました。彼が我が家に来て2年ほど経過しても噛み癖は一向に減らず、むしろ頻度・強度が増しました（私の対応を考えれば当然なのですが）。
+    彼が給餌時に噛むのは大抵服なのですが、服の内側にある私の皮膚も、しばしば巻き添えを喰らいました。今でも私の肌には彼による咬み傷が無数に残っています。
+  </p>
+  <p>これって、レムにとって必要な行動なのだろうか？私自身、単純に痛いですし、出血すると掃除や給餌を中断せざるを得ず面倒です。彼と接する上で飼い主が痛みを感じる機会は少ない方が良いのではないか？</p>
+  <p>そう考え直し、特に給餌時の「ヒトの肌を噛む」、「服を噛んで引っ張る」といった<strong> 噛む </strong>行動を、彼らの行動レパートリーにある<strong> 舐める
+    </strong>に変えようと決意し、そのための手続きを開始しました。</p>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_5.png"><img id="fig19"
+          src="https://mimolme.github.io/img/tips/conditioning_5.png" alt="guineapig_conditioning" height="130px"></a>
+      <div>
+        <small>図19. 「噛む」を無くし「舐める」を増やす</small>
+      </div>
+    </div>
+  </div><br>
+  <p>さて、手続きは<a href="#fig19">図19</a>の通り、</p>
+  <ul>
+    <li>噛む行動が生じても<strong> 絶対に </strong>好物を与えない</li>
+    <li>舐めたら<strong> すぐに </strong>好物を与える</li>
+  </ul>
+  <p>という流れです。図で書くと単純なのですが、実戦はかなり困難です。</p>
+  <p>まず、噛む行動はなかなか減りません。行動の直後に好物を与えなくてもです。一度「習慣化」した行動は減少しにくいです。工夫が必要です。</p>
+  <p>どうすれば良いのか？着目したのは、彼が<strong> 噛みながら引っ張っていた服から口を離したとき </strong>です。当然ながら、彼は<span
+      class="marker">噛む行動を永遠に継続できるわけではない</span>のです。<span
+      class="marker">彼が服から口を離したときに、好物を与え</span>ます。これを何度か繰り返します。噛まなくても好物がもらえることを"覚えて"もらいます。</p>
+  <p>次に、彼の口が私の体のどこかに接触した時に<strong> すぐ </strong>に好物を与えます。これはレムに限ったことではありませんが、彼らは餌がほしいとき、<span
+      class="marker">餌に向かって鼻から接近</span>します。彼らの出っ張った鼻の直下に口があります。これを利用し、例えば彼の口が私の太ももに少しでも触れたら好物を与えます。これも何度も繰り返します。
+    なお、レムの口は昔から半開きのことが多いです。手続き中に彼の歯が私の皮膚に当たった場合は好物を与えません。唇や舌が当たった時に<strong>
+      すぐ </strong>に好物を与えます。これを毎日続けます。</p>
+  <p>
+    この手続きを開始してどれくらい経過したか、開始時から記録していないことを本当に悔やみますが（写真・動画に基づくと2025年6月頃から開始）、「舐める行動」は他の行動と同様、割とすぐに定着しました。
+  </p>
+  <p>しかし、噛む行動に関しては「完全に無くす」ことがなかなか難しいです（<span class="target_1"></span>時点での「噛む行動」非出現連続日数は<span
+      class="target_2" style="font-weight: bold"></span>です。なお、ここでカウントしているのは、<span
+      class="marker">給餌時（訓練中）における「噛む行動」</span>です。訓練時間外に私たちの不注意によって彼を驚かせて噛ませてしまったケースも含めた記録は<a
+      href="#fig20">図20</a>をご覧ください。ちなみに「訓練時間外」を分けてカウントする理由は、彼との訓練時間外における接触頻度・時間が日によって大きく異なる&統制する予定もないためです。ちなみに「訓練」の所要時間は「20分
+    + 5~10分」です。時間が長いほどレムの場合は噛む頻度が高くなります）。</p>
+  <br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+    <div>
+      <a href="https://mimolme.github.io/img/tips/BCL_plot_v3.png"><img id="fig20" class="responsive-png"
+          src="https://mimolme.github.io/img/tips/BCL_plot_v3.png" alt="モルモット_噛む行動の生起頻度" height="300px"
+          style="width: auto;"></a>
+      <div>
+        <small>図20. 「噛む行動」の生起頻度（2025/9/24から記録。訓練自体は同年6月頃から開始。2025/11/14は<a
+            href="https://mimolme.github.io/health-disease/diseases/diarrheaAndConstipation/2025-11-14/">体調不良</a>のため訓練せず未実施）</small>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p><a href="#fig20">図20</a>の通り、<span class="target_1"></span>時点での<strong> 「噛む行動」非出現連続日数の最高記録 </strong>は<strong> 31日間
+    </strong>。たまに噛むことはありますが、肌に生傷が絶えなかった訓練前と比較すると、圧倒的に減りました。
+    訓練時間外を含めても、「無意図的に驚かせてしまったとき」や「餌がほしいとき」、「撫でられて気持ちよさそうなとき」に「甘噛み」程度で軽く噛む・軽く歯を立てることがあるくらいです。
+    ちなみに「噛む行動」をカウントしている一方で「舐める行動」をカウントしないのは、継続が難しいからです（回数が多すぎる & 掃除中で正確にカウントしきれない）。</p>
+  <p>
+    ところで、訓練中ではどのような場合に「噛む」（甘噛みや軽く歯を立てる程度）のか？それは<strong> 舐めているにも関わらず「すぐに」好物が与えられないとき </strong>です。</p>
+  <p>
+    例えば、2025年10月、彼の訓練中に夫婦喧嘩が始まってしまい、彼の「舐める」行動を無視してしまいました。
+    これによって、不覚にも彼の「噛む」行動を引き出してしまいました。せっかく31日間も訓練中に「噛む」行動が生起しなかったのに。
+    一度で「噛む」行動が出現してしまうと、その後出現しやすくなる傾向があります。
+  </p>
+  <p>
+    訓練中に「噛む行動」が生じた場合、私たちは<strong> 直後に低い声
+    </strong>を提示します。好物も与えません。すると、レムの場合、動きが止まります。しばらくすると再び口を私たちの肌に接触させるので、接触あるいは舐めたらすぐに高めの声で褒めつつおでこを撫でつつ好物を与えます。すると「噛む行動」は大抵おさまります。
+  </p>
+  <p>
+    ちなみに、実はこの訓練、彼のケージを掃除しながら行なっています。正式に実験しているわけではないので、例えばチモシーを袋から取り出しているときに舐められた場合、手が塞がっていてすぐに与えられないことがあります。すると「早く頂戴」と言わんばかりに服や肌を噛んで引っ張ることが今でも稀にあります。
+    また、前述の通り、彼は大抵「開口状態」なので「<strong>舌で</strong>舐める」と「<strong>歯がぶつかる</strong>」が同時に生起しやすいのも確かです。
+    他にも、いつもの世話人（私）以外の人物の声（例：低い声）や誤った対応（例：噛まれたらおやつをあげる）でも「噛む行動」は、ぶり返します。
+  </p>
+  <p>
+    訓練時間外では、抱っこして彼の頭を撫でていると気持ちよさそうに私の腕を甘噛みしたまま皮膚を引っ張ったりします。
+    いわゆる「甘え」なのかも知れませんし、歯がゆいのかも知れません。
+  </p>
+
+  <p>
+    彼の「噛んで引っ張る行動」については完全に無くしたいものですが、私自身も日常生活を送っているので本訓練のみでは完全には無くならない見込みです。
+    とはいえ、噛まれる機会の減少は、私にとっては間違いなく良いことです。
+    出血に伴い手間や時間が削られることもなくなりましたし、生傷ができることもなくなりました。
+    「軽く歯を立てる」や「甘噛み」に関しては無くならなくても良いかなと思いますが、「噛んで引っ張る行動」はできれば消したいので、引き続き継続したいと思います。
+  </p>
+  <p>
+    なお、余談ですが、レムは餌をもらう場所や貰うまでの道のりも「覚えて」います。
+    決まった道順で給餌を求めにきます（例：私の右太ももに降ろされた後、左回りでトンネルを潜ってから私の左足に到達）。
+  </p>
+  <p>
+    さらに余談。Nishimuraら（2020）では、16匹中4匹のモルモットが、合図の種類に応じて、報酬が得られる“時間帯”を区別し、その時間帯に行動することを安定してできるようになりました<sup><a
+        href="#ref4">[4]</a></sup>。
+    この研究では、モルモットが学習できることを「オペラント条件付け」を用いて示されていることが私にとってとても興味深いのですが、それだけではありません。実験手続きでは、モルモットの特性をしっかり踏まえられている上に、実験デザイン・解析も洗練されています（この研究とOjima
+    ら (2016)<sup><a href="#ref1">[1]</a></sup>による研究はとてもユニークです）。興味がある方はぜひご一読ください（私は感動しました）。
+  </p>
+
+  </section><br><br>
+  <div class="box-heading">
+    <h3 id="overindulge">4-4.「おやつの与えすぎ」を減らす</h3>
+  </div>
+  <p>
+    基本的には毎日決まった時間帯（朝晩）に、月齢を踏まえて決まった量のおやつ（青果や<a
+      href="https://mimolme.github.io/feeding-environment/feeding/#fig10">牧草大用ペレット</a>）を与えます。
+    レムの場合は原則訓練中に与え、余った場合はケージ内に入れます。
+    しかし、それ以外の時間帯でも彼らが鳴いたりじーっとこちらを見ていたりすると、ついついおやつをあげたくなってしまいます。
+  </p>
+  <p>とはいえ、おやつを与えすぎると栄養バランスが崩れたり、牧草を食べる量が減って便秘になったりと、彼らの健康に悪影響を及ぼしかねません。
+    <strong> 鳴けば餌が貰える </strong>（<a href="#fig21">図21</a>）と「思われ」ても困りますし、私たちとしても
+    <strong> 餌をあげれば鳴き止む。静寂が訪れる！ </strong>（<a href="#fig22">図22</a>）ことに慣れてしまうのは、
+    やはり、結果として彼らの不健康につながるので良くありません。
+  </p>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_6.png"><img id="fig21"
+          src="https://mimolme.github.io/img/tips/conditioning_6.png" alt="guineapig_conditioning" height="65px"></a>
+      <div>
+        <small>図21. モルモットの「鳴く」行動が増える過程</small>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+    <div>
+      <a href="https://mimolme.github.io/img/tips/conditioning_7.png"><img id="fig22"
+          src="https://mimolme.github.io/img/tips/conditioning_7.png" alt="guineapig_conditioning" height="65px"></a>
+      <div>
+        <small>図22. 飼い主の「鳴かれるとおやつをあげてしまう」過程</small>
+      </div>
+    </div>
+  </div><br>
+  <p>モルモットにとって好ましくない習慣として、</p>
+  <ul>
+    <li>モルモットの<strong> 鳴く行動が増える </strong></li>
+    <li>飼い主の<strong> おやつの時間以外におやつをあげてしまう行動が増える</strong></li>
+  </ul>
+  <p>この2点が挙げられます。この２つの習慣を改善するには、</p>
+  <ul>
+    <li>モルモットが鳴いても<strong> 飼い主は無視する </strong></li>
+  </ul>
+  <p>これがベストです。あるいは、鳴いたらスキンシップをとるのでも良いかもしれません。我が家ではレムが鳴いたら抱っこして撫でるようにしています。
+    レムの場合は、これによって以前よりも私たちの太ももの上で気持ちよさそうに（うっとりしたり体の力を抜いたり寝たり）するようになりました。
+    しかし、この「鳴いたらスキンシップ」の効力は、個体差があるかもしれません。
+    というのも、飼い主の住居、モルモットの習性や月齢にもよりますが、</p>
+  <ul>
+    <li>近所迷惑を回避するためにおやつを与えてしまう</li>
+    <li>給餌時間にも割と鳴く（「鳴く」に餌が後続して偶発出現しやすい）</li>
+    <li>可愛くてついおやつを与えてしまう</li>
+  </ul>
+  <p>などがありがちです。特に、よく鳴く子だと、気をつけていても<span class="marker"><strong> 鳴く
+      </strong>に後続して</span>無意図的に好物を与えてしまうこともあるでしょう。するとなかなか鳴く行動自体を無くすことができません。</p>
+  <p>また、飼い主側の習慣で一度でも不適切なタイミングで与えてしまうとすぐに「鳴く」が<strong> ぶり返して </strong>しまいます。</p>
+  <p>我が家では、とにかく「鳴いてもあげない」を徹底しています。</p><br>
+  </section>
+  <div class="box-heading">
+    <h3 id="untrainable">4-5. 無効な訓練</h3>
+  </div>
+  <p>ここまで、モルモットの <strong> 特定の行動を増やす・減らす方法 </strong>を紹介してきました。意外と<strong>
+      モルモットは「覚えられる」</strong>ということをご理解いただけたのではないでしょうか？ご紹介した手続きを応用し、ぜひあなたのモルモットにもお試しいただければと思います。</p>
+  <p>ただし、<a href="#note">冒頭</a>でもお伝えしたとおり、モルモットが何でもできるようになるわけではありません。極端な例として、どんなに良きタイミングで餌付けしても、モルモットはヒトの音声を発声できるようにはなりません。
+  </p>
+  <p>また、<strong> 無効な訓練の代表例 </strong>として、</p>
+  <ul>
+    <li>モルモットの特定の行動（例：噛む）を減らしたいとき、ヒトの言語で注意する（例：「噛んじゃダメ！」）する</li>
+  </ul>
+  <p>
+    を挙げます。これは、少なくとも我が家の3頭のモルモットには全く効果ありません。もしあなたがモルモットを飼っていて反例をお持ちの場合、
+    あなたは実は大きな声を出していませんか？あるいは大声とともに体を持ち上げるといった、モルモットが驚くようなことをしていませんか？
+  </p>
+  <p>
+    例えば噛み癖のあるレムに対して、「噛む行動」に後続して生命を脅かすような刺激が呈示されると、もしかしたら噛まなくなるかもしれません。しかし、これは彼に大きな身体的負担をかけますし、神経系や脳に大きな損傷を与えるリスクもあります。
+    これはまさに「罰」です。私は「罰」で彼の行動を制御することは好ましくないと考えています。というのも「罰」の使用は、倫理的な観点のみならず、科学的に妥当ではないことが多くの研究（例として<a href="#ref5">[5]</a>,
+    <a href="#ref6">[6]</a>）から明らかになっているからです。
+    報酬（例：おやつ）を用いた研究よりも罰（例：電気ショック）を用いた方が有効であることを科学的に示せておらず、動物福祉団体からも「罰」「嫌悪刺激」を推奨しない旨、声明・ガイドラインとして公表されています（例として<a
+      href="#ref7">[7]</a>, <a href="#ref8">[8]</a>）。
+  </p>
+  <p>それでは「噛む」に後続して好物を与えないのも罰ではないか？と思う方がいるかもしれません。確かにこれも罰に含まれるかもしれません。
+    しかし、私は全く好物を与えないわけではなく「特定のタイミングで」好物を与えているだけです。これが彼らにとって致命的な損傷になり得ますか？</p>
+  <p>あなたとモルモットとの関係性において、好ましくない行動を減らしたい場合、どうすればお互いにとって良いか、考えてみてください。</p>
+  </section>
+  <br>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+    <div>
+      <a href="https://mimolme.github.io/img/tips/mol_cute1.jpg"><img id="fig23"
+          src="https://mimolme.github.io/img/tips/mol_cute1.jpg" alt="mol_cute1" height="200px"></a>
+      <div>
+        <small>図23. 訓練せずとも</small>
+      </div>
+    </div>
+    <div>
+      <a href="https://mimolme.github.io/img/tips/mol_cute2.jpg"><img id="fig24"
+          src="https://mimolme.github.io/img/tips/mol_cute2.jpg" alt="mol_cute2" height="200px"></a>
+      <div>
+        <small>図24. 本当に懐っこかったモル</small>
+      </div>
+    </div>
+    <div>
+      <a href="https://mimolme.github.io/img/tips/mol_cute3.jpg"><img id="fig25"
+          src="https://mimolme.github.io/img/tips/mol_cute3.jpg" alt="mol_cute3" height="200px"></a>
+      <div>
+        <small>図25. 可愛すぎる</small>
+      </div>
+    </div>
+  </div><br>
+  <section>
+    <div class="references">
+      <h2>参考文献</h2>
+      <ul>
+        <li id="ref1">[1] Ojima, H., & Horikawa, J. (2016). Recognition of modified conditioning sounds by
+          competitively trained guinea pigs. <i>Frontiers in Behavioral Neuroscience,</i> 9, 373, doi:<a
+            href="https://doi.org/10.3389/fnbeh.2015.00373">10.3389/fnbeh.2015.00373</a>.
+        </li>
+        <li id="ref2">[2] 小島久幸. (2017). 行動に関連した神経ネットワーク；音脈分擬の基盤をなす音節間の時間間隔を脳に見る. <i>KAKEN 2016年度研究成果報告書</i>.</li>
+        <li id="ref3">[3] 杉山尚子., 島宗理., 佐藤方哉., Malott, R. W., & Malott, M. E. (1998). <i>行動分析学入門</i>, 産業図書.</li>
+        <li id="ref4">[4] Nishimura, M., Wang, C., Shu, R., & Song, W. (2020). Dynamic changes of timing precision in
+          timed actions during a behavioural task in guinea pigs. <i>Scientific Reports, 10</i>(1), 20079. doi:<a
+            href="https://www.nature.com/articles/s41598-020-76953-y">10.1038/s41598-020-76953-y</a></li>
+        <li id="ref5">[5] Herron, M. E., Shofer, F. S., & Reisner, I. R. (2009).
+          Survey of the use and outcome of confrontational and non-confrontational training methods in client-owned dogs
+          showing undesired behaviors.
+          <i>Applied Animal Behaviour Science, 117</i>(1), 47–54. doi:<a
+            href="https://www.sciencedirect.com/science/article/abs/pii/S0168159108003717?via%3Dihub">10.1016/j.applanim.2008.12.011</a>
+        </li>
+        <li id="ref6">[6] Cooper, J. J., Cracknell, N., Hardiman, J., Wright, H., & Mills, D. (2014).
+          The welfare consequences and efficacy of training pet dogs with remote electronic training collars in
+          comparison to reward based training.
+          <i>PloS One, 9</i>(9), e102722. doi:<a
+            href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0102722">10.1371/journal.pone.0102722</a>
+        </li>
+        <li id="ref7">[7] <i>Why we don't punish? (2014). </i>Retrieved Dec 24, 2025, from <a
+            href="https://www.sfanimalcare.org/wp-content/uploads/2014/08/Why-We-Dont-Punish.pdf">https://www.sfanimalcare.org/wp-content/uploads/2014/08/Why-We-Dont-Punish.pdf</a>
+        </li>
+        <li id="ref8">[8] <i>AVSAB humane dog training position statement 2021 (2021). </i>Retrieved Dec 24, 2025, from
+          <a
+            href="https://avsab.org/wp-content/uploads/2021/08/AVSAB-Humane-Dog-Training-Position-Statement-2021.pdf">https://avsab.org/wp-content/uploads/2021/08/AVSAB-Humane-Dog-Training-Position-Statement-2021.pdf</a>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+
+
+  <a href="#top" class="back-to-top">▲</a>
+  <!-- モーダル -->
+  <div id="modal" class="modal">
+    <img class="modal-content" id="modal-img">
+  </div>
+  </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  // 非出現日数を文章内に反映
+  document.addEventListener('DOMContentLoaded', () => {
+    const originals = {
+      1: document.getElementById('original_1')?.textContent ?? '',
+      2: document.getElementById('original_2')?.textContent ?? ''
+    };
+
+    [1, 2].forEach(i => {
+      document.querySelectorAll(`.target_${i}`).forEach(el => {
+        el.textContent = originals[i];
+      });
+    });
+  });
+
+  // モーダル表示（画像クリック）
+  document.querySelectorAll('a[href$=".jpg"], a[href$=".png"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.style.display = "block";
+      modalImg.src = this.href;
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  // モーダル全体をクリックしたら閉じる（画像も含めてOK）
+  document.getElementById("modal").addEventListener("click", function () {
+    this.style.display = "none";
+    document.body.classList.remove("modal-open");
+  });
+  // フッター読み込み
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+    .catch(() => document.getElementById("footer-placeholder").innerHTML = "<footer>フッターを読み込めませんでした</footer>");
+  // トグルメニュー
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const placeholder = document.getElementById('nav-placeholder');
+
+    // 1) 先に nav.html を読み込む
+    fetch('/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('ナビゲーションの読み込みに失敗しました');
+        return res.text();
+      })
+      .then(html => {
+        // 2) DOMに挿入
+        placeholder.innerHTML = html;
+
+        // 3) ここで初めて .nav-menu を取得（今なら存在する）
+        const nav = placeholder.querySelector('.nav-menu');
+        if (!nav) {
+          console.warn('nav.html に .nav-menu が見つかりません');
+          return;
+        }
+
+        // 4) ハンバーガー開閉の配線
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();                 // 外側クリックと競合しないように
+          nav.classList.toggle('open');
+        });
+
+        // 5) メニュー外クリックで閉じる
+        document.addEventListener('click', (e) => {
+          const inside = nav.contains(e.target) || toggle.contains(e.target);
+          if (!inside) nav.classList.remove('open');
+        });
+
+        // 6) 画面幅が広がったら（PC表示に戻ったら）閉じておく
+        const mql = window.matchMedia('(min-width: 601px)');
+        const closeOnWide = () => nav.classList.remove('open');
+        // 古いブラウザ対策
+        if (mql.addEventListener) mql.addEventListener('change', closeOnWide);
+        else mql.addListener(closeOnWide);
+      })
+      .catch(err => {
+        console.error(err);
+        placeholder.innerHTML = '<nav class="nav-menu">メニューを読み込めませんでした</nav>';
+      });
+  });
+</script>
+<script src="/js/breadcrumbs.js"></script>
