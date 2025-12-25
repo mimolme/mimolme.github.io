@@ -134,6 +134,10 @@ nav.nav-menu {
   color: #5baff0;
 }
 
+.nav_bs:hover {
+  color: #1285fe;
+}
+
 /* パンくず */
 .breadcrumbs {
   font-size: 0.65rem;
