@@ -134,7 +134,11 @@ nav.nav-menu {
   color: #5baff0;
 }
 
-.nav_bs:hover {
+.nav_bsky {
+  font-size: 0.75rem;
+}
+
+.nav_bsky:hover {
   color: #1285fe;
 }
 
